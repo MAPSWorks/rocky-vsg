@@ -70,35 +70,54 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_attachment-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ROCKY_NAMESPACE::Attachment Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="_application_8h_source.html">Application.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_map_object_8h_source.html">MapObject.h</a>&gt;</code></p>
 
 <p>Inherits rocky::Inherit&lt; Object, Attachment &gt;.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3769f7e85c6c9b196b43bf95dbde468b"><td class="memItemLeft" align="right" valign="top"><a id="a3769f7e85c6c9b196b43bf95dbde468b"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>createNode</b> (<a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html">Runtime</a> &amp;runtime)=0</td></tr>
-<tr class="separator:a3769f7e85c6c9b196b43bf95dbde468b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0173c246910cafe2e5e388f75413b784"><td class="memItemLeft" align="right" valign="top"><a id="a0173c246910cafe2e5e388f75413b784"></a>
+virtual <a class="el" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a47a3157b68495813746976f5649f0577">JSON</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_attachment.html#a0173c246910cafe2e5e388f75413b784">to_json</a> () const =0</td></tr>
+<tr class="memdesc:a0173c246910cafe2e5e388f75413b784"><td class="mdescLeft">&#160;</td><td class="mdescRight">seialize to JSON <br /></td></tr>
+<tr class="separator:a0173c246910cafe2e5e388f75413b784"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:aa8670c4ea65b8025f71fec1664e755fa"><td class="memItemLeft" align="right" valign="top"><a id="aa8670c4ea65b8025f71fec1664e755fa"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>visible</b> = true</td></tr>
-<tr class="separator:aa8670c4ea65b8025f71fec1664e755fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a208d97746042ccd2760df3c427ef6342"><td class="memItemLeft" align="right" valign="top"><a id="a208d97746042ccd2760df3c427ef6342"></a>
+<a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1optional.html">optional</a>&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_attachment.html#a208d97746042ccd2760df3c427ef6342">name</a></td></tr>
+<tr class="memdesc:a208d97746042ccd2760df3c427ef6342"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of this attachment. <br /></td></tr>
+<tr class="separator:a208d97746042ccd2760df3c427ef6342"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0e85d91f17402d4dec458ccd15cb6ed"><td class="memItemLeft" align="right" valign="top"><a id="ac0e85d91f17402d4dec458ccd15cb6ed"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_attachment.html#ac0e85d91f17402d4dec458ccd15cb6ed">relativeToGeoTransform</a> = false</td></tr>
+<tr class="memdesc:ac0e85d91f17402d4dec458ccd15cb6ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the attachment should position under the <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_object.html">MapObject</a>'s GeoTranform. <br /></td></tr>
+<tr class="separator:ac0e85d91f17402d4dec458ccd15cb6ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32cb6fa47c8b95db0637b434f321d2be"><td class="memItemLeft" align="right" valign="top"><a id="a32cb6fa47c8b95db0637b434f321d2be"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_attachment.html#a32cb6fa47c8b95db0637b434f321d2be">horizonCulling</a> = false</td></tr>
+<tr class="memdesc:a32cb6fa47c8b95db0637b434f321d2be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the attachment should cull to the visible horizon. <br /></td></tr>
+<tr class="separator:a32cb6fa47c8b95db0637b434f321d2be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b01579df2b97ddd0aac6eb1cc67432c"><td class="memItemLeft" align="right" valign="top"><a id="a8b01579df2b97ddd0aac6eb1cc67432c"></a>
-vsg::ref_ptr&lt; vsg::Node &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>node</b></td></tr>
+vsg::ref_ptr&lt; vsg::Node &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_attachment.html#a8b01579df2b97ddd0aac6eb1cc67432c">node</a></td></tr>
+<tr class="memdesc:a8b01579df2b97ddd0aac6eb1cc67432c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Root node of the attachment; created by <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_attachment.html#a3769f7e85c6c9b196b43bf95dbde468b" title="Creates the root node of this attachment.">createNode()</a> <br /></td></tr>
 <tr class="separator:a8b01579df2b97ddd0aac6eb1cc67432c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a3769f7e85c6c9b196b43bf95dbde468b"><td class="memItemLeft" align="right" valign="top"><a id="a3769f7e85c6c9b196b43bf95dbde468b"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_attachment.html#a3769f7e85c6c9b196b43bf95dbde468b">createNode</a> (<a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html">Runtime</a> &amp;runtime)=0</td></tr>
+<tr class="memdesc:a3769f7e85c6c9b196b43bf95dbde468b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the root node of this attachment. <br /></td></tr>
+<tr class="separator:a3769f7e85c6c9b196b43bf95dbde468b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Renderable component that attaches to a <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_object.html">MapObject</a>, inheriting its <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_transform.html">GeoTransform</a> and other shared characteristics. </p>
+<div class="textblock"><p>Renderable component that attaches to a <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_object.html">MapObject</a>, possibly inheriting its <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_transform.html">GeoTransform</a> and other shared characteristics. </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/rocky_vsg/<a class="el" href="_application_8h_source.html">Application.h</a></li>
+<li>src/rocky_vsg/<a class="el" href="_map_object_8h_source.html">MapObject.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

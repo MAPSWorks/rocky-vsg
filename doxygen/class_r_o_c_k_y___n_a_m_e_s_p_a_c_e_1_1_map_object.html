@@ -76,7 +76,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="_application_8h_source.html">Application.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_map_object_8h_source.html">MapObject.h</a>&gt;</code></p>
 
 <p>Inherits rocky::Inherit&lt; Object, MapObject &gt;.</p>
 <table class="memberdecls">
@@ -91,7 +91,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aa77ad752e66b5b352df6e9b21e60f7d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a map object with a single attachment. <br /></td></tr>
 <tr class="separator:aa77ad752e66b5b352df6e9b21e60f7d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c2bf5c1434f8ccb2d7cc118857a256a"><td class="memItemLeft" align="right" valign="top"><a id="a3c2bf5c1434f8ccb2d7cc118857a256a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_object.html#a3c2bf5c1434f8ccb2d7cc118857a256a">MapObject</a> (Attachments <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_object.html#a9b09e99c1a4de09ba01ba2740091aff4">attachments</a>)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_object.html#a3c2bf5c1434f8ccb2d7cc118857a256a">MapObject</a> (<a class="el" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#ade7652769c7d5c9f5419f272fa04ba07">Attachments</a> <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_object.html#a9b09e99c1a4de09ba01ba2740091aff4">attachments</a>)</td></tr>
 <tr class="memdesc:a3c2bf5c1434f8ccb2d7cc118857a256a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a map object with zero or more attachments. <br /></td></tr>
 <tr class="separator:a3c2bf5c1434f8ccb2d7cc118857a256a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -102,19 +102,28 @@ const std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class=
 <tr class="memdesc:ab23e63f3d061589c614e400c762172ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Globally unique ID for this map object (auto generated) <br /></td></tr>
 <tr class="separator:ab23e63f3d061589c614e400c762172ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b09e99c1a4de09ba01ba2740091aff4"><td class="memItemLeft" align="right" valign="top"><a id="a9b09e99c1a4de09ba01ba2740091aff4"></a>
-Attachments&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_object.html#a9b09e99c1a4de09ba01ba2740091aff4">attachments</a></td></tr>
+<a class="el" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#ade7652769c7d5c9f5419f272fa04ba07">Attachments</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_object.html#a9b09e99c1a4de09ba01ba2740091aff4">attachments</a></td></tr>
 <tr class="memdesc:a9b09e99c1a4de09ba01ba2740091aff4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attachments associated with this map object. <br /></td></tr>
 <tr class="separator:a9b09e99c1a4de09ba01ba2740091aff4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33278b65b79e93c8e4dca11c6521b532"><td class="memItemLeft" align="right" valign="top"><a id="a33278b65b79e93c8e4dca11c6521b532"></a>
+vsg::ref_ptr&lt; vsg::Group &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_object.html#a33278b65b79e93c8e4dca11c6521b532">root</a></td></tr>
+<tr class="memdesc:a33278b65b79e93c8e4dca11c6521b532"><td class="mdescLeft">&#160;</td><td class="mdescRight">Top-level group for this object. <br /></td></tr>
+<tr class="separator:a33278b65b79e93c8e4dca11c6521b532"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad762d95816f729741a138dc6961b6365"><td class="memItemLeft" align="right" valign="top"><a id="ad762d95816f729741a138dc6961b6365"></a>
 vsg::ref_ptr&lt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_transform.html">GeoTransform</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_object.html#ad762d95816f729741a138dc6961b6365">xform</a></td></tr>
-<tr class="memdesc:ad762d95816f729741a138dc6961b6365"><td class="mdescLeft">&#160;</td><td class="mdescRight">Top-level transform for this object (optional) <br /></td></tr>
+<tr class="memdesc:ad762d95816f729741a138dc6961b6365"><td class="mdescLeft">&#160;</td><td class="mdescRight">Geotransform for this object if it has any Relative attachments. <br /></td></tr>
 <tr class="separator:ad762d95816f729741a138dc6961b6365"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cb8227703ee9eaf954b451545ad03f3"><td class="memItemLeft" align="right" valign="top"><a id="a1cb8227703ee9eaf954b451545ad03f3"></a>
+vsg::ref_ptr&lt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_horizon_cull_group.html">HorizonCullGroup</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_object.html#a1cb8227703ee9eaf954b451545ad03f3">horizoncull</a></td></tr>
+<tr class="memdesc:a1cb8227703ee9eaf954b451545ad03f3"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_horizon.html">Horizon</a> culler for this object if it requests one. <br /></td></tr>
+<tr class="separator:a1cb8227703ee9eaf954b451545ad03f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>An object placed somewhere on the map. A <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_object.html">MapObject</a> itself has no visual represetation. You can add attachments to render different things like icons, models, geometries, or text. </p>
+<div class="textblock"><p>An object placed somewhere relative to the map.</p>
+<p>A <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_object.html">MapObject</a> itself has no visual represetation. You can add attachments to render different things like icons, models, geometries, or text. </p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
-<li>src/rocky_vsg/<a class="el" href="_application_8h_source.html">Application.h</a></li>
-<li>src/rocky_vsg/Application.cpp</li>
+<li>src/rocky_vsg/<a class="el" href="_map_object_8h_source.html">MapObject.h</a></li>
+<li>src/rocky_vsg/MapObject.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
