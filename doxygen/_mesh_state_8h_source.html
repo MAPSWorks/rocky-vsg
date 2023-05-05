@@ -120,24 +120,26 @@ $(function() {
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordtype">void</span> add(<span class="keyword">const</span> vsg::vec3&amp; v1, <span class="keyword">const</span> vsg::vec3&amp; v2, <span class="keyword">const</span> vsg::vec3&amp; v3);</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordtype">void</span> compile(vsg::Context&amp;) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        vsg::vec4 _defaultColor = { 1,1,1,1 };</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        std::vector&lt;vsg::vec3&gt; _verts;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        std::vector&lt;vsg::vec3&gt; _normals;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        std::vector&lt;vsg::vec4&gt; _colors;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        vsg::ref_ptr&lt;vsg::DrawIndexed&gt; _drawCommand;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keyword">using</span> index_type = <span class="keywordtype">unsigned</span> short;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        std::map&lt;vsg::vec3, index_type&gt; _lut;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        std::vector&lt;index_type&gt; _indices;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    };</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordtype">void</span> record(vsg::CommandBuffer&amp;) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        vsg::vec4 _defaultColor = { 1,1,1,1 };</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        std::vector&lt;vsg::vec3&gt; _verts;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        std::vector&lt;vsg::vec3&gt; _normals;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        std::vector&lt;vsg::vec4&gt; _colors;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        vsg::ref_ptr&lt;vsg::DrawIndexed&gt; _drawCommand;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keyword">using</span> index_type = <span class="keywordtype">unsigned</span> short;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        std::map&lt;vsg::vec3, index_type&gt; _lut;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        std::vector&lt;index_type&gt; _indices;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    };</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
 <div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_bind_mesh_style_html"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_bind_mesh_style.html">ROCKY_NAMESPACE::BindMeshStyle</a></div><div class="ttdef"><b>Definition:</b> MeshState.h:48</div></div>
 <div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_mesh_geometry_html"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_mesh_geometry.html">ROCKY_NAMESPACE::MeshGeometry</a></div><div class="ttdef"><b>Definition:</b> MeshState.h:64</div></div>
 <div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_mesh_state_html"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_mesh_state.html">ROCKY_NAMESPACE::MeshState</a></div><div class="ttdef"><b>Definition:</b> MeshState.h:25</div></div>
 <div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_mesh_state_html_a9488e9bf7f65b846a266e1e6f0dcfba5"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_mesh_state.html#a9488e9bf7f65b846a266e1e6f0dcfba5">ROCKY_NAMESPACE::MeshState::pipelineConfig</a></div><div class="ttdeci">static vsg::ref_ptr&lt; vsg::GraphicsPipelineConfigurator &gt; pipelineConfig</div><div class="ttdef"><b>Definition:</b> MeshState.h:38</div></div>
 <div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_mesh_state_html_af22676186e598a18dc268548dc7f98d8"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_mesh_state.html#af22676186e598a18dc268548dc7f98d8">ROCKY_NAMESPACE::MeshState::pipelineStateCommands</a></div><div class="ttdeci">static vsg::StateGroup::StateCommands pipelineStateCommands</div><div class="ttdoc">Singleton state commands for establishing the pipeline.</div><div class="ttdef"><b>Definition:</b> MeshState.h:41</div></div>
-<div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime_html"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html">ROCKY_NAMESPACE::Runtime</a></div><div class="ttdef"><b>Definition:</b> Runtime.h:32</div></div>
+<div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime_html"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html">ROCKY_NAMESPACE::Runtime</a></div><div class="ttdef"><b>Definition:</b> Runtime.h:33</div></div>
 <div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_status_html"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_status.html">ROCKY_NAMESPACE::Status</a></div><div class="ttdef"><b>Definition:</b> Status.h:15</div></div>
 <div class="ttc" id="anamespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e_html"><div class="ttname"><a href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html">ROCKY_NAMESPACE</a></div><div class="ttdef"><b>Definition:</b> Callbacks.h:13</div></div>
 <div class="ttc" id="astruct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_mesh_style_html"><div class="ttname"><a href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_mesh_style.html">ROCKY_NAMESPACE::MeshStyle</a></div><div class="ttdef"><b>Definition:</b> Mesh.h:16</div></div>

@@ -162,10 +162,10 @@ using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a370b0e078f0636162c2e377d3c24d7dd"><td class="memItemLeft" align="right" valign="top"><a id="a370b0e078f0636162c2e377d3c24d7dd"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_manipulator.html#a370b0e078f0636162c2e377d3c24d7dd">MapManipulator</a> (vsg::ref_ptr&lt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_node.html">MapNode</a> &gt; mapNode, vsg::ref_ptr&lt; vsg::Camera &gt; camera)</td></tr>
-<tr class="memdesc:a370b0e078f0636162c2e377d3c24d7dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new manipulator. <br /></td></tr>
-<tr class="separator:a370b0e078f0636162c2e377d3c24d7dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56919507f54077c5c1c31a033f43ca2f"><td class="memItemLeft" align="right" valign="top"><a id="a56919507f54077c5c1c31a033f43ca2f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_manipulator.html#a56919507f54077c5c1c31a033f43ca2f">MapManipulator</a> (vsg::ref_ptr&lt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_node.html">MapNode</a> &gt; mapNode, vsg::ref_ptr&lt; vsg::Window &gt; window, vsg::ref_ptr&lt; vsg::Camera &gt; camera)</td></tr>
+<tr class="memdesc:a56919507f54077c5c1c31a033f43ca2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new manipulator. <br /></td></tr>
+<tr class="separator:a56919507f54077c5c1c31a033f43ca2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8eb7c46a7c773e0bbc5c536a66dd20fe"><td class="memItemLeft" align="right" valign="top"><a id="a8eb7c46a7c773e0bbc5c536a66dd20fe"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_manipulator.html#a8eb7c46a7c773e0bbc5c536a66dd20fe">home</a> ()</td></tr>
 <tr class="memdesc:a8eb7c46a7c773e0bbc5c536a66dd20fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Go to the home position. <br /></td></tr>
@@ -350,24 +350,36 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:a1ffc72d18f938bacc4917c91800ba95c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a707443a4529c49a5ad37b76b42a2ce"><td class="memItemLeft" align="right" valign="top">vsg::dvec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_manipulator.html#a4a707443a4529c49a5ad37b76b42a2ce">ndc</a> (const vsg::PointerEvent &amp;) const</td></tr>
 <tr class="separator:a4a707443a4529c49a5ad37b76b42a2ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf3af66ed60850bd5e0159870aad13d6"><td class="memItemLeft" align="right" valign="top"><a id="abf3af66ed60850bd5e0159870aad13d6"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>forMe</b> (vsg::PointerEvent &amp;ev) const</td></tr>
+<tr class="separator:abf3af66ed60850bd5e0159870aad13d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48fa51ba881d0eb88c2cafc9b6c6f555"><td class="memItemLeft" align="right" valign="top"><a id="a48fa51ba881d0eb88c2cafc9b6c6f555"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>forMe</b> (vsg::KeyEvent &amp;ev) const</td></tr>
+<tr class="separator:a48fa51ba881d0eb88c2cafc9b6c6f555"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d6e4bd797a872a39688d85427389c10"><td class="memItemLeft" align="right" valign="top"><a id="a3d6e4bd797a872a39688d85427389c10"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>forMe</b> (vsg::ScrollWheelEvent &amp;ev) const</td></tr>
+<tr class="separator:a3d6e4bd797a872a39688d85427389c10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:ae8071bfdcc140ff5dac58c4fe9ad465a"><td class="memItemLeft" align="right" valign="top"><a id="ae8071bfdcc140ff5dac58c4fe9ad465a"></a>
-vsg::observer_ptr&lt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_node.html">MapNode</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_mapNode</b></td></tr>
-<tr class="separator:ae8071bfdcc140ff5dac58c4fe9ad465a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32728c9231837e3be0965c99a25fd5dc"><td class="memItemLeft" align="right" valign="top"><a id="a32728c9231837e3be0965c99a25fd5dc"></a>
-vsg::ref_ptr&lt; vsg::Camera &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_camera</b></td></tr>
-<tr class="separator:a32728c9231837e3be0965c99a25fd5dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62635437b30c70c4c1003f05e9d750e5"><td class="memItemLeft" align="right" valign="top"><a id="a62635437b30c70c4c1003f05e9d750e5"></a>
+vsg::observer_ptr&lt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_node.html">MapNode</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_mapNode_weakptr</b></td></tr>
+<tr class="separator:a62635437b30c70c4c1003f05e9d750e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab46be11bb681662ff10650779a80bd72"><td class="memItemLeft" align="right" valign="top"><a id="ab46be11bb681662ff10650779a80bd72"></a>
+vsg::observer_ptr&lt; vsg::Window &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_window_weakptr</b></td></tr>
+<tr class="separator:ab46be11bb681662ff10650779a80bd72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ede4ed4d9e2ea07d4da0e1bdbc012b0"><td class="memItemLeft" align="right" valign="top"><a id="a5ede4ed4d9e2ea07d4da0e1bdbc012b0"></a>
+vsg::observer_ptr&lt; vsg::Camera &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_camera_weakptr</b></td></tr>
+<tr class="separator:a5ede4ed4d9e2ea07d4da0e1bdbc012b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adee9f7aba25c80e38bc0976408919f90"><td class="memItemLeft" align="right" valign="top"><a id="adee9f7aba25c80e38bc0976408919f90"></a>
 <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s.html">SRS</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_worldSRS</b></td></tr>
 <tr class="separator:adee9f7aba25c80e38bc0976408919f90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa04cd68483f4b5c3db96718587d5d7ff"><td class="memItemLeft" align="right" valign="top"><a id="aa04cd68483f4b5c3db96718587d5d7ff"></a>
-<a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1optional.html">optional</a>&lt; vsg::MoveEvent &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_currentMove</b></td></tr>
-<tr class="separator:aa04cd68483f4b5c3db96718587d5d7ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e43091c3acd5101b4ba58b4eb1a22d9"><td class="memItemLeft" align="right" valign="top"><a id="a5e43091c3acd5101b4ba58b4eb1a22d9"></a>
-<a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1optional.html">optional</a>&lt; vsg::MoveEvent &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_previousMove</b></td></tr>
-<tr class="separator:a5e43091c3acd5101b4ba58b4eb1a22d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18ac481141a700aa07f8c6c61d3052b3"><td class="memItemLeft" align="right" valign="top"><a id="a18ac481141a700aa07f8c6c61d3052b3"></a>
+<a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1optional.html">optional</a>&lt; vsg::PointerEvent &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_currentMove</b></td></tr>
+<tr class="separator:a18ac481141a700aa07f8c6c61d3052b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58c4f88e814400f2f1fc39c88e7c42b0"><td class="memItemLeft" align="right" valign="top"><a id="a58c4f88e814400f2f1fc39c88e7c42b0"></a>
+<a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1optional.html">optional</a>&lt; vsg::PointerEvent &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_previousMove</b></td></tr>
+<tr class="separator:a58c4f88e814400f2f1fc39c88e7c42b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a830b4e678f7e5b184ded2e74be1cc7c5"><td class="memItemLeft" align="right" valign="top"><a id="a830b4e678f7e5b184ded2e74be1cc7c5"></a>
 <a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1optional.html">optional</a>&lt; vsg::ButtonPressEvent &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_buttonPress</b></td></tr>
 <tr class="separator:a830b4e678f7e5b184ded2e74be1cc7c5"><td class="memSeparator" colspan="2">&#160;</td></tr>

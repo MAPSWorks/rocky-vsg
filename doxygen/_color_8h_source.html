@@ -80,7 +80,7 @@ $(function() {
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html">ROCKY_NAMESPACE</a></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_color.html">   17</a></span>&#160;    <span class="keyword">class </span>ROCKY_EXPORT <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_color.html">Color</a> : <span class="keyword">public</span> fvec4</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_color.html">   17</a></span>&#160;    <span class="keyword">class </span>ROCKY_EXPORT <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_color.html">Color</a> : <span class="keyword">public</span> glm::fvec4</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    {</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">enum</span> Format {</div>
@@ -89,23 +89,23 @@ $(function() {
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        };</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
 <div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_color.html#abe6d20533ecdfa13054a3033201756cc">   26</a></span>&#160;        <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_color.html#abe6d20533ecdfa13054a3033201756cc">Color</a>() : </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            fvec4(1, 1, 1, 1) { }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            glm::fvec4(1, 1, 1, 1) { }</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
 <div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_color.html#ab97acd2d441ec4751b8a7a47d846b0f4">   30</a></span>&#160;        <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_color.html#ab97acd2d441ec4751b8a7a47d846b0f4">Color</a>(<span class="keyword">const</span> <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_color.html">Color</a>&amp; rhs) : </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            fvec4(rhs) { }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            glm::fvec4(rhs) { }</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_color.html#a073746c8167f06c215cd62e07a8c2310">   34</a></span>&#160;        <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_color.html#a073746c8167f06c215cd62e07a8c2310">Color</a>(<span class="keyword">const</span> fvec4&amp; rgba) : fvec4(rgba) { }</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_color.html#a7b8f27e30f912cb27abc6e444db5b50d">   34</a></span>&#160;        <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_color.html#a7b8f27e30f912cb27abc6e444db5b50d">Color</a>(<span class="keyword">const</span> glm::fvec4&amp; rgba) : glm::fvec4(rgba) { }</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_color.html#aab425b6c62694043fff6653366180fff">   37</a></span>&#160;        <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_color.html#aab425b6c62694043fff6653366180fff">Color</a>(<span class="keyword">const</span> fvec3&amp; rgb) :</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            fvec4(rgb[0], rgb[1], rgb[2], 1.0f) { }</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_color.html#a0e9881ab6b6ae6a7829d588e2c99984e">   37</a></span>&#160;        <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_color.html#a0e9881ab6b6ae6a7829d588e2c99984e">Color</a>(<span class="keyword">const</span> glm::fvec3&amp; rgb) :</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            glm::fvec4(rgb[0], rgb[1], rgb[2], 1.0f) { }</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_color.html">Color</a>(<span class="keyword">const</span> <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_color.html">Color</a>&amp; rhs, <span class="keywordtype">float</span> a);</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
 <div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_color.html#a61193d8e63a0e2c0227179f78761314f">   44</a></span>&#160;        <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_color.html#a61193d8e63a0e2c0227179f78761314f">Color</a>(<span class="keywordtype">float</span> r, <span class="keywordtype">float</span> g, <span class="keywordtype">float</span> b, <span class="keywordtype">float</span> a = 1.0f) :</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            fvec4(r, g, b, a) { }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            glm::fvec4(r, g, b, a) { }</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
 <div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_color.html#a12f68ec78a83d0f16101199d514785b4">   48</a></span>&#160;        <span class="keyword">explicit</span> <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_color.html#a12f68ec78a83d0f16101199d514785b4">Color</a>(<span class="keywordtype">float</span> v) :</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            fvec4(v, v, v, v) { }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            glm::fvec4(v, v, v, v) { }</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_color.html">Color</a>(</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordtype">unsigned</span> value,</div>
@@ -119,11 +119,11 @@ $(function() {
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_color.html">Color</a> brightness(<span class="keywordtype">float</span> factor) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        fvec4 asHSL() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        glm::fvec4 asHSL() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordtype">void</span> fromHSL(<span class="keyword">const</span> fvec4&amp; hsla);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordtype">void</span> fromHSL(<span class="keyword">const</span> glm::fvec4&amp; hsla);</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        u8vec4 asNormalizedRGBA() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        glm::u8vec4 asNormalizedRGBA() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordtype">void</span> set(<span class="keywordtype">float</span> r, <span class="keywordtype">float</span> g, <span class="keywordtype">float</span> b, <span class="keywordtype">float</span> a);</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
@@ -163,10 +163,10 @@ $(function() {
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;} <span class="comment">// namespace osgEarth</span></div>
 <div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_color_html"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_color.html">ROCKY_NAMESPACE::Color</a></div><div class="ttdef"><b>Definition:</b> Color.h:18</div></div>
-<div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_color_html_a073746c8167f06c215cd62e07a8c2310"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_color.html#a073746c8167f06c215cd62e07a8c2310">ROCKY_NAMESPACE::Color::Color</a></div><div class="ttdeci">Color(const fvec4 &amp;rgba)</div><div class="ttdef"><b>Definition:</b> Color.h:34</div></div>
+<div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_color_html_a0e9881ab6b6ae6a7829d588e2c99984e"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_color.html#a0e9881ab6b6ae6a7829d588e2c99984e">ROCKY_NAMESPACE::Color::Color</a></div><div class="ttdeci">Color(const glm::fvec3 &amp;rgb)</div><div class="ttdef"><b>Definition:</b> Color.h:37</div></div>
 <div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_color_html_a12f68ec78a83d0f16101199d514785b4"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_color.html#a12f68ec78a83d0f16101199d514785b4">ROCKY_NAMESPACE::Color::Color</a></div><div class="ttdeci">Color(float v)</div><div class="ttdef"><b>Definition:</b> Color.h:48</div></div>
 <div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_color_html_a61193d8e63a0e2c0227179f78761314f"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_color.html#a61193d8e63a0e2c0227179f78761314f">ROCKY_NAMESPACE::Color::Color</a></div><div class="ttdeci">Color(float r, float g, float b, float a=1.0f)</div><div class="ttdef"><b>Definition:</b> Color.h:44</div></div>
-<div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_color_html_aab425b6c62694043fff6653366180fff"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_color.html#aab425b6c62694043fff6653366180fff">ROCKY_NAMESPACE::Color::Color</a></div><div class="ttdeci">Color(const fvec3 &amp;rgb)</div><div class="ttdef"><b>Definition:</b> Color.h:37</div></div>
+<div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_color_html_a7b8f27e30f912cb27abc6e444db5b50d"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_color.html#a7b8f27e30f912cb27abc6e444db5b50d">ROCKY_NAMESPACE::Color::Color</a></div><div class="ttdeci">Color(const glm::fvec4 &amp;rgba)</div><div class="ttdef"><b>Definition:</b> Color.h:34</div></div>
 <div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_color_html_ab97acd2d441ec4751b8a7a47d846b0f4"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_color.html#ab97acd2d441ec4751b8a7a47d846b0f4">ROCKY_NAMESPACE::Color::Color</a></div><div class="ttdeci">Color(const Color &amp;rhs)</div><div class="ttdef"><b>Definition:</b> Color.h:30</div></div>
 <div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_color_html_abe6d20533ecdfa13054a3033201756cc"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_color.html#abe6d20533ecdfa13054a3033201756cc">ROCKY_NAMESPACE::Color::Color</a></div><div class="ttdeci">Color()</div><div class="ttdef"><b>Definition:</b> Color.h:26</div></div>
 <div class="ttc" id="anamespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e_html"><div class="ttname"><a href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html">ROCKY_NAMESPACE</a></div><div class="ttdef"><b>Definition:</b> Callbacks.h:13</div></div>

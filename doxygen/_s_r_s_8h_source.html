@@ -152,7 +152,7 @@ $(function() {
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <span class="keywordflow">return</span> !operator==(rhs);</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        }</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        dmat4 localToWorldMatrix(<span class="keyword">const</span> dvec3&amp; origin) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        glm::dmat4 localToWorldMatrix(<span class="keyword">const</span> glm::dvec3&amp; origin) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">double</span> transformUnits(</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            <span class="keywordtype">double</span> input,</div>
@@ -205,14 +205,14 @@ $(function() {
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> DVEC3A, <span class="keyword">typename</span> DVEC3B&gt;</div>
 <div class="line"><a name="l00200"></a><span class="lineno"><a class="line" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s_operation.html#a9b3c19b4fcd727cfeee9675cc3acd1cd">  200</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s_operation.html#a9b3c19b4fcd727cfeee9675cc3acd1cd">transform</a>(<span class="keyword">const</span> DVEC3A&amp; in, DVEC3B&amp; out)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            out = DVEC3B(in.x, in.y, in.z);</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            <span class="keywordflow">return</span> _nop? true : forward(get_handle(), out.x, out.y, out.z);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            out[0] = in[0], out[1] = in[1], out[2] = in[2];</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            <span class="keywordflow">return</span> _nop? true : forward(get_handle(), out[0], out[1], out[2]);</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        }</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> DVEC3A, <span class="keyword">typename</span> DVEC3B&gt;</div>
 <div class="line"><a name="l00208"></a><span class="lineno"><a class="line" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s_operation.html#a235c39741988b32061d1f9fe4e0ce548">  208</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s_operation.html#a235c39741988b32061d1f9fe4e0ce548">operator()</a>(<span class="keyword">const</span> DVEC3A&amp; in, DVEC3B&amp; out)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            out = DVEC3B(in.x, in.y, in.z);</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            <span class="keywordflow">return</span> _nop ? true : forward(get_handle(), out.x, out.y, out.z);</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            out[0] = in[0], out[1] = in[1], out[2] = in[2];</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            <span class="keywordflow">return</span> _nop ? true : forward(get_handle(), out[0], out[1], out[2]);</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        }</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> ITERATOR&gt;</div>
@@ -229,13 +229,13 @@ $(function() {
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> DVEC3&gt;</div>
 <div class="line"><a name="l00229"></a><span class="lineno"><a class="line" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s_operation.html#adfa52651cb1fc386d136915ccd42e0ba">  229</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s_operation.html#adfa52651cb1fc386d136915ccd42e0ba">transformArray</a>(DVEC3* inout, std::size_t count)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            <span class="keywordflow">return</span> _nop ? true : forward(get_handle(),</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                &amp;inout[0].x, &amp;inout[0].y, &amp;inout[0].z, <span class="keyword">sizeof</span>(DVEC3), count);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                &amp;inout[0][0], &amp;inout[0][1], &amp;inout[0][2], <span class="keyword">sizeof</span>(DVEC3), count);</div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        }</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> DVEC3A, <span class="keyword">typename</span> DVEC3B&gt;</div>
 <div class="line"><a name="l00237"></a><span class="lineno"><a class="line" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s_operation.html#a64027d127e396adff760ec74b4429053">  237</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s_operation.html#a64027d127e396adff760ec74b4429053">inverse</a>(<span class="keyword">const</span> DVEC3A&amp; in, DVEC3B&amp; out)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            out = DVEC3B(in.x, in.y, in.z);</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            <span class="keywordflow">return</span> _nop ? true : inverse(get_handle(), out.x, out.y, out.z);</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            out = { in[0], in[1], in[2] };</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            <span class="keywordflow">return</span> _nop ? true : inverse(get_handle(), out[0], out[1], out[2]);</div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        }</div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; </div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> ITERATOR&gt;</div>
@@ -252,7 +252,7 @@ $(function() {
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> DVEC3&gt;</div>
 <div class="line"><a name="l00258"></a><span class="lineno"><a class="line" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s_operation.html#a0b94c13ce1d7c51c9b1645aecc9ca844">  258</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s_operation.html#a0b94c13ce1d7c51c9b1645aecc9ca844">inverseArray</a>(DVEC3* inout, std::size_t count)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            <span class="keywordflow">return</span> _nop ? true : inverse(get_handle(),</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                &amp;inout[0].x, &amp;inout[0].y, &amp;inout[0].z, <span class="keyword">sizeof</span>(DVEC3), count);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                &amp;inout[0][0], &amp;inout[0][1], &amp;inout[0][2], <span class="keyword">sizeof</span>(DVEC3), count);</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        }</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
 <div class="line"><a name="l00264"></a><span class="lineno"><a class="line" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s_operation.html#ae2345777e6a01a1ce3645e2d96ab0584">  264</a></span>&#160;        <span class="keyword">const</span> std::string&amp; <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s_operation.html#ae2345777e6a01a1ce3645e2d96ab0584">lastError</a>()<span class="keyword"> const </span>{</div>

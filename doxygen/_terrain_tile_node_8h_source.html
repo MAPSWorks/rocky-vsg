@@ -102,7 +102,7 @@ $(function() {
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">struct </span>TextureData</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        shared_ptr&lt;Image&gt; image;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        dmat4 matrix{ 1 };</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        glm::dmat4 matrix{ 1 };</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        vsg::ref_ptr&lt;vsg::ImageInfo&gt; texture;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    };</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
@@ -119,10 +119,10 @@ $(function() {
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    {</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keyword">struct </span>Uniforms</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            fmat4 elevation_matrix;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            fmat4 color_matrix;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            fmat4 normal_matrix;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            fmat4 model_matrix;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            glm::fmat4 elevation_matrix;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            glm::fmat4 color_matrix;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            glm::fmat4 normal_matrix;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            glm::fmat4 model_matrix;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        };</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        vsg::ref_ptr&lt;vsg::DescriptorImage&gt; color;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        vsg::ref_ptr&lt;vsg::DescriptorImage&gt; colorParent;</div>
@@ -135,7 +135,7 @@ $(function() {
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">class </span>TerrainTileRenderModel</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    {</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        rocky::fmat4 modelMatrix;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        glm::fmat4 modelMatrix;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        TextureData color;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        TextureData elevation;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        TextureData normal;</div>
@@ -143,7 +143,7 @@ $(function() {
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        TerrainTileDescriptors descriptors;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordtype">void</span> applyScaleBias(<span class="keyword">const</span> dmat4&amp; sb)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordtype">void</span> applyScaleBias(<span class="keyword">const</span> glm::dmat4&amp; sb)</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        {</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordflow">if</span> (color.image)</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                color.matrix *= sb;</div>
@@ -162,7 +162,7 @@ $(function() {
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_tile_key.html">TileKey</a> key;</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordtype">bool</span> doNotExpire;</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <a class="code" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#af01f4eb53e72c4be729979cd946c295d">Revision</a> revision;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        fvec2 morphConstants;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        glm::fvec2 morphConstants;</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordtype">float</span> childrenVisibilityRange;</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordtype">unsigned</span> numLODs;</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        TerrainTileRenderModel renderModel;</div>
@@ -183,7 +183,7 @@ $(function() {
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <span class="keyword">const</span> <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_tile_key.html">TileKey</a>&amp; key,</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_terrain_tile_node.html">TerrainTileNode</a>* parent,</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            vsg::ref_ptr&lt;vsg::Node&gt; geometry,</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            <span class="keyword">const</span> fvec2&amp; morphConstants,</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            <span class="keyword">const</span> glm::fvec2&amp; morphConstants,</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            <span class="keywordtype">float</span> childrenVisibilityRange,</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            <span class="keyword">const</span> <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s.html">SRS</a>&amp; worldSRS,</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            <span class="keyword">const</span> TerrainTileDescriptors&amp; initialDescriptors,</div>
@@ -192,13 +192,13 @@ $(function() {
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keywordtype">void</span> setElevation(</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            shared_ptr&lt;Image&gt; image,</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            <span class="keyword">const</span> dmat4&amp; matrix);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            <span class="keyword">const</span> glm::dmat4&amp; matrix);</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
 <div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_terrain_tile_node.html#a8c256e0b5b6122ce57463e26beb85165">  137</a></span>&#160;        shared_ptr&lt;Image&gt; <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_terrain_tile_node.html#a8c256e0b5b6122ce57463e26beb85165">getElevationRaster</a>()<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            <span class="keywordflow">return</span> surface-&gt;getElevationRaster();</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        }</div>
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
-<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_terrain_tile_node.html#a3152cf51a5b55ddddabbf413b5053004">  142</a></span>&#160;        <span class="keyword">const</span> dmat4&amp; <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_terrain_tile_node.html#a3152cf51a5b55ddddabbf413b5053004">getElevationMatrix</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_terrain_tile_node.html#a4ae365249b50005c6a086c1d2ffafd30">  142</a></span>&#160;        <span class="keyword">const</span> glm::dmat4&amp; <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_terrain_tile_node.html#a4ae365249b50005c6a086c1d2ffafd30">getElevationMatrix</a>()<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            <span class="keywordflow">return</span> surface-&gt;getElevationMatrix();</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        }</div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
@@ -240,11 +240,11 @@ $(function() {
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span>TerrainTilePager;</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    };</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;}</div>
-<div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime_html"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html">ROCKY_NAMESPACE::Runtime</a></div><div class="ttdef"><b>Definition:</b> Runtime.h:32</div></div>
+<div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime_html"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html">ROCKY_NAMESPACE::Runtime</a></div><div class="ttdef"><b>Definition:</b> Runtime.h:33</div></div>
 <div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s_html"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s.html">ROCKY_NAMESPACE::SRS</a></div><div class="ttdef"><b>Definition:</b> SRS.h:21</div></div>
 <div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_terrain_tile_host_html"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_terrain_tile_host.html">ROCKY_NAMESPACE::TerrainTileHost</a></div><div class="ttdef"><b>Definition:</b> TerrainTileHost.h:20</div></div>
 <div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_terrain_tile_node_html"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_terrain_tile_node.html">ROCKY_NAMESPACE::TerrainTileNode</a></div><div class="ttdef"><b>Definition:</b> TerrainTileNode.h:96</div></div>
-<div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_terrain_tile_node_html_a3152cf51a5b55ddddabbf413b5053004"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_terrain_tile_node.html#a3152cf51a5b55ddddabbf413b5053004">ROCKY_NAMESPACE::TerrainTileNode::getElevationMatrix</a></div><div class="ttdeci">const dmat4 &amp; getElevationMatrix() const</div><div class="ttdoc">This node's elevation matrix.</div><div class="ttdef"><b>Definition:</b> TerrainTileNode.h:142</div></div>
+<div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_terrain_tile_node_html_a4ae365249b50005c6a086c1d2ffafd30"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_terrain_tile_node.html#a4ae365249b50005c6a086c1d2ffafd30">ROCKY_NAMESPACE::TerrainTileNode::getElevationMatrix</a></div><div class="ttdeci">const glm::dmat4 &amp; getElevationMatrix() const</div><div class="ttdoc">This node's elevation matrix.</div><div class="ttdef"><b>Definition:</b> TerrainTileNode.h:142</div></div>
 <div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_terrain_tile_node_html_a6a8b733021fc8cf1eb99cf27db3152bb"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_terrain_tile_node.html#a6a8b733021fc8cf1eb99cf27db3152bb">ROCKY_NAMESPACE::TerrainTileNode::update</a></div><div class="ttdeci">void update(const vsg::FrameStamp *, const IOOptions &amp;)</div><div class="ttdoc">Update this node (placeholder)</div><div class="ttdef"><b>Definition:</b> TerrainTileNode.h:151</div></div>
 <div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_terrain_tile_node_html_a8c256e0b5b6122ce57463e26beb85165"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_terrain_tile_node.html#a8c256e0b5b6122ce57463e26beb85165">ROCKY_NAMESPACE::TerrainTileNode::getElevationRaster</a></div><div class="ttdeci">shared_ptr&lt; Image &gt; getElevationRaster() const</div><div class="ttdoc">This node's elevation raster image.</div><div class="ttdef"><b>Definition:</b> TerrainTileNode.h:137</div></div>
 <div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_tile_key_html"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_tile_key.html">ROCKY_NAMESPACE::TileKey</a></div><div class="ttdef"><b>Definition:</b> TileKey.h:22</div></div>

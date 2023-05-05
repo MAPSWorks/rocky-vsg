@@ -78,7 +78,7 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="_geo_transform_8h_source.html">GeoTransform.h</a>&gt;</code></p>
 
-<p>Inherits vsg::Inherit&lt; vsg::CullGroup, GeoTransform &gt;.</p>
+<p>Inherits vsg::Inherit&lt; vsg::Group, GeoTransform &gt;.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -86,9 +86,6 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_transform.html#a9ca10e38f59ce0978f3c9361287aad36">GeoTransform</a> ()</td></tr>
 <tr class="memdesc:a9ca10e38f59ce0978f3c9361287aad36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct an invalid geotransform. <br /></td></tr>
 <tr class="separator:a9ca10e38f59ce0978f3c9361287aad36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1776323a7abbe145a45cca03912b99f5"><td class="memItemLeft" align="right" valign="top"><a id="a1776323a7abbe145a45cca03912b99f5"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>GeoTransform</b> (const <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_transform.html">GeoTransform</a> &amp;rhs)=delete</td></tr>
-<tr class="separator:a1776323a7abbe145a45cca03912b99f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36b08e96ca6420350008c1a8b74a2bba"><td class="memItemLeft" align="right" valign="top"><a id="a36b08e96ca6420350008c1a8b74a2bba"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_transform.html#a36b08e96ca6420350008c1a8b74a2bba">setPosition</a> (const <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_point.html">GeoPoint</a> &amp;p)</td></tr>
 <tr class="memdesc:a36b08e96ca6420350008c1a8b74a2bba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Geospatial position. <br /></td></tr>
@@ -97,6 +94,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 const <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_point.html">GeoPoint</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_transform.html#a4de683968f8604a0f9dbd87f5230687f">position</a> () const</td></tr>
 <tr class="memdesc:a4de683968f8604a0f9dbd87f5230687f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Geospatial position. <br /></td></tr>
 <tr class="separator:a4de683968f8604a0f9dbd87f5230687f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1776323a7abbe145a45cca03912b99f5"><td class="memItemLeft" align="right" valign="top"><a id="a1776323a7abbe145a45cca03912b99f5"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>GeoTransform</b> (const <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_transform.html">GeoTransform</a> &amp;rhs)=delete</td></tr>
+<tr class="separator:a1776323a7abbe145a45cca03912b99f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7852dd3d602f08ce02539ea2a35a583"><td class="memItemLeft" align="right" valign="top"><a id="ad7852dd3d602f08ce02539ea2a35a583"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>accept</b> (vsg::RecordTraversal &amp;) const override</td></tr>
 <tr class="separator:ad7852dd3d602f08ce02539ea2a35a583"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -111,7 +111,7 @@ util::ViewLocal&lt; Data &gt;&#160;</td><td class="memItemRight" valign="bottom"
 <tr class="separator:ade279645350393875db32de3b1b15600"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Transform node that accepts geospatial coordinates. </p>
+<div class="textblock"><p>Transform node that accepts geospatial coordinates and creates a local ENU (X=east, Y=north, Z=up) coordinate frame for its children that is tangent to the earth at the transform's geo position. </p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/rocky_vsg/<a class="el" href="_geo_transform_8h_source.html">GeoTransform.h</a></li>
 <li>src/rocky_vsg/GeoTransform.cpp</li>

@@ -84,41 +84,41 @@ $(function() {
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html">ROCKY_NAMESPACE</a></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">inline</span> fvec3 to_glm(<span class="keyword">const</span> vsg::vec3&amp; a) {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordflow">return</span> fvec3(a.x, a.y, a.z);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">inline</span> glm::fvec3 to_glm(<span class="keyword">const</span> vsg::vec3&amp; a) {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordflow">return</span> glm::fvec3(a.x, a.y, a.z);</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    }</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">inline</span> dvec3 to_glm(<span class="keyword">const</span> vsg::dvec3&amp; a) {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordflow">return</span> dvec3(a.x, a.y, a.z);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">inline</span> glm::dvec3 to_glm(<span class="keyword">const</span> vsg::dvec3&amp; a) {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordflow">return</span> glm::dvec3(a.x, a.y, a.z);</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    }</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">inline</span> fmat4 to_glm(<span class="keyword">const</span> vsg::mat4&amp; a) {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordflow">return</span> fmat4(</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">inline</span> glm::fmat4 to_glm(<span class="keyword">const</span> vsg::mat4&amp; a) {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordflow">return</span> glm::fmat4(</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            a[0][0], a[0][1], a[0][2], a[0][3],</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            a[1][0], a[1][1], a[1][2], a[1][3],</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            a[2][0], a[2][1], a[2][2], a[2][3],</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            a[3][0], a[3][1], a[3][2], a[3][3]);</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">inline</span> dmat4 to_glm(<span class="keyword">const</span> vsg::dmat4&amp; a) {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordflow">return</span> dmat4(</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">inline</span> glm::dmat4 to_glm(<span class="keyword">const</span> vsg::dmat4&amp; a) {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordflow">return</span> glm::dmat4(</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            a[0][0], a[0][1], a[0][2], a[0][3],</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            a[1][0], a[1][1], a[1][2], a[1][3],</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            a[2][0], a[2][1], a[2][2], a[2][3],</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            a[3][0], a[3][1], a[3][2], a[3][3]);</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">inline</span> vsg::vec3 to_vsg(<span class="keyword">const</span> fvec3&amp; a) {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">inline</span> vsg::vec3 to_vsg(<span class="keyword">const</span> glm::fvec3&amp; a) {</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">return</span> vsg::vec3(a.x, a.y, a.z);</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">inline</span> vsg::dvec3 to_vsg(<span class="keyword">const</span> dvec3&amp; a) {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">inline</span> vsg::dvec3 to_vsg(<span class="keyword">const</span> glm::dvec3&amp; a) {</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">return</span> vsg::dvec3(a.x, a.y, a.z);</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">inline</span> vsg::mat4 to_vsg(<span class="keyword">const</span> fmat4&amp; a) {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">inline</span> vsg::mat4 to_vsg(<span class="keyword">const</span> glm::fmat4&amp; a) {</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">return</span> vsg::mat4(</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            a[0][0], a[0][1], a[0][2], a[0][3],</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            a[1][0], a[1][1], a[1][2], a[1][3],</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            a[2][0], a[2][1], a[2][2], a[2][3],</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            a[3][0], a[3][1], a[3][2], a[3][3]);</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">inline</span> vsg::dmat4 to_vsg(<span class="keyword">const</span> dmat4&amp; a) {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">inline</span> vsg::dmat4 to_vsg(<span class="keyword">const</span> glm::dmat4&amp; a) {</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">return</span> vsg::dmat4(</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            a[0][0], a[0][1], a[0][2], a[0][3],</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            a[1][0], a[1][1], a[1][2], a[1][3],</div>

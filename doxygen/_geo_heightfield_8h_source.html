@@ -125,7 +125,7 @@ $(function() {
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="keywordflow">return</span> _hf;</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        }</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keyword">inline</span> dvec2 resolution() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keyword">inline</span> glm::dvec2 resolution() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordtype">float</span> heightAtLocation(</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y,</div>
@@ -136,7 +136,7 @@ $(function() {
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        {</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="keyword">inline</span> <span class="keywordtype">bool</span> operator() (<span class="keyword">const</span> <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_heightfield.html">GeoHeightfield</a>&amp; lhs, <span class="keyword">const</span> <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_heightfield.html">GeoHeightfield</a>&amp; rhs)<span class="keyword"> const</span></div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="keyword">            </span>{</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                <span class="keywordflow">return</span> lhs.<a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_heightfield.html#a22726cd945922b90ebf4dac6c03cb334">resolution</a>().x &lt; rhs.<a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_heightfield.html#a22726cd945922b90ebf4dac6c03cb334">resolution</a>().x;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                <span class="keywordflow">return</span> lhs.<a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_heightfield.html#a3d2507c459de3f2596543c50e764aeda">resolution</a>().x &lt; rhs.<a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_heightfield.html#a3d2507c459de3f2596543c50e764aeda">resolution</a>().x;</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            }</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        };</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
@@ -144,24 +144,20 @@ $(function() {
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        GeoExtent _extent;</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        shared_ptr&lt;Heightfield&gt; _hf;</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordtype">float</span> _minHeight, _maxHeight;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        dvec2 _resolution;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        glm::dvec2 _resolution;</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordtype">void</span> init();</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    };</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="comment">//inline shared_ptr&lt;Heightfield&gt; GeoHeightfield::getHeightfield() const {</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="comment">//    return _hf;</span></div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="comment">//}</span></div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
-<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_heightfield.html#a22726cd945922b90ebf4dac6c03cb334">  131</a></span>&#160;    <span class="keyword">inline</span> dvec2 <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_heightfield.html#a22726cd945922b90ebf4dac6c03cb334">GeoHeightfield::resolution</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keywordflow">return</span> _resolution;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    }</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;}</div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_heightfield.html#a3d2507c459de3f2596543c50e764aeda">  127</a></span>&#160;    <span class="keyword">inline</span> glm::dvec2 <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_heightfield.html#a3d2507c459de3f2596543c50e764aeda">GeoHeightfield::resolution</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keywordflow">return</span> _resolution;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    }</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;}</div>
 <div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_extent_html"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_extent.html">ROCKY_NAMESPACE::GeoExtent</a></div><div class="ttdef"><b>Definition:</b> GeoExtent.h:19</div></div>
 <div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_extent_html_a2d62b62dddb64faf02e36869328dfcc2"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_extent.html#a2d62b62dddb64faf02e36869328dfcc2">ROCKY_NAMESPACE::GeoExtent::srs</a></div><div class="ttdeci">const SRS &amp; srs() const</div><div class="ttdef"><b>Definition:</b> GeoExtent.h:52</div></div>
 <div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_heightfield_html"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_heightfield.html">ROCKY_NAMESPACE::GeoHeightfield</a></div><div class="ttdef"><b>Definition:</b> GeoHeightfield.h:19</div></div>
-<div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_heightfield_html_a22726cd945922b90ebf4dac6c03cb334"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_heightfield.html#a22726cd945922b90ebf4dac6c03cb334">ROCKY_NAMESPACE::GeoHeightfield::resolution</a></div><div class="ttdeci">dvec2 resolution() const</div><div class="ttdoc">Gets the X interval of this GeoHeightField.</div><div class="ttdef"><b>Definition:</b> GeoHeightfield.h:131</div></div>
+<div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_heightfield_html_a3d2507c459de3f2596543c50e764aeda"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_heightfield.html#a3d2507c459de3f2596543c50e764aeda">ROCKY_NAMESPACE::GeoHeightfield::resolution</a></div><div class="ttdeci">glm::dvec2 resolution() const</div><div class="ttdoc">Gets the X interval of this GeoHeightField.</div><div class="ttdef"><b>Definition:</b> GeoHeightfield.h:127</div></div>
 <div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_heightfield_html_a79d54bc4a6e3aba823c5e73ef59f00c8"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_heightfield.html#a79d54bc4a6e3aba823c5e73ef59f00c8">ROCKY_NAMESPACE::GeoHeightfield::minHeight</a></div><div class="ttdeci">float minHeight() const</div><div class="ttdoc">The minimum height in the heightfield.</div><div class="ttdef"><b>Definition:</b> GeoHeightfield.h:90</div></div>
 <div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_heightfield_html_ad5b981ae3fb57500fbd99d4d3433852c"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_heightfield.html#ad5b981ae3fb57500fbd99d4d3433852c">ROCKY_NAMESPACE::GeoHeightfield::srs</a></div><div class="ttdeci">const SRS &amp; srs() const</div><div class="ttdoc">SRS of this heightfield.</div><div class="ttdef"><b>Definition:</b> GeoHeightfield.h:87</div></div>
 <div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_heightfield_html_ae360244bd9dc91ec5ae5d42b7914be26"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_heightfield.html#ae360244bd9dc91ec5ae5d42b7914be26">ROCKY_NAMESPACE::GeoHeightfield::heightfield</a></div><div class="ttdeci">shared_ptr&lt; Heightfield &gt; heightfield() const</div><div class="ttdoc">Gets a pointer to the underlying OSG heightfield.</div><div class="ttdef"><b>Definition:</b> GeoHeightfield.h:96</div></div>
