@@ -83,6 +83,14 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:aca60b96b56c1ef3e0f502c0bd3d861ba"><td class="memItemLeft" align="right" valign="top"><a id="aca60b96b56c1ef3e0f502c0bd3d861ba"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_attachment.html#aca60b96b56c1ef3e0f502c0bd3d861ba">setVisible</a> (bool value)</td></tr>
+<tr class="memdesc:aca60b96b56c1ef3e0f502c0bd3d861ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether this attachment should render. <br /></td></tr>
+<tr class="separator:aca60b96b56c1ef3e0f502c0bd3d861ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cecaa3d6a01267de60af062c3b1caf6"><td class="memItemLeft" align="right" valign="top"><a id="a8cecaa3d6a01267de60af062c3b1caf6"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_attachment.html#a8cecaa3d6a01267de60af062c3b1caf6">visible</a> () const</td></tr>
+<tr class="memdesc:a8cecaa3d6a01267de60af062c3b1caf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether this attachment should render. <br /></td></tr>
+<tr class="separator:a8cecaa3d6a01267de60af062c3b1caf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0173c246910cafe2e5e388f75413b784"><td class="memItemLeft" align="right" valign="top"><a id="a0173c246910cafe2e5e388f75413b784"></a>
 virtual <a class="el" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a47a3157b68495813746976f5649f0577">JSON</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_attachment.html#a0173c246910cafe2e5e388f75413b784">to_json</a> () const =0</td></tr>
 <tr class="memdesc:a0173c246910cafe2e5e388f75413b784"><td class="mdescLeft">&#160;</td><td class="mdescRight">seialize to JSON <br /></td></tr>
@@ -102,10 +110,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_attachment.html#a32cb6fa47c8b95db0637b434f321d2be">horizonCulling</a> = false</td></tr>
 <tr class="memdesc:a32cb6fa47c8b95db0637b434f321d2be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the attachment should cull to the visible horizon. <br /></td></tr>
 <tr class="separator:a32cb6fa47c8b95db0637b434f321d2be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b01579df2b97ddd0aac6eb1cc67432c"><td class="memItemLeft" align="right" valign="top"><a id="a8b01579df2b97ddd0aac6eb1cc67432c"></a>
-vsg::ref_ptr&lt; vsg::Node &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_attachment.html#a8b01579df2b97ddd0aac6eb1cc67432c">node</a></td></tr>
-<tr class="memdesc:a8b01579df2b97ddd0aac6eb1cc67432c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Root node of the attachment; created by <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_attachment.html#a3769f7e85c6c9b196b43bf95dbde468b" title="Creates the root node of this attachment.">createNode()</a> <br /></td></tr>
-<tr class="separator:a8b01579df2b97ddd0aac6eb1cc67432c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16fccfec09e9c1f3bf69b356130b32f2"><td class="memItemLeft" align="right" valign="top"><a id="a16fccfec09e9c1f3bf69b356130b32f2"></a>
+vsg::ref_ptr&lt; vsg::Switch &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_attachment.html#a16fccfec09e9c1f3bf69b356130b32f2">node</a></td></tr>
+<tr class="memdesc:a16fccfec09e9c1f3bf69b356130b32f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Root node of the attachment; created by <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_attachment.html#a3769f7e85c6c9b196b43bf95dbde468b" title="Creates the root node of this attachment.">createNode()</a> <br /></td></tr>
+<tr class="separator:a16fccfec09e9c1f3bf69b356130b32f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -116,8 +124,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Renderable component that attaches to a <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_object.html">MapObject</a>, possibly inheriting its <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_transform.html">GeoTransform</a> and other shared characteristics. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/rocky_vsg/<a class="el" href="_map_object_8h_source.html">MapObject.h</a></li>
+<li>src/rocky_vsg/MapObject.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
