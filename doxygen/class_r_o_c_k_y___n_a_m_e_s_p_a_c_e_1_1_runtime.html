@@ -99,6 +99,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a6f5c20d095c36517f760b7c1f7a8c3db"><td class="memItemLeft" align="right" valign="top"><a id="a6f5c20d095c36517f760b7c1f7a8c3db"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>runDuringUpdate</b> (std::function&lt; void()&gt; function)</td></tr>
 <tr class="separator:a6f5c20d095c36517f760b7c1f7a8c3db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32bee88f39c683ccdbb1a73310048e24"><td class="memItemLeft" align="right" valign="top"><a id="a32bee88f39c683ccdbb1a73310048e24"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#a32bee88f39c683ccdbb1a73310048e24">compile</a> (vsg::ref_ptr&lt; vsg::Object &gt; object)</td></tr>
+<tr class="memdesc:a32bee88f39c683ccdbb1a73310048e24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compiles an object and. <br /></td></tr>
+<tr class="separator:a32bee88f39c683ccdbb1a73310048e24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb8259186ee5f1b5ef3659b4db710378"><td class="memItemLeft" align="right" valign="top">util::Future&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#abb8259186ee5f1b5ef3659b4db710378">compileAndAddChild</a> (vsg::ref_ptr&lt; vsg::Group &gt; parent, <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#a4a044dcb4398ee00604404edcf9e3da1">NodeFactory</a> factory, const util::job &amp;config={ })</td></tr>
 <tr class="separator:abb8259186ee5f1b5ef3659b4db710378"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa16de15e7e83c6f44ce8261df1bae0e6"><td class="memItemLeft" align="right" valign="top"><a id="aa16de15e7e83c6f44ce8261df1bae0e6"></a>
@@ -107,22 +111,19 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:aa16de15e7e83c6f44ce8261df1bae0e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a269f5b61c4e532503e1c446fa495c739"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#a269f5b61c4e532503e1c446fa495c739">dirtyShaders</a> ()</td></tr>
 <tr class="separator:a269f5b61c4e532503e1c446fa495c739"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a619950a2894655e30b48cfc58b33d4d0"><td class="memItemLeft" align="right" valign="top"><a id="a619950a2894655e30b48cfc58b33d4d0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#a619950a2894655e30b48cfc58b33d4d0">dirty</a> (vsg::Object *object)</td></tr>
-<tr class="memdesc:a619950a2894655e30b48cfc58b33d4d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile and object. <br /></td></tr>
-<tr class="separator:a619950a2894655e30b48cfc58b33d4d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3fc0c6334a6668eb87082e933152621"><td class="memItemLeft" align="right" valign="top"><a id="aa3fc0c6334a6668eb87082e933152621"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#aa3fc0c6334a6668eb87082e933152621">update</a> ()</td></tr>
+<tr class="memdesc:aa3fc0c6334a6668eb87082e933152621"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update any pending compile results. <br /></td></tr>
+<tr class="separator:aa3fc0c6334a6668eb87082e933152621"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a7e42f8222e1f2ab05929fd754eb70513"><td class="memItemLeft" align="right" valign="top"><a id="a7e42f8222e1f2ab05929fd754eb70513"></a>
-std::function&lt; vsg::ref_ptr&lt; vsg::CompileManager &gt;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#a7e42f8222e1f2ab05929fd754eb70513">compiler</a></td></tr>
-<tr class="memdesc:a7e42f8222e1f2ab05929fd754eb70513"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compiler for new vsg objects. <br /></td></tr>
-<tr class="separator:a7e42f8222e1f2ab05929fd754eb70513"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab836cecc902a5b2181dfd6f54034b00a"><td class="memItemLeft" align="right" valign="top">std::function&lt; vsg::ref_ptr&lt; vsg::UpdateOperations &gt;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#ab836cecc902a5b2181dfd6f54034b00a">updates</a></td></tr>
-<tr class="separator:ab836cecc902a5b2181dfd6f54034b00a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aacf4f5f7b8a84f748f98be59230ac41b"><td class="memItemLeft" align="right" valign="top"><a id="aacf4f5f7b8a84f748f98be59230ac41b"></a>
-vsg::ref_ptr&lt; vsg::SharedObjects &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#aacf4f5f7b8a84f748f98be59230ac41b">sharedObjects</a></td></tr>
-<tr class="memdesc:aacf4f5f7b8a84f748f98be59230ac41b"><td class="mdescLeft">&#160;</td><td class="mdescRight">VSG object sharing. <br /></td></tr>
+<tr class="memitem:aa525689a8b3ed1f7940b8a239fb88446"><td class="memItemLeft" align="right" valign="top"><a id="aa525689a8b3ed1f7940b8a239fb88446"></a>
+vsg::ref_ptr&lt; vsg::Viewer &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#aa525689a8b3ed1f7940b8a239fb88446">viewer</a></td></tr>
+<tr class="memdesc:aa525689a8b3ed1f7940b8a239fb88446"><td class="mdescLeft">&#160;</td><td class="mdescRight">Viewer instance. <br /></td></tr>
+<tr class="separator:aa525689a8b3ed1f7940b8a239fb88446"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacf4f5f7b8a84f748f98be59230ac41b"><td class="memItemLeft" align="right" valign="top">vsg::ref_ptr&lt; vsg::SharedObjects &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#aacf4f5f7b8a84f748f98be59230ac41b">sharedObjects</a></td></tr>
+<tr class="memdesc:aacf4f5f7b8a84f748f98be59230ac41b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compiler for new vsg objects.  <a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#aacf4f5f7b8a84f748f98be59230ac41b">More...</a><br /></td></tr>
 <tr class="separator:aacf4f5f7b8a84f748f98be59230ac41b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac26d1c0c94947cf207bb39239b822156"><td class="memItemLeft" align="right" valign="top"><a id="ac26d1c0c94947cf207bb39239b822156"></a>
 vsg::ref_ptr&lt; vsg::Options &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#ac26d1c0c94947cf207bb39239b822156">readerWriterOptions</a></td></tr>
@@ -201,7 +202,7 @@ util::Future&lt; vsg::ref_ptr&lt; vsg::Font &gt; &gt;&#160;</td><td class="memIt
   </tr>
 </table>
 </div><div class="memdoc">
-<p>TODO: Signal that something has changed that requires shader regen. When we implement this, it will probably fire off a callback that signals listeners to recreate their graphics pipelines so they can incorporate the new shader settings. OR, we can just maintain a revision number and the update() pass can check it as needed. </p>
+<p>TODO: Signal that something has changed that requires shader regen. When we implement this, it will probably fire off a callback that signals listeners to recreate their graphics pipelines so they can incorporate the new shader settings. OR, we can just maintain a revision number and the <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#aa3fc0c6334a6668eb87082e933152621" title="Update any pending compile results.">update()</a> pass can check it as needed. </p>
 
 </div>
 </div>
@@ -236,18 +237,20 @@ util::Future&lt; vsg::ref_ptr&lt; vsg::Font &gt; &gt;&#160;</td><td class="memIt
 
 </div>
 </div>
-<a id="ab836cecc902a5b2181dfd6f54034b00a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab836cecc902a5b2181dfd6f54034b00a">&#9670;&nbsp;</a></span>updates</h2>
+<a id="aacf4f5f7b8a84f748f98be59230ac41b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacf4f5f7b8a84f748f98be59230ac41b">&#9670;&nbsp;</a></span>sharedObjects</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::function&lt;vsg::ref_ptr&lt;vsg::UpdateOperations&gt;)&gt; ROCKY_NAMESPACE::Runtime::updates</td>
+          <td class="memname">vsg::ref_ptr&lt;vsg::SharedObjects&gt; ROCKY_NAMESPACE::Runtime::sharedObjects</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Queue for VSG synchronous update operations. Operations in this queue can safely edit the scene graph. </p>
+
+<p>Compiler for new vsg objects. </p>
+<p>Queue for VSG synchronous update operations. Operations in this queue can safely edit the scene graph. VSG object sharing </p>
 
 </div>
 </div>

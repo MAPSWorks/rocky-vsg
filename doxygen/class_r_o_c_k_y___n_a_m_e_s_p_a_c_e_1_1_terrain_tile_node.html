@@ -98,8 +98,8 @@ shared_ptr&lt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_image
 const glm::dmat4 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_terrain_tile_node.html#a4ae365249b50005c6a086c1d2ffafd30">getElevationMatrix</a> () const</td></tr>
 <tr class="memdesc:a4ae365249b50005c6a086c1d2ffafd30"><td class="mdescLeft">&#160;</td><td class="mdescRight">This node's elevation matrix. <br /></td></tr>
 <tr class="separator:a4ae365249b50005c6a086c1d2ffafd30"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66e7d25aeb03051c6f5b1792a2020f05"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_terrain_tile_node.html#a66e7d25aeb03051c6f5b1792a2020f05">unloadChildren</a> ()</td></tr>
-<tr class="separator:a66e7d25aeb03051c6f5b1792a2020f05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a860eab371c9d56c0e7a0a7a54a1b672b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_terrain_tile_node.html#a860eab371c9d56c0e7a0a7a54a1b672b">unloadSubtiles</a> ()</td></tr>
+<tr class="separator:a860eab371c9d56c0e7a0a7a54a1b672b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a8b733021fc8cf1eb99cf27db3152bb"><td class="memItemLeft" align="right" valign="top"><a id="a6a8b733021fc8cf1eb99cf27db3152bb"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_terrain_tile_node.html#a6a8b733021fc8cf1eb99cf27db3152bb">update</a> (const vsg::FrameStamp *, const IOOptions &amp;)</td></tr>
 <tr class="memdesc:a6a8b733021fc8cf1eb99cf27db3152bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update this node (placeholder) <br /></td></tr>
@@ -138,15 +138,9 @@ vsg::ref_ptr&lt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_sur
 <tr class="memitem:a9264e02d626cd92d3a73c4da0e0e315e"><td class="memItemLeft" align="right" valign="top"><a id="a9264e02d626cd92d3a73c4da0e0e315e"></a>
 vsg::ref_ptr&lt; vsg::StateGroup &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>stategroup</b></td></tr>
 <tr class="separator:a9264e02d626cd92d3a73c4da0e0e315e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09e1677a5fa622171123b9c64eec97e2"><td class="memItemLeft" align="right" valign="top"><a id="a09e1677a5fa622171123b9c64eec97e2"></a>
-util::Future&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>childrenLoader</b></td></tr>
-<tr class="separator:a09e1677a5fa622171123b9c64eec97e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01938f34103c81a1297dd4c5d8a9e2e7"><td class="memItemLeft" align="right" valign="top"><a id="a01938f34103c81a1297dd4c5d8a9e2e7"></a>
-util::Future&lt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_terrain_tile_model.html">TerrainTileModel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>elevationLoader</b></td></tr>
-<tr class="separator:a01938f34103c81a1297dd4c5d8a9e2e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a92d1428e4ba767073c93d1e1405454"><td class="memItemLeft" align="right" valign="top"><a id="a4a92d1428e4ba767073c93d1e1405454"></a>
-util::Future&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>elevationMerger</b></td></tr>
-<tr class="separator:a4a92d1428e4ba767073c93d1e1405454"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50beae238a7264029d424ca67ae11e2c"><td class="memItemLeft" align="right" valign="top"><a id="a50beae238a7264029d424ca67ae11e2c"></a>
+util::Future&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>subtilesLoader</b></td></tr>
+<tr class="separator:a50beae238a7264029d424ca67ae11e2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97a7628b312d2fdc9bdc987e442ad932"><td class="memItemLeft" align="right" valign="top"><a id="a97a7628b312d2fdc9bdc987e442ad932"></a>
 util::Future&lt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_terrain_tile_model.html">TerrainTileModel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>dataLoader</b></td></tr>
 <tr class="separator:a97a7628b312d2fdc9bdc987e442ad932"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -171,9 +165,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>inheritFrom</b> (vsg:
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a1a92be288ec020343b48ca2d4ed9ad46"><td class="memItemLeft" align="right" valign="top"><a id="a1a92be288ec020343b48ca2d4ed9ad46"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>_needsChildren</b></td></tr>
-<tr class="separator:a1a92be288ec020343b48ca2d4ed9ad46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43613f5ec5956c814522900dc84e72a3"><td class="memItemLeft" align="right" valign="top"><a id="a43613f5ec5956c814522900dc84e72a3"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>_needsSubtiles</b></td></tr>
+<tr class="separator:a43613f5ec5956c814522900dc84e72a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50331b905b6e998f9f2caba7c072506e"><td class="memItemLeft" align="right" valign="top"><a id="a50331b905b6e998f9f2caba7c072506e"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>_needsUpdate</b></td></tr>
 <tr class="separator:a50331b905b6e998f9f2caba7c072506e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -213,14 +207,14 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>_needsUpdate</b></td>
 
 </div>
 </div>
-<a id="a66e7d25aeb03051c6f5b1792a2020f05"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a66e7d25aeb03051c6f5b1792a2020f05">&#9670;&nbsp;</a></span>unloadChildren()</h2>
+<a id="a860eab371c9d56c0e7a0a7a54a1b672b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a860eab371c9d56c0e7a0a7a54a1b672b">&#9670;&nbsp;</a></span>unloadSubtiles()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void TerrainTileNode::unloadChildren </td>
+          <td class="memname">void TerrainTileNode::unloadSubtiles </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
