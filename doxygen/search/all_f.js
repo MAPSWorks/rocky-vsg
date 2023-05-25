@@ -30,9 +30,8 @@ var searchData=
   ['optional_3c_20unsigned_20_3e_353',['optional&lt; unsigned &gt;',['../struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1optional.html',1,'ROCKY_NAMESPACE']]],
   ['optional_3c_20usage_20_3e_354',['optional&lt; Usage &gt;',['../struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1optional.html',1,'ROCKY_NAMESPACE']]],
   ['optional_3c_20vsg_3a_3abuttonpressevent_20_3e_355',['optional&lt; vsg::ButtonPressEvent &gt;',['../struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1optional.html',1,'ROCKY_NAMESPACE']]],
-  ['optional_3c_20vsg_3a_3abuttonreleaseevent_20_3e_356',['optional&lt; vsg::ButtonReleaseEvent &gt;',['../struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1optional.html',1,'ROCKY_NAMESPACE']]],
-  ['optional_3c_20vsg_3a_3akeypressevent_20_3e_357',['optional&lt; vsg::KeyPressEvent &gt;',['../struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1optional.html',1,'ROCKY_NAMESPACE']]],
-  ['optional_3c_20vsg_3a_3apointerevent_20_3e_358',['optional&lt; vsg::PointerEvent &gt;',['../struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1optional.html',1,'ROCKY_NAMESPACE']]],
-  ['options_359',['Options',['../struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_m_b_tiles_1_1_options.html',1,'ROCKY_NAMESPACE::MBTiles']]],
-  ['overridesrs_360',['overrideSRS',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_profile.html#a63b4e41b245908edbadd30c6d6942282',1,'ROCKY_NAMESPACE::Profile']]]
+  ['optional_3c_20vsg_3a_3akeypressevent_20_3e_356',['optional&lt; vsg::KeyPressEvent &gt;',['../struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1optional.html',1,'ROCKY_NAMESPACE']]],
+  ['optional_3c_20vsg_3a_3amoveevent_20_3e_357',['optional&lt; vsg::MoveEvent &gt;',['../struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1optional.html',1,'ROCKY_NAMESPACE']]],
+  ['options_358',['Options',['../struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_m_b_tiles_1_1_options.html',1,'ROCKY_NAMESPACE::MBTiles']]],
+  ['overridesrs_359',['overrideSRS',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_profile.html#a63b4e41b245908edbadd30c6d6942282',1,'ROCKY_NAMESPACE::Profile']]]
 ];

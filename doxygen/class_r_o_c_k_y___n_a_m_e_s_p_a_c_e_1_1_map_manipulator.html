@@ -285,9 +285,9 @@ vsg::dquat&#160;</td><td class="memItemRight" valign="bottom"><b>getQuaternion</
 <tr class="memitem:aa6d8b1bd9e89c94caaef0baefb0e66ca"><td class="memItemLeft" align="right" valign="top"><a id="aa6d8b1bd9e89c94caaef0baefb0e66ca"></a>
 vsg::dmat4&#160;</td><td class="memItemRight" valign="bottom"><b>getWorldLookAtMatrix</b> (const vsg::dvec3 &amp;center) const</td></tr>
 <tr class="separator:aa6d8b1bd9e89c94caaef0baefb0e66ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e9fe83ba483422d2134a433eeaea884"><td class="memItemLeft" align="right" valign="top"><a id="a6e9fe83ba483422d2134a433eeaea884"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isMouseClick</b> () const</td></tr>
-<tr class="separator:a6e9fe83ba483422d2134a433eeaea884"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41953cd0aa67f42e729c81d315a0c9da"><td class="memItemLeft" align="right" valign="top"><a id="a41953cd0aa67f42e729c81d315a0c9da"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isMouseClick</b> (vsg::ButtonReleaseEvent &amp;) const</td></tr>
+<tr class="separator:a41953cd0aa67f42e729c81d315a0c9da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b107098ffbfc4d187fbc8ff66cd4275"><td class="memItemLeft" align="right" valign="top"><a id="a9b107098ffbfc4d187fbc8ff66cd4275"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>applyOptionsToDeltas</b> (const Action &amp;action, vsg::dvec2 &amp;delta)</td></tr>
 <tr class="separator:a9b107098ffbfc4d187fbc8ff66cd4275"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -303,15 +303,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setCenter</b> (const 
 <tr class="memitem:a0978081dc4409889e9ac4b8d641e4ada"><td class="memItemLeft" align="right" valign="top"><a id="a0978081dc4409889e9ac4b8d641e4ada"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>createLocalCoordFrame</b> (const vsg::dvec3 &amp;worldPos, vsg::dmat4 &amp;out_frame) const</td></tr>
 <tr class="separator:a0978081dc4409889e9ac4b8d641e4ada"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad434dd649aa608c21dc81f67a5b6cfca"><td class="memItemLeft" align="right" valign="top"><a id="ad434dd649aa608c21dc81f67a5b6cfca"></a>
-<a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_manipulator.html#a29ff4aeb5d816515dd0e0d70cdb16ac7">ActionType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getActionTypeForEvent</b> (const vsg::WindowEvent &amp;ea) const</td></tr>
-<tr class="separator:ad434dd649aa608c21dc81f67a5b6cfca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac05d6ca3faa4a10107dedeebfa2b8cb5"><td class="memItemLeft" align="right" valign="top"><a id="ac05d6ca3faa4a10107dedeebfa2b8cb5"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>handleAction</b> (const Action &amp;action, const vsg::dvec2 &amp;delta, vsg::time_point now, double duration)</td></tr>
 <tr class="separator:ac05d6ca3faa4a10107dedeebfa2b8cb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7d443710cf53eed618aed7a67e07978"><td class="memItemLeft" align="right" valign="top"><a id="ad7d443710cf53eed618aed7a67e07978"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>handleMouseAction</b> (const Action &amp;action, vsg::time_point time)</td></tr>
-<tr class="separator:ad7d443710cf53eed618aed7a67e07978"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab936178547bda1a0531c9b17e466bab2"><td class="memItemLeft" align="right" valign="top"><a id="ab936178547bda1a0531c9b17e466bab2"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>handleMouseAction</b> (const Action &amp;action, const vsg::MoveEvent &amp;previous, const vsg::MoveEvent &amp;current)</td></tr>
+<tr class="separator:ab936178547bda1a0531c9b17e466bab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91e37f392b795ce1d7639a8495d0efe2"><td class="memItemLeft" align="right" valign="top"><a id="a91e37f392b795ce1d7639a8495d0efe2"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>handleMouseClickAction</b> (const Action &amp;action, vsg::time_point time)</td></tr>
 <tr class="separator:a91e37f392b795ce1d7639a8495d0efe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -336,24 +333,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>clearEvents</b> ()</t
 <tr class="memitem:a1ea3ab1da86e093733e1cd21769a907c"><td class="memItemLeft" align="right" valign="top"><a id="a1ea3ab1da86e093733e1cd21769a907c"></a>
 vsg::ref_ptr&lt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_node.html">MapNode</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getMapNode</b> () const</td></tr>
 <tr class="separator:a1ea3ab1da86e093733e1cd21769a907c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad163b19ea3ae3bbf0ff99ea63596ca8c"><td class="memItemLeft" align="right" valign="top"><a id="ad163b19ea3ae3bbf0ff99ea63596ca8c"></a>
-std::pair&lt; int32_t, int32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>cameraRenderAreaCoordinates</b> (const vsg::PointerEvent &amp;) const</td></tr>
-<tr class="separator:ad163b19ea3ae3bbf0ff99ea63596ca8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ffc72d18f938bacc4917c91800ba95c"><td class="memItemLeft" align="right" valign="top"><a id="a1ffc72d18f938bacc4917c91800ba95c"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_manipulator.html#a1ffc72d18f938bacc4917c91800ba95c">withinRenderArea</a> (const vsg::PointerEvent &amp;pointerEvent) const</td></tr>
 <tr class="memdesc:a1ffc72d18f938bacc4917c91800ba95c"><td class="mdescLeft">&#160;</td><td class="mdescRight">code adopted from VSG <br /></td></tr>
 <tr class="separator:a1ffc72d18f938bacc4917c91800ba95c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a707443a4529c49a5ad37b76b42a2ce"><td class="memItemLeft" align="right" valign="top">vsg::dvec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_manipulator.html#a4a707443a4529c49a5ad37b76b42a2ce">ndc</a> (const vsg::PointerEvent &amp;) const</td></tr>
 <tr class="separator:a4a707443a4529c49a5ad37b76b42a2ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf3af66ed60850bd5e0159870aad13d6"><td class="memItemLeft" align="right" valign="top"><a id="abf3af66ed60850bd5e0159870aad13d6"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>forMe</b> (vsg::PointerEvent &amp;ev) const</td></tr>
-<tr class="separator:abf3af66ed60850bd5e0159870aad13d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48fa51ba881d0eb88c2cafc9b6c6f555"><td class="memItemLeft" align="right" valign="top"><a id="a48fa51ba881d0eb88c2cafc9b6c6f555"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>forMe</b> (vsg::KeyEvent &amp;ev) const</td></tr>
-<tr class="separator:a48fa51ba881d0eb88c2cafc9b6c6f555"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d6e4bd797a872a39688d85427389c10"><td class="memItemLeft" align="right" valign="top"><a id="a3d6e4bd797a872a39688d85427389c10"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>forMe</b> (vsg::ScrollWheelEvent &amp;ev) const</td></tr>
-<tr class="separator:a3d6e4bd797a872a39688d85427389c10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -369,18 +354,12 @@ vsg::observer_ptr&lt; vsg::Camera &gt;&#160;</td><td class="memItemRight" valign
 <tr class="memitem:adee9f7aba25c80e38bc0976408919f90"><td class="memItemLeft" align="right" valign="top"><a id="adee9f7aba25c80e38bc0976408919f90"></a>
 <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s.html">SRS</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_worldSRS</b></td></tr>
 <tr class="separator:adee9f7aba25c80e38bc0976408919f90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18ac481141a700aa07f8c6c61d3052b3"><td class="memItemLeft" align="right" valign="top"><a id="a18ac481141a700aa07f8c6c61d3052b3"></a>
-<a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1optional.html">optional</a>&lt; vsg::PointerEvent &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_currentMove</b></td></tr>
-<tr class="separator:a18ac481141a700aa07f8c6c61d3052b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58c4f88e814400f2f1fc39c88e7c42b0"><td class="memItemLeft" align="right" valign="top"><a id="a58c4f88e814400f2f1fc39c88e7c42b0"></a>
-<a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1optional.html">optional</a>&lt; vsg::PointerEvent &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_previousMove</b></td></tr>
-<tr class="separator:a58c4f88e814400f2f1fc39c88e7c42b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e43091c3acd5101b4ba58b4eb1a22d9"><td class="memItemLeft" align="right" valign="top"><a id="a5e43091c3acd5101b4ba58b4eb1a22d9"></a>
+<a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1optional.html">optional</a>&lt; vsg::MoveEvent &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_previousMove</b></td></tr>
+<tr class="separator:a5e43091c3acd5101b4ba58b4eb1a22d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a830b4e678f7e5b184ded2e74be1cc7c5"><td class="memItemLeft" align="right" valign="top"><a id="a830b4e678f7e5b184ded2e74be1cc7c5"></a>
 <a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1optional.html">optional</a>&lt; vsg::ButtonPressEvent &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_buttonPress</b></td></tr>
 <tr class="separator:a830b4e678f7e5b184ded2e74be1cc7c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07767ffcfa1b65be70c596986fd187c4"><td class="memItemLeft" align="right" valign="top"><a id="a07767ffcfa1b65be70c596986fd187c4"></a>
-<a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1optional.html">optional</a>&lt; vsg::ButtonReleaseEvent &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_buttonRelease</b></td></tr>
-<tr class="separator:a07767ffcfa1b65be70c596986fd187c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc9b79dd130dd3aaebaf755a71d1a36a"><td class="memItemLeft" align="right" valign="top"><a id="acc9b79dd130dd3aaebaf755a71d1a36a"></a>
 <a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1optional.html">optional</a>&lt; vsg::KeyPressEvent &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_keyPress</b></td></tr>
 <tr class="separator:acc9b79dd130dd3aaebaf755a71d1a36a"><td class="memSeparator" colspan="2">&#160;</td></tr>
