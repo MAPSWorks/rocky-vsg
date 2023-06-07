@@ -182,8 +182,8 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_manipulator.html#a1b1718aff81fceac1c16c636b9e161ac">zoom</a> (double dx, double dy)</td></tr>
 <tr class="memdesc:a1b1718aff81fceac1c16c636b9e161ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zoom the camera using deltas (dy only) <br /></td></tr>
 <tr class="separator:a1b1718aff81fceac1c16c636b9e161ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3e459e025a4918316b0947f45237e3a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_manipulator.html#aa3e459e025a4918316b0947f45237e3a">screenToWorld</a> (float x, float y, vsg::dvec3 &amp;out_coords) const</td></tr>
-<tr class="separator:aa3e459e025a4918316b0947f45237e3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c740460cef41fb3e004e8d593d8877c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_manipulator.html#a9c740460cef41fb3e004e8d593d8877c">viewportToWorld</a> (float x, float y, vsg::dvec3 &amp;out_coords) const</td></tr>
+<tr class="separator:a9c740460cef41fb3e004e8d593d8877c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67768a7ff2e97b51d90d46418853ec1b"><td class="memItemLeft" align="right" valign="top"><a id="a67768a7ff2e97b51d90d46418853ec1b"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_manipulator.html#a67768a7ff2e97b51d90d46418853ec1b">getDistance</a> () const</td></tr>
 <tr class="memdesc:a67768a7ff2e97b51d90d46418853ec1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Distance from the focal point in world coordiantes. <br /></td></tr>
@@ -363,6 +363,9 @@ vsg::observer_ptr&lt; vsg::Camera &gt;&#160;</td><td class="memItemRight" valign
 <tr class="memitem:acc9b79dd130dd3aaebaf755a71d1a36a"><td class="memItemLeft" align="right" valign="top"><a id="acc9b79dd130dd3aaebaf755a71d1a36a"></a>
 <a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1optional.html">optional</a>&lt; vsg::KeyPressEvent &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_keyPress</b></td></tr>
 <tr class="separator:acc9b79dd130dd3aaebaf755a71d1a36a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2038442d8706d5f6fd6e0421d3a09e4c"><td class="memItemLeft" align="right" valign="top"><a id="a2038442d8706d5f6fd6e0421d3a09e4c"></a>
+vsg::time_point&#160;</td><td class="memItemRight" valign="bottom"><b>_previousTime</b></td></tr>
+<tr class="separator:a2038442d8706d5f6fd6e0421d3a09e4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0a7e984c6efc42b4092307ec7468c9b"><td class="memItemLeft" align="right" valign="top"><a id="ad0a7e984c6efc42b4092307ec7468c9b"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>_thrown</b></td></tr>
 <tr class="separator:ad0a7e984c6efc42b4092307ec7468c9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -487,14 +490,14 @@ static Action&#160;</td><td class="memItemRight" valign="bottom"><b>NullAction</
 
 </div>
 </div>
-<a id="aa3e459e025a4918316b0947f45237e3a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3e459e025a4918316b0947f45237e3a">&#9670;&nbsp;</a></span>screenToWorld()</h2>
+<a id="a9c740460cef41fb3e004e8d593d8877c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c740460cef41fb3e004e8d593d8877c">&#9670;&nbsp;</a></span>viewportToWorld()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool MapManipulator::screenToWorld </td>
+          <td class="memname">bool MapManipulator::viewportToWorld </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>x</em>, </td>
@@ -518,7 +521,7 @@ static Action&#160;</td><td class="memItemRight" valign="bottom"><b>NullAction</
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Converts screen coordinates (relative to the view's viewpoint) to world coordinates. Note, this method will use the mask set by setTraversalMask(). </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Converts view coordinates (relative to the view's viewpoint) to world coordinates. Note, this method will use the mask set by setTraversalMask(). </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x,y</td><td>Viewport coordinates </td></tr>
     <tr><td class="paramname">out_coords</td><td>Output world coordinates (only valid if the method returns true) </td></tr>

@@ -122,6 +122,8 @@ const <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_extent.htm
 <tr class="separator:aebaffa225cbcc88e775673c04846b28f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a379055c5a835826ea0f73b5a112620a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_result.html">Result</a>&lt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_image.html">GeoImage</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_image.html#a379055c5a835826ea0f73b5a112620a4">reproject</a> (const <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s.html">SRS</a> &amp;to_srs, const <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_extent.html">GeoExtent</a> *to_extent=nullptr, unsigned width=0, unsigned height=0, bool useBilinearInterpolation=true) const</td></tr>
 <tr class="separator:a379055c5a835826ea0f73b5a112620a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01f06b1bd27d9b3a4498685742dd3fad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_image.html#a01f06b1bd27d9b3a4498685742dd3fad">composite</a> (const std::vector&lt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_image.html">GeoImage</a> &gt; &amp;sources)</td></tr>
+<tr class="separator:a01f06b1bd27d9b3a4498685742dd3fad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2af54b70f16e9920554338aebce8637"><td class="memItemLeft" align="right" valign="top"><a id="ad2af54b70f16e9920554338aebce8637"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_image.html#ad2af54b70f16e9920554338aebce8637">getUnitsPerPixel</a> () const</td></tr>
 <tr class="memdesc:ad2af54b70f16e9920554338aebce8637"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the units per pixel of this geoimage. <br /></td></tr>
@@ -134,14 +136,11 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_image.html#ac3e719f633322ba875992ae42efbe984">read</a> (glm::fvec4 &amp;output, const <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_point.html">GeoPoint</a> &amp;p) const</td></tr>
 <tr class="memdesc:ac3e719f633322ba875992ae42efbe984"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the value of a pixel at a geopoint. <br /></td></tr>
 <tr class="separator:ac3e719f633322ba875992ae42efbe984"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84f40b103f5fc9ec6c1fd2ffe3a7ec1f"><td class="memItemLeft" align="right" valign="top"><a id="a84f40b103f5fc9ec6c1fd2ffe3a7ec1f"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>read</b> (glm::fvec4 &amp;output, double x, double y) const</td></tr>
+<tr class="memitem:a84f40b103f5fc9ec6c1fd2ffe3a7ec1f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_image.html#a84f40b103f5fc9ec6c1fd2ffe3a7ec1f">read</a> (glm::fvec4 &amp;output, double x, double y) const</td></tr>
 <tr class="separator:a84f40b103f5fc9ec6c1fd2ffe3a7ec1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9358501c7f0e5f877a3c187aaad28a38"><td class="memItemLeft" align="right" valign="top"><a id="a9358501c7f0e5f877a3c187aaad28a38"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>read</b> (glm::fvec4 &amp;output, double x, double y, const <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s.html">SRS</a> &amp;<a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_image.html#a1851c0996ff67a99dafdfb9aa3382e97">srs</a>) const</td></tr>
+<tr class="memitem:a9358501c7f0e5f877a3c187aaad28a38"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_image.html#a9358501c7f0e5f877a3c187aaad28a38">read</a> (glm::fvec4 &amp;output, double x, double y, const <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s.html">SRS</a> &amp;<a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_image.html#a1851c0996ff67a99dafdfb9aa3382e97">srs</a>) const</td></tr>
 <tr class="separator:a9358501c7f0e5f877a3c187aaad28a38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93722550ef33570880fd29de68573086"><td class="memItemLeft" align="right" valign="top"><a id="a93722550ef33570880fd29de68573086"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>read</b> (glm::fvec4 &amp;output, double x, double y, const <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s_operation.html">SRSOperation</a> &amp;operation) const</td></tr>
+<tr class="memitem:a93722550ef33570880fd29de68573086"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_image.html#a93722550ef33570880fd29de68573086">read</a> (glm::fvec4 &amp;output, double x, double y, const <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s_operation.html">SRSOperation</a> &amp;operation) const</td></tr>
 <tr class="separator:a93722550ef33570880fd29de68573086"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
@@ -153,6 +152,30 @@ static <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_image.htm
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A georeferenced image; i.e. an <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_image.html">Image</a> coupled with a <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_extent.html">GeoExtent</a>. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a01f06b1bd27d9b3a4498685742dd3fad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01f06b1bd27d9b3a4498685742dd3fad">&#9670;&nbsp;</a></span>composite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GeoImage::composite </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_image.html">GeoImage</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>sources</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Composites one or more source images into this image. This will only write to RGBA pixels that have an alpha of zero, or to RGB pixels that all all black. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sources</td><td>GeoImages to composite, from bottom to top. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="aebaffa225cbcc88e775673c04846b28f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aebaffa225cbcc88e775673c04846b28f">&#9670;&nbsp;</a></span>crop()</h2>
 
@@ -205,6 +228,123 @@ static <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_image.htm
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a84f40b103f5fc9ec6c1fd2ffe3a7ec1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84f40b103f5fc9ec6c1fd2ffe3a7ec1f">&#9670;&nbsp;</a></span>read() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GeoImage::read </td>
+          <td>(</td>
+          <td class="paramtype">glm::fvec4 &amp;&#160;</td>
+          <td class="paramname"><em>output</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Read the value of a pixel at the coordinate (x, y) which is assumed to be in this <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_image.html">GeoImage</a>'s <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s.html">SRS</a>. </p>
+
+</div>
+</div>
+<a id="a9358501c7f0e5f877a3c187aaad28a38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9358501c7f0e5f877a3c187aaad28a38">&#9670;&nbsp;</a></span>read() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GeoImage::read </td>
+          <td>(</td>
+          <td class="paramtype">glm::fvec4 &amp;&#160;</td>
+          <td class="paramname"><em>output</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s.html">SRS</a> &amp;&#160;</td>
+          <td class="paramname"><em>srs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Read the value of a pixel at the coordinate (x, y) which is expressed in the provided <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s.html">SRS</a>. </p>
+
+</div>
+</div>
+<a id="a93722550ef33570880fd29de68573086"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93722550ef33570880fd29de68573086">&#9670;&nbsp;</a></span>read() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GeoImage::read </td>
+          <td>(</td>
+          <td class="paramtype">glm::fvec4 &amp;&#160;</td>
+          <td class="paramname"><em>output</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s_operation.html">SRSOperation</a> &amp;&#160;</td>
+          <td class="paramname"><em>operation</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Read the value of a pixel at the coordinate (x, y) which will be transformed using the provided operation before reading. </p>
 
 </div>
 </div>

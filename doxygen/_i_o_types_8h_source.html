@@ -274,67 +274,66 @@ $(function() {
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        <span class="keywordtype">bool</span> fromCache = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        <a class="code" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a47a3157b68495813746976f5649f0577">JSON</a> metadata;</div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        <a class="code" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_i_o_result.html">IOResult</a>(<span class="keyword">const</span> T&amp; result) :</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            <a class="code" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_result.html">Result</a>&lt;T&gt;(result) { }</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
-<div class="line"><a name="l00245"></a><span class="lineno"><a class="line" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_i_o_result.html#a52834f853ea54c7c4d902473aa963c34">  245</a></span>&#160;        <a class="code" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_i_o_result.html#a52834f853ea54c7c4d902473aa963c34">IOResult</a>(<span class="keyword">const</span> <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_status.html">Status</a>&amp; s) :</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            <a class="code" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_result.html">Result</a>&lt;T&gt;(s),</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            ioCode(s.ok() ? RESULT_OK : RESULT_NOT_FOUND) { }</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160; </div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> RHS&gt;</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        <span class="keyword">static</span> <a class="code" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_i_o_result.html">IOResult&lt;T&gt;</a> propagate(<span class="keyword">const</span> <a class="code" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_i_o_result.html">IOResult&lt;RHS&gt;</a>&amp; rhs) {</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            <a class="code" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_i_o_result.html">IOResult&lt;T&gt;</a> lhs(rhs.status);</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            lhs.ioCode = rhs.ioCode;</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            lhs.metadata = rhs.metadata;</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            lhs.fromCache = rhs.fromCache;</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            lhs.lastModifiedTime = rhs.lastModifiedTime;</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            lhs.duration = rhs.duration;</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;            <span class="keywordflow">return</span> lhs;</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        }</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160; </div>
-<div class="line"><a name="l00261"></a><span class="lineno"><a class="line" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_i_o_result.html#a237759fd501ac4e5207b827b9f0ac059">  261</a></span>&#160;        <span class="keyword">static</span> std::string <a class="code" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_i_o_result.html#a237759fd501ac4e5207b827b9f0ac059">getResultCodeString</a>(<span class="keywordtype">unsigned</span> code)</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        {</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;            <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                code == RESULT_OK              ? <span class="stringliteral">&quot;OK&quot;</span> :</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                code == RESULT_CANCELED        ? <span class="stringliteral">&quot;Read canceled&quot;</span> :</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                code == RESULT_NOT_FOUND       ? <span class="stringliteral">&quot;Target not found&quot;</span> :</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                code == RESULT_SERVER_ERROR    ? <span class="stringliteral">&quot;Server reported error&quot;</span> :</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                code == RESULT_TIMEOUT         ? <span class="stringliteral">&quot;Read timed out&quot;</span> :</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                code == RESULT_NO_READER       ? <span class="stringliteral">&quot;No suitable ReaderWriter found&quot;</span> :</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                code == RESULT_READER_ERROR    ? <span class="stringliteral">&quot;ReaderWriter error&quot;</span> :</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                code == RESULT_NOT_IMPLEMENTED ? <span class="stringliteral">&quot;Not implemented&quot;</span> :</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                code == RESULT_NOT_MODIFIED    ? <span class="stringliteral">&quot;Not modified&quot;</span> :</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                                                 <span class="stringliteral">&quot;Unknown error&quot;</span>;</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        }</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        std::string getResultCodeString()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;            <span class="keywordflow">return</span> getResultCodeString(ioCode);</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        }</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    };</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160; </div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    Services&amp; IOOptions::services() {</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        <span class="keywordflow">return</span> _services;</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    }</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160; </div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <span class="keyword">const</span> Services&amp; IOOptions::services()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        <span class="keywordflow">return</span> _services;</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    }</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160; </div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    std::string IOOptions::property(<span class="keyword">const</span> std::string&amp; name)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <span class="keyword">auto</span> i = _properties.find(name);</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        <span class="keywordflow">return</span> i != _properties.end() ? i-&gt;second : <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    }</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160; </div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    std::string&amp; IOOptions::property(<span class="keyword">const</span> std::string&amp; name) {</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        <span class="keywordflow">return</span> _properties[name];</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    }</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160; </div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="keywordtype">bool</span> IOOptions::canceled()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        <span class="keywordflow">return</span> _cancelable ? _cancelable-&gt;canceled() : <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    }</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;}</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        <a class="code" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_i_o_result.html">IOResult</a>(<span class="keyword">const</span> T&amp; result) :</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            <a class="code" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_result.html">Result</a>&lt;T&gt;(result) { }</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
+<div class="line"><a name="l00244"></a><span class="lineno"><a class="line" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_i_o_result.html#a52834f853ea54c7c4d902473aa963c34">  244</a></span>&#160;        <a class="code" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_i_o_result.html#a52834f853ea54c7c4d902473aa963c34">IOResult</a>(<span class="keyword">const</span> <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_status.html">Status</a>&amp; s) :</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            <a class="code" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_result.html">Result</a>&lt;T&gt;(s),</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            ioCode(s.ok() ? RESULT_OK : RESULT_NOT_FOUND) { }</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160; </div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> RHS&gt;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <span class="keyword">static</span> <a class="code" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_i_o_result.html">IOResult&lt;T&gt;</a> propagate(<span class="keyword">const</span> <a class="code" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_i_o_result.html">IOResult&lt;RHS&gt;</a>&amp; rhs) {</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            <a class="code" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_i_o_result.html">IOResult&lt;T&gt;</a> lhs(rhs.status);</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            lhs.ioCode = rhs.ioCode;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            lhs.metadata = rhs.metadata;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            lhs.fromCache = rhs.fromCache;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            lhs.lastModifiedTime = rhs.lastModifiedTime;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            lhs.duration = rhs.duration;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            <span class="keywordflow">return</span> lhs;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        }</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
+<div class="line"><a name="l00260"></a><span class="lineno"><a class="line" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_i_o_result.html#a237759fd501ac4e5207b827b9f0ac059">  260</a></span>&#160;        <span class="keyword">static</span> std::string <a class="code" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_i_o_result.html#a237759fd501ac4e5207b827b9f0ac059">getResultCodeString</a>(<span class="keywordtype">unsigned</span> code)</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        {</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;            <span class="keywordflow">return</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                code == RESULT_OK              ? <span class="stringliteral">&quot;OK&quot;</span> :</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                code == RESULT_CANCELED        ? <span class="stringliteral">&quot;Read canceled&quot;</span> :</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                code == RESULT_NOT_FOUND       ? <span class="stringliteral">&quot;Target not found&quot;</span> :</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                code == RESULT_SERVER_ERROR    ? <span class="stringliteral">&quot;Server reported error&quot;</span> :</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                code == RESULT_TIMEOUT         ? <span class="stringliteral">&quot;Read timed out&quot;</span> :</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                code == RESULT_NO_READER       ? <span class="stringliteral">&quot;No suitable ReaderWriter found&quot;</span> :</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                code == RESULT_READER_ERROR    ? <span class="stringliteral">&quot;ReaderWriter error&quot;</span> :</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                code == RESULT_NOT_IMPLEMENTED ? <span class="stringliteral">&quot;Not implemented&quot;</span> :</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                code == RESULT_NOT_MODIFIED    ? <span class="stringliteral">&quot;Not modified&quot;</span> :</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                                                 <span class="stringliteral">&quot;Unknown error&quot;</span>;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        }</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160; </div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        std::string getResultCodeString()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;            <span class="keywordflow">return</span> getResultCodeString(ioCode);</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        }</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    };</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160; </div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    Services&amp; IOOptions::services() {</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        <span class="keywordflow">return</span> _services;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    }</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160; </div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="keyword">const</span> Services&amp; IOOptions::services()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        <span class="keywordflow">return</span> _services;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    }</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160; </div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    std::string IOOptions::property(<span class="keyword">const</span> std::string&amp; name)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        <span class="keyword">auto</span> i = _properties.find(name);</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <span class="keywordflow">return</span> i != _properties.end() ? i-&gt;second : <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    }</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160; </div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    std::string&amp; IOOptions::property(<span class="keyword">const</span> std::string&amp; name) {</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        <span class="keywordflow">return</span> _properties[name];</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    }</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160; </div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="keywordtype">bool</span> IOOptions::canceled()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        <span class="keywordflow">return</span> _cancelable ? _cancelable-&gt;canceled() : <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    }</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;}</div>
 <div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_cache_html"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_cache.html">ROCKY_NAMESPACE::Cache</a></div><div class="ttdoc">Base class for a cache.</div><div class="ttdef"><b>Definition:</b> IOTypes.h:31</div></div>
 <div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_cancelable_html"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_cancelable.html">ROCKY_NAMESPACE::Cancelable</a></div><div class="ttdoc">General purpose interface things that can be canceled.</div><div class="ttdef"><b>Definition:</b> IOTypes.h:24</div></div>
 <div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_data_interface_html"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_data_interface.html">ROCKY_NAMESPACE::DataInterface</a></div><div class="ttdoc">Service for accessing other data.</div><div class="ttdef"><b>Definition:</b> IOTypes.h:52</div></div>
@@ -349,8 +348,8 @@ $(function() {
 <div class="ttc" id="anamespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e_html_afec670c9439b50c350c4e3ac852ed29a"><div class="ttname"><a href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#afec670c9439b50c350c4e3ac852ed29a">ROCKY_NAMESPACE::LogService</a></div><div class="ttdeci">std::function&lt; Log &amp;()&gt; LogService</div><div class="ttdoc">Service providing a Log.</div><div class="ttdef"><b>Definition:</b> IOTypes.h:35</div></div>
 <div class="ttc" id="astruct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_i_o_metadata_html"><div class="ttname"><a href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_i_o_metadata.html">ROCKY_NAMESPACE::IOMetadata</a></div><div class="ttdef"><b>Definition:</b> IOTypes.h:208</div></div>
 <div class="ttc" id="astruct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_i_o_result_html"><div class="ttname"><a href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_i_o_result.html">ROCKY_NAMESPACE::IOResult</a></div><div class="ttdef"><b>Definition:</b> IOTypes.h:217</div></div>
-<div class="ttc" id="astruct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_i_o_result_html_a237759fd501ac4e5207b827b9f0ac059"><div class="ttname"><a href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_i_o_result.html#a237759fd501ac4e5207b827b9f0ac059">ROCKY_NAMESPACE::IOResult::getResultCodeString</a></div><div class="ttdeci">static std::string getResultCodeString(unsigned code)</div><div class="ttdef"><b>Definition:</b> IOTypes.h:261</div></div>
-<div class="ttc" id="astruct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_i_o_result_html_a52834f853ea54c7c4d902473aa963c34"><div class="ttname"><a href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_i_o_result.html#a52834f853ea54c7c4d902473aa963c34">ROCKY_NAMESPACE::IOResult::IOResult</a></div><div class="ttdeci">IOResult(const Status &amp;s)</div><div class="ttdef"><b>Definition:</b> IOTypes.h:245</div></div>
+<div class="ttc" id="astruct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_i_o_result_html_a237759fd501ac4e5207b827b9f0ac059"><div class="ttname"><a href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_i_o_result.html#a237759fd501ac4e5207b827b9f0ac059">ROCKY_NAMESPACE::IOResult::getResultCodeString</a></div><div class="ttdeci">static std::string getResultCodeString(unsigned code)</div><div class="ttdef"><b>Definition:</b> IOTypes.h:260</div></div>
+<div class="ttc" id="astruct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_i_o_result_html_a52834f853ea54c7c4d902473aa963c34"><div class="ttname"><a href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_i_o_result.html#a52834f853ea54c7c4d902473aa963c34">ROCKY_NAMESPACE::IOResult::IOResult</a></div><div class="ttdeci">IOResult(const Status &amp;s)</div><div class="ttdef"><b>Definition:</b> IOTypes.h:244</div></div>
 <div class="ttc" id="astruct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_i_o_result_html_abaf737c79db1558c2bd4634cc30f78ac"><div class="ttname"><a href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_i_o_result.html#abaf737c79db1558c2bd4634cc30f78ac">ROCKY_NAMESPACE::IOResult::IOCode</a></div><div class="ttdeci">IOCode</div><div class="ttdef"><b>Definition:</b> IOTypes.h:220</div></div>
 <div class="ttc" id="astruct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_result_html"><div class="ttname"><a href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_result.html">ROCKY_NAMESPACE::Result</a></div><div class="ttdef"><b>Definition:</b> Status.h:55</div></div>
 </div><!-- fragment --></div><!-- contents -->
