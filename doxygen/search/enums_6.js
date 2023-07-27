@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rendertype_1239',['RenderType',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_layer.html#a81f42475cc4fa775fb9b86381a14edd1',1,'ROCKY_NAMESPACE::Layer']]]
+  ['loglevel_1288',['LogLevel',['../namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a46b8e71e9eef89d82e49c74847baaadd',1,'ROCKY_NAMESPACE']]]
 ];

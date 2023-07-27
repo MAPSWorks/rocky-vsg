@@ -92,46 +92,33 @@ Static Public Member Functions</h2></td></tr>
 static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_mesh_state.html#ae7ace55bd0c621bb2dc9fae001ec850f">initialize</a> (<a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html">Runtime</a> &amp;)</td></tr>
 <tr class="memdesc:ae7ace55bd0c621bb2dc9fae001ec850f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create the state commands necessary for rendering meshes. <br /></td></tr>
 <tr class="separator:ae7ace55bd0c621bb2dc9fae001ec850f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76f819dc832af8f23dcd61f5f8330c23"><td class="memItemLeft" align="right" valign="top"><a id="a76f819dc832af8f23dcd61f5f8330c23"></a>
+static Config &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_mesh_state.html#a76f819dc832af8f23dcd61f5f8330c23">get</a> ()</td></tr>
+<tr class="memdesc:a76f819dc832af8f23dcd61f5f8330c23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the default state objects. <br /></td></tr>
+<tr class="separator:a76f819dc832af8f23dcd61f5f8330c23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d99a00723e6452603106717374f732c"><td class="memItemLeft" align="right" valign="top"><a id="a1d99a00723e6452603106717374f732c"></a>
+static Config &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_mesh_state.html#a1d99a00723e6452603106717374f732c">get</a> (const std::string &amp;, vsg::ref_ptr&lt; vsg::ShaderCompileSettings &gt; settings={})</td></tr>
+<tr class="memdesc:a1d99a00723e6452603106717374f732c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access a named state object build with the specified settings. <br /></td></tr>
+<tr class="separator:a1d99a00723e6452603106717374f732c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a5e7148bbcba1fa9b52efcdb52a262800"><td class="memItemLeft" align="right" valign="top"><a id="a5e7148bbcba1fa9b52efcdb52a262800"></a>
 static <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>status</b></td></tr>
 <tr class="separator:a5e7148bbcba1fa9b52efcdb52a262800"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9488e9bf7f65b846a266e1e6f0dcfba5"><td class="memItemLeft" align="right" valign="top">static vsg::ref_ptr&lt; vsg::GraphicsPipelineConfigurator &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_mesh_state.html#a9488e9bf7f65b846a266e1e6f0dcfba5">pipelineConfig</a></td></tr>
-<tr class="separator:a9488e9bf7f65b846a266e1e6f0dcfba5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af22676186e598a18dc268548dc7f98d8"><td class="memItemLeft" align="right" valign="top"><a id="af22676186e598a18dc268548dc7f98d8"></a>
-static vsg::StateGroup::StateCommands&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_mesh_state.html#af22676186e598a18dc268548dc7f98d8">pipelineStateCommands</a></td></tr>
-<tr class="memdesc:af22676186e598a18dc268548dc7f98d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Singleton state commands for establishing the pipeline. <br /></td></tr>
-<tr class="separator:af22676186e598a18dc268548dc7f98d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0897e874f45b166dbbe4e4a32f91171"><td class="memItemLeft" align="right" valign="top"><a id="ae0897e874f45b166dbbe4e4a32f91171"></a>
+static vsg::ref_ptr&lt; vsg::ShaderSet &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>shaderSet</b></td></tr>
+<tr class="separator:ae0897e874f45b166dbbe4e4a32f91171"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb2eecae75f204247fb5affa278144ed"><td class="memItemLeft" align="right" valign="top"><a id="acb2eecae75f204247fb5affa278144ed"></a>
+static <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html">Runtime</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>runtime</b> = nullptr</td></tr>
+<tr class="separator:acb2eecae75f204247fb5affa278144ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a443e4fbe62f397e6ac9607b0fcd77898"><td class="memItemLeft" align="right" valign="top"><a id="a443e4fbe62f397e6ac9607b0fcd77898"></a>
+static std::unordered_map&lt; std::string, Config &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>configs</b></td></tr>
+<tr class="separator:a443e4fbe62f397e6ac9607b0fcd77898"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Creates commands for rendering mesh primitives and holds the singleton pipeline configurator for their drawing state. </p>
-</div><h2 class="groupheader">Member Data Documentation</h2>
-<a id="a9488e9bf7f65b846a266e1e6f0dcfba5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9488e9bf7f65b846a266e1e6f0dcfba5">&#9670;&nbsp;</a></span>pipelineConfig</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">vsg::ref_ptr&lt; vsg::GraphicsPipelineConfigurator &gt; MeshState::pipelineConfig</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Singleton pipeline config object created when the object is first constructed, for access to pipeline and desriptor set layouts. </p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+</div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/rocky_vsg/engine/<a class="el" href="_mesh_state_8h_source.html">MeshState.h</a></li>
 <li>src/rocky_vsg/engine/MeshState.cpp</li>
 </ul>

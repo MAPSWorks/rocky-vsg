@@ -68,9 +68,9 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-types">Protected Types</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_mesh_geometry-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ROCKY_NAMESPACE::MeshGeometry Class Reference</div>  </div>
@@ -81,30 +81,30 @@ $(function() {
 
 <p>Inherits vsg::Inherit&lt; vsg::Geometry, MeshGeometry &gt;.</p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:ae9124a9041f31ad94395c6c212b2fd1f"><td class="memItemLeft" align="right" valign="top"><a id="ae9124a9041f31ad94395c6c212b2fd1f"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>index_type</b> = unsigned short</td></tr>
+<tr class="separator:ae9124a9041f31ad94395c6c212b2fd1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:afb1168bfba5c1392f656f1d229052e1f"><td class="memItemLeft" align="right" valign="top"><a id="afb1168bfba5c1392f656f1d229052e1f"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_mesh_geometry.html#afb1168bfba5c1392f656f1d229052e1f">MeshGeometry</a> ()</td></tr>
 <tr class="memdesc:afb1168bfba5c1392f656f1d229052e1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new line string geometry node. <br /></td></tr>
 <tr class="separator:afb1168bfba5c1392f656f1d229052e1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abcc5948bb82475099ebc1315368819e0"><td class="memItemLeft" align="right" valign="top"><a id="abcc5948bb82475099ebc1315368819e0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_mesh_geometry.html#abcc5948bb82475099ebc1315368819e0">add</a> (const vsg::vec3 &amp;v1, const vsg::vec3 &amp;v2, const vsg::vec3 &amp;v3)</td></tr>
-<tr class="memdesc:abcc5948bb82475099ebc1315368819e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a triangle to the mesh. <br /></td></tr>
-<tr class="separator:abcc5948bb82475099ebc1315368819e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a0952c8a1e009b5eca33daccef8a6e6"><td class="memItemLeft" align="right" valign="top"><a id="a2a0952c8a1e009b5eca33daccef8a6e6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_mesh_geometry.html#a2a0952c8a1e009b5eca33daccef8a6e6">add</a> (const vsg::vec3 &amp;vert1, const vsg::vec3 &amp;vert2, const vsg::vec3 &amp;vert3, const vsg::vec2 &amp;uv1, const vsg::vec2 &amp;uv2, const vsg::vec2 &amp;uv3)</td></tr>
+<tr class="memdesc:a2a0952c8a1e009b5eca33daccef8a6e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a triangle to the mesh. <br /></td></tr>
+<tr class="separator:a2a0952c8a1e009b5eca33daccef8a6e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abcf45d4f3e8fc9752418ddc377f7f91f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_mesh_geometry.html#abcf45d4f3e8fc9752418ddc377f7f91f">compile</a> (vsg::Context &amp;) override</td></tr>
 <tr class="separator:abcf45d4f3e8fc9752418ddc377f7f91f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1bed95367934d0a21355e118c56113f"><td class="memItemLeft" align="right" valign="top"><a id="aa1bed95367934d0a21355e118c56113f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>record</b> (vsg::CommandBuffer &amp;) const override</td></tr>
 <tr class="separator:aa1bed95367934d0a21355e118c56113f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-types"></a>
-Protected Types</h2></td></tr>
-<tr class="memitem:ae9124a9041f31ad94395c6c212b2fd1f"><td class="memItemLeft" align="right" valign="top"><a id="ae9124a9041f31ad94395c6c212b2fd1f"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>index_type</b> = unsigned short</td></tr>
-<tr class="separator:ae9124a9041f31ad94395c6c212b2fd1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
 <tr class="memitem:a8f93a904b1ce9d336af6dbf27a4d59ab"><td class="memItemLeft" align="right" valign="top"><a id="a8f93a904b1ce9d336af6dbf27a4d59ab"></a>
 vsg::vec4&#160;</td><td class="memItemRight" valign="bottom"><b>_defaultColor</b> = { 1,1,1,1 }</td></tr>
 <tr class="separator:a8f93a904b1ce9d336af6dbf27a4d59ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -117,6 +117,9 @@ std::vector&lt; vsg::vec3 &gt;&#160;</td><td class="memItemRight" valign="bottom
 <tr class="memitem:add1e7650e07e8ffc2bd2dd9ba4ebbe92"><td class="memItemLeft" align="right" valign="top"><a id="add1e7650e07e8ffc2bd2dd9ba4ebbe92"></a>
 std::vector&lt; vsg::vec4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_colors</b></td></tr>
 <tr class="separator:add1e7650e07e8ffc2bd2dd9ba4ebbe92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2473e7b337dc8f0842b0d405083a693"><td class="memItemLeft" align="right" valign="top"><a id="ac2473e7b337dc8f0842b0d405083a693"></a>
+std::vector&lt; vsg::vec2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_uvs</b></td></tr>
+<tr class="separator:ac2473e7b337dc8f0842b0d405083a693"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b3a16bdb736b000111f26831ce194fc"><td class="memItemLeft" align="right" valign="top"><a id="a9b3a16bdb736b000111f26831ce194fc"></a>
 vsg::ref_ptr&lt; vsg::DrawIndexed &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_drawCommand</b></td></tr>
 <tr class="separator:a9b3a16bdb736b000111f26831ce194fc"><td class="memSeparator" colspan="2">&#160;</td></tr>

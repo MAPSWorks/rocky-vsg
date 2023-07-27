@@ -106,9 +106,6 @@ $(function() {
 : <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_image_layer.html#a95c6b83b3e2af65c79c7d1519d57f359">ROCKY_NAMESPACE::ImageLayer</a>
 , <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_t_m_s_elevation_layer.html#a52faf48018b18c610f0b916b59afc7de">ROCKY_NAMESPACE::TMSElevationLayer</a>
 </li>
-<li>setCoverageUsesPaletteIndex()
-: <a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_g_d_a_l_1_1_layer_base.html#accb05db0e1ac0cac9f31a417e3b5b773">ROCKY_NAMESPACE::GDAL::LayerBase</a>
-</li>
 <li>setDataExtents()
 : <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_tile_layer.html#ab5376cdaa9e59e25b998dccd2d19ebff">ROCKY_NAMESPACE::TileLayer</a>
 </li>
@@ -136,6 +133,9 @@ $(function() {
 , <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_m_b_tiles_image_layer.html#a0e08a404be09b1877a72ef94fb11f185">ROCKY_NAMESPACE::MBTilesImageLayer</a>
 , <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_t_m_s_elevation_layer.html#ab409a754a1be330f590ac7a71f7bdc45">ROCKY_NAMESPACE::TMSElevationLayer</a>
 , <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_t_m_s_image_layer.html#a5398c8831ecb97beadd43b725ab6f09b">ROCKY_NAMESPACE::TMSImageLayer</a>
+</li>
+<li>setGeometry()
+: <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_line_string.html#a7dfd7f459e3cb0b41322af5674352a54">ROCKY_NAMESPACE::LineString</a>
 </li>
 <li>setImage()
 : <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_bind_icon_style.html#aea455c24773353de32e83a31ff837d28">ROCKY_NAMESPACE::BindIconStyle</a>
@@ -228,12 +228,16 @@ $(function() {
 , <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_icon.html#aa79b5438f4fc9bb65d554d6ee171913b">ROCKY_NAMESPACE::Icon</a>
 , <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_line_string.html#a520170cce7bc4338e1ea3410e2582ddb">ROCKY_NAMESPACE::LineString</a>
 , <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_mesh.html#a99e7d8de4cf5c030d8f5cead5ca9df19">ROCKY_NAMESPACE::Mesh</a>
+, <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_multi_line_string.html#ad949a09e8edb7d333fcc775279a77264">ROCKY_NAMESPACE::MultiLineString</a>
 </li>
 <li>setSubDataSet()
 : <a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_g_d_a_l_1_1_layer_base.html#a159adfc6effb111500efcd636bcf28cc">ROCKY_NAMESPACE::GDAL::LayerBase</a>
 </li>
 <li>setText()
 : <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_label.html#a10cce4d1dd1c225df105f98c1cbf08bd">ROCKY_NAMESPACE::Label</a>
+</li>
+<li>setTexture()
+: <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_mesh.html#a44296c0c0f8b102d5f82df01a559ed2d">ROCKY_NAMESPACE::Mesh</a>
 </li>
 <li>setTileSize()
 : <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_tile_layer.html#a54e895ce8ce1c49403166d046d2b8b6f">ROCKY_NAMESPACE::TileLayer</a>
@@ -252,9 +256,6 @@ $(function() {
 , <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_m_b_tiles_image_layer.html#a75b9095b60d87992efbbf2eb4fb98842">ROCKY_NAMESPACE::MBTilesImageLayer</a>
 , <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_t_m_s_elevation_layer.html#a39ba4d616910087115730d5194705b35">ROCKY_NAMESPACE::TMSElevationLayer</a>
 , <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_t_m_s_image_layer.html#aa7d48b8f1fd9e04eb39642f838d86d4c">ROCKY_NAMESPACE::TMSImageLayer</a>
-</li>
-<li>setUseVRT()
-: <a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_g_d_a_l_1_1_layer_base.html#a75d14ad2aa8e2d9bcdc5b8014773574a">ROCKY_NAMESPACE::GDAL::LayerBase</a>
 </li>
 <li>setUseVSGLogger()
 : <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_instance_v_s_g.html#ad3db7b26d83075262b8e4ae2da046531">ROCKY_NAMESPACE::InstanceVSG</a>
@@ -312,6 +313,7 @@ $(function() {
 : <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_icon.html#a122c4e1557b7657977bd2169eb9171ec">ROCKY_NAMESPACE::Icon</a>
 , <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_line_string.html#aeead8d08495dbff0cf47e89c3274e096">ROCKY_NAMESPACE::LineString</a>
 , <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_mesh.html#a87d8aec0bdaf57da459fc6c5a401a186">ROCKY_NAMESPACE::Mesh</a>
+, <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_multi_line_string.html#a1d8e0fb6f34f2b9247355f48445b79b1">ROCKY_NAMESPACE::MultiLineString</a>
 </li>
 <li>sunPosition()
 : <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_ephemeris.html#a224d4201a359dbc1c2260a94ab7d1bc7">ROCKY_NAMESPACE::Ephemeris</a>
