@@ -42,6 +42,6 @@ var searchData=
   ['transforminplace_568',['transformInPlace',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_point.html#a344f585997b9ef56c0905c0a3aec2d34',1,'ROCKY_NAMESPACE::GeoPoint']]],
   ['transformrange_569',['transformRange',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s_operation.html#a679cf85daa813a82b108307dc8587f3d',1,'ROCKY_NAMESPACE::SRSOperation']]],
   ['transformunits_570',['transformUnits',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s.html#a5e9ad33ec07def3e9816da3d62018ecc',1,'ROCKY_NAMESPACE::SRS::transformUnits(double input, const SRS &amp;fromSRS, const SRS &amp;toSRS, const Angle &amp;latitude)'],['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s.html#afa8331a3237eed9c3f9f8666ad4fd9e5',1,'ROCKY_NAMESPACE::SRS::transformUnits(const Distance &amp;distance, const SRS &amp;outSRS, const Angle &amp;latitude)']]],
-  ['type_571',['type',['../struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geometry.html#ab8bbd93edeaaf6912b3a96afd98aa6a7',1,'ROCKY_NAMESPACE::Geometry']]],
-  ['type_572',['Type',['../struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geometry.html#a236f01ed442e26a87265212a53c09ea1',1,'ROCKY_NAMESPACE::Geometry']]]
+  ['type_571',['Type',['../struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geometry.html#a236f01ed442e26a87265212a53c09ea1',1,'ROCKY_NAMESPACE::Geometry']]],
+  ['type_572',['type',['../struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geometry.html#ab8bbd93edeaaf6912b3a96afd98aa6a7',1,'ROCKY_NAMESPACE::Geometry']]]
 ];

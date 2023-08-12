@@ -68,6 +68,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
@@ -79,6 +80,13 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="_mesh_state_8h_source.html">MeshState.h</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a94a7f57409ee3e0a53f67440e11fad34"><td class="memItemLeft" align="right" valign="top"><a id="a94a7f57409ee3e0a53f67440e11fad34"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>Features</b> { <b>NONE</b> = 0x0
+, <b>TEXTURE</b> = 0x1
+ }</td></tr>
+<tr class="separator:a94a7f57409ee3e0a53f67440e11fad34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aac28f3b5d73425860c669a4b0e61f540"><td class="memItemLeft" align="right" valign="top"><a id="aac28f3b5d73425860c669a4b0e61f540"></a>
@@ -92,14 +100,10 @@ Static Public Member Functions</h2></td></tr>
 static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_mesh_state.html#ae7ace55bd0c621bb2dc9fae001ec850f">initialize</a> (<a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html">Runtime</a> &amp;)</td></tr>
 <tr class="memdesc:ae7ace55bd0c621bb2dc9fae001ec850f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create the state commands necessary for rendering meshes. <br /></td></tr>
 <tr class="separator:ae7ace55bd0c621bb2dc9fae001ec850f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76f819dc832af8f23dcd61f5f8330c23"><td class="memItemLeft" align="right" valign="top"><a id="a76f819dc832af8f23dcd61f5f8330c23"></a>
-static Config &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_mesh_state.html#a76f819dc832af8f23dcd61f5f8330c23">get</a> ()</td></tr>
-<tr class="memdesc:a76f819dc832af8f23dcd61f5f8330c23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the default state objects. <br /></td></tr>
-<tr class="separator:a76f819dc832af8f23dcd61f5f8330c23"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d99a00723e6452603106717374f732c"><td class="memItemLeft" align="right" valign="top"><a id="a1d99a00723e6452603106717374f732c"></a>
-static Config &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_mesh_state.html#a1d99a00723e6452603106717374f732c">get</a> (const std::string &amp;, vsg::ref_ptr&lt; vsg::ShaderCompileSettings &gt; settings={})</td></tr>
-<tr class="memdesc:a1d99a00723e6452603106717374f732c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access a named state object build with the specified settings. <br /></td></tr>
-<tr class="separator:a1d99a00723e6452603106717374f732c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ead8df5164603050d594a6d520b1048"><td class="memItemLeft" align="right" valign="top"><a id="a7ead8df5164603050d594a6d520b1048"></a>
+static Config &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_mesh_state.html#a7ead8df5164603050d594a6d520b1048">get</a> (int features=NONE)</td></tr>
+<tr class="memdesc:a7ead8df5164603050d594a6d520b1048"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access a state config permutation. <br /></td></tr>
+<tr class="separator:a7ead8df5164603050d594a6d520b1048"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -112,9 +116,9 @@ static vsg::ref_ptr&lt; vsg::ShaderSet &gt;&#160;</td><td class="memItemRight" v
 <tr class="memitem:acb2eecae75f204247fb5affa278144ed"><td class="memItemLeft" align="right" valign="top"><a id="acb2eecae75f204247fb5affa278144ed"></a>
 static <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html">Runtime</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>runtime</b> = nullptr</td></tr>
 <tr class="separator:acb2eecae75f204247fb5affa278144ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a443e4fbe62f397e6ac9607b0fcd77898"><td class="memItemLeft" align="right" valign="top"><a id="a443e4fbe62f397e6ac9607b0fcd77898"></a>
-static std::unordered_map&lt; std::string, Config &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>configs</b></td></tr>
-<tr class="separator:a443e4fbe62f397e6ac9607b0fcd77898"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a347c7a8b80b3994199253ef8150e5ccb"><td class="memItemLeft" align="right" valign="top"><a id="a347c7a8b80b3994199253ef8150e5ccb"></a>
+static std::vector&lt; Config &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>configs</b></td></tr>
+<tr class="separator:a347c7a8b80b3994199253ef8150e5ccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Creates commands for rendering mesh primitives and holds the singleton pipeline configurator for their drawing state. </p>
