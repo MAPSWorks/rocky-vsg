@@ -192,6 +192,14 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_manipulator.html#ae3accb6343a074e485e1a9af8f3f6179">setDistance</a> (double distance)</td></tr>
 <tr class="memdesc:ae3accb6343a074e485e1a9af8f3f6179"><td class="mdescLeft">&#160;</td><td class="mdescRight">Distance from the focal point in world coordinates. <br /></td></tr>
 <tr class="separator:ae3accb6343a074e485e1a9af8f3f6179"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3108195d51e43b1a5d443be7ea92e0e"><td class="memItemLeft" align="right" valign="top"><a id="ab3108195d51e43b1a5d443be7ea92e0e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_manipulator.html#ab3108195d51e43b1a5d443be7ea92e0e">setViewpoint</a> (const <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_viewpoint.html">Viewpoint</a> &amp;vp, std::chrono::duration&lt; float &gt; duration_s)</td></tr>
+<tr class="memdesc:ab3108195d51e43b1a5d443be7ea92e0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the viewpoint with optional transition time. <br /></td></tr>
+<tr class="separator:ab3108195d51e43b1a5d443be7ea92e0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2eff8c93c96ee52e64f7b31f84f88e05"><td class="memItemLeft" align="right" valign="top"><a id="a2eff8c93c96ee52e64f7b31f84f88e05"></a>
+<a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_viewpoint.html">Viewpoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_manipulator.html#a2eff8c93c96ee52e64f7b31f84f88e05">getViewpoint</a> () const</td></tr>
+<tr class="memdesc:a2eff8c93c96ee52e64f7b31f84f88e05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fetches the current viewpoint. <br /></td></tr>
+<tr class="separator:a2eff8c93c96ee52e64f7b31f84f88e05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a095abedfc782498afc0e0445be0f7009"><td class="memItemLeft" align="right" valign="top"><a id="a095abedfc782498afc0e0445be0f7009"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (vsg::KeyPressEvent &amp;keyPress) override</td></tr>
 <tr class="separator:a095abedfc782498afc0e0445be0f7009"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -339,6 +347,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:a1ffc72d18f938bacc4917c91800ba95c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a707443a4529c49a5ad37b76b42a2ce"><td class="memItemLeft" align="right" valign="top">vsg::dvec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_manipulator.html#a4a707443a4529c49a5ad37b76b42a2ce">ndc</a> (const vsg::PointerEvent &amp;) const</td></tr>
 <tr class="separator:a4a707443a4529c49a5ad37b76b42a2ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38b8cf0e4a14691f6897bcb94c35a877"><td class="memItemLeft" align="right" valign="top"><a id="a38b8cf0e4a14691f6897bcb94c35a877"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isSettingViewpoint</b> () const</td></tr>
+<tr class="separator:a38b8cf0e4a14691f6897bcb94c35a877"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad32d99d66b5b0fbf7d04363dbcc5f491"><td class="memItemLeft" align="right" valign="top"><a id="ad32d99d66b5b0fbf7d04363dbcc5f491"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>setViewpointFrame</b> (const vsg::time_point &amp;)</td></tr>
+<tr class="separator:ad32d99d66b5b0fbf7d04363dbcc5f491"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
