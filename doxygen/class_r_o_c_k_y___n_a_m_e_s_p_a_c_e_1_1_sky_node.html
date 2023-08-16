@@ -69,6 +69,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_sky_node-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ROCKY_NAMESPACE::SkyNode Class Reference</div>  </div>
@@ -93,6 +95,28 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_sky_node.html#aff9b1dd13a4014a52a74e582fe0c47c5">setShowAtmosphere</a> (bool value)</td></tr>
 <tr class="memdesc:aff9b1dd13a4014a52a74e582fe0c47c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggle the rendering of the atmosphere. <br /></td></tr>
 <tr class="separator:aff9b1dd13a4014a52a74e582fe0c47c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63b04de29fa926919760760db8680992"><td class="memItemLeft" align="right" valign="top"><a id="a63b04de29fa926919760760db8680992"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_sky_node.html#a63b04de29fa926919760760db8680992">setDateTime</a> (const <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_date_time.html">DateTime</a> &amp;value)</td></tr>
+<tr class="memdesc:a63b04de29fa926919760760db8680992"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the date and time. <br /></td></tr>
+<tr class="separator:a63b04de29fa926919760760db8680992"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a2d4086b7012aa760ca988d859cef0e99"><td class="memItemLeft" align="right" valign="top"><a id="a2d4086b7012aa760ca988d859cef0e99"></a>
+vsg::ref_ptr&lt; vsg::AmbientLight &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ambient</b></td></tr>
+<tr class="separator:a2d4086b7012aa760ca988d859cef0e99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae18aea27537a6175481593b0f0977382"><td class="memItemLeft" align="right" valign="top"><a id="ae18aea27537a6175481593b0f0977382"></a>
+vsg::ref_ptr&lt; vsg::PointLight &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>sun</b></td></tr>
+<tr class="separator:ae18aea27537a6175481593b0f0977382"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a45c514ad1271a75038e3a62b3f26b798"><td class="memItemLeft" align="right" valign="top"><a id="a45c514ad1271a75038e3a62b3f26b798"></a>
+vsg::ref_ptr&lt; vsg::Node &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_atmosphere</b></td></tr>
+<tr class="separator:a45c514ad1271a75038e3a62b3f26b798"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dbb05c58b92ff4c5e915d9c8c3a3bfb"><td class="memItemLeft" align="right" valign="top"><a id="a8dbb05c58b92ff4c5e915d9c8c3a3bfb"></a>
+<a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_instance_v_s_g.html">InstanceVSG</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_instance</b></td></tr>
+<tr class="separator:a8dbb05c58b92ff4c5e915d9c8c3a3bfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Node that renders an atmosphere, stars, sun and moon. (Note: this only works with a geocentric world <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s.html">SRS</a>.) </p>
