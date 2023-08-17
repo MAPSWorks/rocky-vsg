@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Rocky: ROCKY_NAMESPACE::SimplePositionedObject Class Reference</title>
+<title>Rocky: ROCKY_NAMESPACE::FeatureSource Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,46 +63,40 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html">ROCKY_NAMESPACE</a></li><li class="navelem"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_simple_positioned_object.html">SimplePositionedObject</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html">ROCKY_NAMESPACE</a></li><li class="navelem"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_feature_source.html">FeatureSource</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_simple_positioned_object-members.html">List of all members</a>  </div>
+<a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_feature_source-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">ROCKY_NAMESPACE::SimplePositionedObject Class Reference</div>  </div>
+<div class="title">ROCKY_NAMESPACE::FeatureSource Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="_viewpoint_8h_source.html">Viewpoint.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_feature_8h_source.html">Feature.h</a>&gt;</code></p>
 
-<p>Inherits <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_positioned_object.html">ROCKY_NAMESPACE::PositionedObject</a>.</p>
+<p>Inherits rocky::Inherit&lt; Object, FeatureSource &gt;.</p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_feature_source_1_1iterator.html">iterator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterator that returns features.  <a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_feature_source_1_1iterator.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aceace19ce985589f7a87a7bcaa79d8ab"><td class="memItemLeft" align="right" valign="top"><a id="aceace19ce985589f7a87a7bcaa79d8ab"></a>
-const <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_point.html">GeoPoint</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_simple_positioned_object.html#aceace19ce985589f7a87a7bcaa79d8ab">position</a> () const override</td></tr>
-<tr class="memdesc:aceace19ce985589f7a87a7bcaa79d8ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Center position of the object. <br /></td></tr>
-<tr class="separator:aceace19ce985589f7a87a7bcaa79d8ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c29164d2d6c9a68ba01ff2d2d3ba7ee"><td class="memItemLeft" align="right" valign="top"><a id="a0c29164d2d6c9a68ba01ff2d2d3ba7ee"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>SimplePositionedObject</b> (const <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_simple_positioned_object.html">SimplePositionedObject</a> &amp;)=default</td></tr>
-<tr class="separator:a0c29164d2d6c9a68ba01ff2d2d3ba7ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2618e99c2ebc9714841f0943318f6db2"><td class="memItemLeft" align="right" valign="top"><a id="a2618e99c2ebc9714841f0943318f6db2"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>SimplePositionedObject</b> (const <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_point.html">GeoPoint</a> &amp;point_)</td></tr>
-<tr class="separator:a2618e99c2ebc9714841f0943318f6db2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:aec3c25b08b8742ae2ae2951404761d31"><td class="memItemLeft" align="right" valign="top"><a id="aec3c25b08b8742ae2ae2951404761d31"></a>
-<a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_point.html">GeoPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><b>point</b></td></tr>
-<tr class="separator:aec3c25b08b8742ae2ae2951404761d31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a295c089fe0fdc473fd82c6ec1a11f404"><td class="memItemLeft" align="right" valign="top"><a id="a295c089fe0fdc473fd82c6ec1a11f404"></a>
+virtual std::shared_ptr&lt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_feature_source_1_1iterator.html">iterator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_feature_source.html#a295c089fe0fdc473fd82c6ec1a11f404">iterate</a> (IOOptions &amp;io)=0</td></tr>
+<tr class="memdesc:a295c089fe0fdc473fd82c6ec1a11f404"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a feature iterator. <br /></td></tr>
+<tr class="separator:a295c089fe0fdc473fd82c6ec1a11f404"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Simplest possible map object - just a position. </p>
+<div class="textblock"><p>Interface/base class for factories for <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_feature.html">Feature</a> objects. </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/rocky/<a class="el" href="_viewpoint_8h_source.html">Viewpoint.h</a></li>
+<li>src/rocky/<a class="el" href="_feature_8h_source.html">Feature.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

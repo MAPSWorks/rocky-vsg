@@ -112,40 +112,42 @@ $(function() {
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keyword">const</span> <a class="code" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_line_style.html">LineStyle</a>&amp; style() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        vsg::ref_ptr&lt;vsg::ubyteArray&gt; _styleData;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    };</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_line_string_geometry.html">   65</a></span>&#160;    <span class="keyword">class </span>ROCKY_VSG_EXPORT <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_line_string_geometry.html">LineStringGeometry</a> : <span class="keyword">public</span> vsg::Inherit&lt;vsg::Geometry, LineStringGeometry&gt;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_line_string_geometry.html">LineStringGeometry</a>();</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordtype">void</span> push_back(<span class="keyword">const</span> vsg::vec3&amp; vert);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordtype">unsigned</span> numVerts() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordtype">void</span> setFirst(<span class="keywordtype">unsigned</span> value);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordtype">void</span> setCount(<span class="keywordtype">unsigned</span> value);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordtype">void</span> compile(vsg::Context&amp;) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        vsg::vec4 _defaultColor = { 1,1,1,1 };</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        std::uint32_t _stippleFactor;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        std::uint16_t _stipplePattern;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordtype">float</span> _width;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        std::vector&lt;vsg::vec3&gt; _current;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        std::vector&lt;vsg::vec3&gt; _previous;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        std::vector&lt;vsg::vec3&gt; _next;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        std::vector&lt;vsg::vec4&gt; _colors;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        vsg::ref_ptr&lt;vsg::DrawIndexed&gt; _drawCommand;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    };</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordtype">void</span> dirty();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    };</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_line_string_geometry.html">   67</a></span>&#160;    <span class="keyword">class </span>ROCKY_VSG_EXPORT <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_line_string_geometry.html">LineStringGeometry</a> : <span class="keyword">public</span> vsg::Inherit&lt;vsg::Geometry, LineStringGeometry&gt;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_line_string_geometry.html">LineStringGeometry</a>();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordtype">void</span> push_back(<span class="keyword">const</span> vsg::vec3&amp; vert);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordtype">unsigned</span> numVerts() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordtype">void</span> setFirst(<span class="keywordtype">unsigned</span> value);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordtype">void</span> setCount(<span class="keywordtype">unsigned</span> value);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordtype">void</span> compile(vsg::Context&amp;) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        vsg::vec4 _defaultColor = { 1,1,1,1 };</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        std::uint32_t _stippleFactor;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        std::uint16_t _stipplePattern;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordtype">float</span> _width;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        std::vector&lt;vsg::vec3&gt; _current;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        std::vector&lt;vsg::vec3&gt; _previous;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        std::vector&lt;vsg::vec3&gt; _next;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        std::vector&lt;vsg::vec4&gt; _colors;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        vsg::ref_ptr&lt;vsg::DrawIndexed&gt; _drawCommand;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    };</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
 <div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_bind_line_style_html"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_bind_line_style.html">ROCKY_NAMESPACE::BindLineStyle</a></div><div class="ttdef"><b>Definition:</b> LineState.h:50</div></div>
 <div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_line_state_html"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_line_state.html">ROCKY_NAMESPACE::LineState</a></div><div class="ttdef"><b>Definition:</b> LineState.h:27</div></div>
 <div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_line_state_html_a2d253c82c7fc44c8fe5154cd55daadfd"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_line_state.html#a2d253c82c7fc44c8fe5154cd55daadfd">ROCKY_NAMESPACE::LineState::pipelineStateCommands</a></div><div class="ttdeci">static vsg::StateGroup::StateCommands pipelineStateCommands</div><div class="ttdoc">Singleton state commands for establishing the pipeline.</div><div class="ttdef"><b>Definition:</b> LineState.h:43</div></div>
 <div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_line_state_html_accb27083c209bd656682e1e09557d321"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_line_state.html#accb27083c209bd656682e1e09557d321">ROCKY_NAMESPACE::LineState::pipelineConfig</a></div><div class="ttdeci">static vsg::ref_ptr&lt; vsg::GraphicsPipelineConfigurator &gt; pipelineConfig</div><div class="ttdef"><b>Definition:</b> LineState.h:40</div></div>
-<div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_line_string_geometry_html"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_line_string_geometry.html">ROCKY_NAMESPACE::LineStringGeometry</a></div><div class="ttdef"><b>Definition:</b> LineState.h:66</div></div>
+<div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_line_string_geometry_html"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_line_string_geometry.html">ROCKY_NAMESPACE::LineStringGeometry</a></div><div class="ttdef"><b>Definition:</b> LineState.h:68</div></div>
 <div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime_html"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html">ROCKY_NAMESPACE::Runtime</a></div><div class="ttdef"><b>Definition:</b> Runtime.h:34</div></div>
 <div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_status_html"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_status.html">ROCKY_NAMESPACE::Status</a></div><div class="ttdef"><b>Definition:</b> Status.h:15</div></div>
 <div class="ttc" id="anamespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e_html"><div class="ttname"><a href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html">ROCKY_NAMESPACE</a></div><div class="ttdef"><b>Definition:</b> Callbacks.h:13</div></div>

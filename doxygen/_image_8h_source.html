@@ -276,13 +276,13 @@ $(function() {
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160; </div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        <span class="keywordtype">float</span> sizeS = (float)(<a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_image.html#afae75706ce9f5d5b28faebe8d54fbf3d">width</a>() - 1);</div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        <span class="keywordtype">float</span> s = u * sizeS;</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        <span class="keywordtype">float</span> s0 = std::max(floor(s), 0.0f);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        <span class="keywordtype">float</span> s0 = std::max(std::floor(s), 0.0f);</div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <span class="keywordtype">float</span> s1 = std::min(s0 + 1.0f, sizeS);</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        <span class="keywordtype">float</span> smix = s0 &lt; s1 ? (s - s0) / (s1 - s0) : 0.0f;</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160; </div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        <span class="keywordtype">float</span> sizeT = (float)(<a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_image.html#a1b9374c1230900b3f2157037b64d20f9">height</a>() - 1);</div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        <span class="keywordtype">float</span> t = v * sizeT;</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <span class="keywordtype">float</span> t0 = std::max(floor(t), 0.0f);</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <span class="keywordtype">float</span> t0 = std::max(std::floor(t), 0.0f);</div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        <span class="keywordtype">float</span> t1 = std::min(t0 + 1.0f, sizeT);</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        <span class="keywordtype">float</span> tmix = t0 &lt; t1 ? (t - t0) / (t1 - t0) : 0.0f;</div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160; </div>
