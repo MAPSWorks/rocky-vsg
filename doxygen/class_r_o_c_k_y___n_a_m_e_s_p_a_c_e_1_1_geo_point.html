@@ -106,13 +106,10 @@ template&lt;class T &gt; </td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_point.html#a532c8cb2ebb1bd05504538b4a286bc0a">~GeoPoint</a> ()</td></tr>
 <tr class="memdesc:a532c8cb2ebb1bd05504538b4a286bc0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br /></td></tr>
 <tr class="separator:a532c8cb2ebb1bd05504538b4a286bc0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c708a3856467917bb7e47298a2b3f72"><td class="memItemLeft" align="right" valign="top"><a id="a8c708a3856467917bb7e47298a2b3f72"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_point.html#a8c708a3856467917bb7e47298a2b3f72">transform</a> (const <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s.html">SRS</a> &amp;outSRS, <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_point.html">GeoPoint</a> &amp;output) const</td></tr>
-<tr class="memdesc:a8c708a3856467917bb7e47298a2b3f72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets copy of this geopoint transformed into another <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s.html">SRS</a>. <br /></td></tr>
+<tr class="memitem:a8c708a3856467917bb7e47298a2b3f72"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_point.html#a8c708a3856467917bb7e47298a2b3f72">transform</a> (const <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s.html">SRS</a> &amp;outSRS, <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_point.html">GeoPoint</a> &amp;output) const</td></tr>
 <tr class="separator:a8c708a3856467917bb7e47298a2b3f72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5c510b7f8cd74698718586f303ea0c5"><td class="memTemplParams" colspan="2"><a id="ac5c510b7f8cd74698718586f303ea0c5"></a>
-template&lt;class VEC3 &gt; </td></tr>
-<tr class="memitem:ac5c510b7f8cd74698718586f303ea0c5"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>transform</b> (const <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s.html">SRS</a> &amp;outSRS, VEC3 &amp;output) const</td></tr>
+<tr class="memitem:ac5c510b7f8cd74698718586f303ea0c5"><td class="memTemplParams" colspan="2">template&lt;class VEC3 &gt; </td></tr>
+<tr class="memitem:ac5c510b7f8cd74698718586f303ea0c5"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_point.html#ac5c510b7f8cd74698718586f303ea0c5">transform</a> (const <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s.html">SRS</a> &amp;outSRS, VEC3 &amp;output) const</td></tr>
 <tr class="separator:ac5c510b7f8cd74698718586f303ea0c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a344f585997b9ef56c0905c0a3aec2d34"><td class="memItemLeft" align="right" valign="top"><a id="a344f585997b9ef56c0905c0a3aec2d34"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_point.html#a344f585997b9ef56c0905c0a3aec2d34">transformInPlace</a> (const <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s.html">SRS</a> &amp;srs)</td></tr>
@@ -189,6 +186,74 @@ static <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_point.htm
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Geodesic distance between the two points </dd></dl>
+
+</div>
+</div>
+<a id="a8c708a3856467917bb7e47298a2b3f72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c708a3856467917bb7e47298a2b3f72">&#9670;&nbsp;</a></span>transform() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GeoPoint::transform </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s.html">SRS</a> &amp;&#160;</td>
+          <td class="paramname"><em>outSRS</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_point.html">GeoPoint</a> &amp;&#160;</td>
+          <td class="paramname"><em>output</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Transforms this geopoint into another <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s.html">SRS</a> and puts the output in the "output" </p><dl class="section return"><dt>Returns</dt><dd>true upon success, false upon failure </dd></dl>
+
+</div>
+</div>
+<a id="ac5c510b7f8cd74698718586f303ea0c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5c510b7f8cd74698718586f303ea0c5">&#9670;&nbsp;</a></span>transform() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class VEC3 &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ROCKY_NAMESPACE::GeoPoint::transform </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s.html">SRS</a> &amp;&#160;</td>
+          <td class="paramname"><em>outSRS</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">VEC3 &amp;&#160;</td>
+          <td class="paramname"><em>output</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Transforms this geopoint into another <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s.html">SRS</a> and puts the output into the provided xyz object </p>
 
 </div>
 </div>
