@@ -84,7 +84,8 @@ $(function() {
 Public Types</h2></td></tr>
 <tr class="memitem:a94a7f57409ee3e0a53f67440e11fad34"><td class="memItemLeft" align="right" valign="top"><a id="a94a7f57409ee3e0a53f67440e11fad34"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>Features</b> { <b>NONE</b> = 0x0
 , <b>WRITE_DEPTH</b> = 0x1
-, <b>APPLY_TEXTURE</b> = 0x2
+, <b>TEXTURE</b> = 0x2
+, <b>DYNAMIC_STYLE</b> = 0x4
  }</td></tr>
 <tr class="separator:a94a7f57409ee3e0a53f67440e11fad34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -101,10 +102,10 @@ Static Public Member Functions</h2></td></tr>
 static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_mesh_state.html#ae7ace55bd0c621bb2dc9fae001ec850f">initialize</a> (<a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html">Runtime</a> &amp;)</td></tr>
 <tr class="memdesc:ae7ace55bd0c621bb2dc9fae001ec850f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create the state commands necessary for rendering meshes. <br /></td></tr>
 <tr class="separator:ae7ace55bd0c621bb2dc9fae001ec850f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fa9e0e1e45e4f6143a1ae2e6dfc307f"><td class="memItemLeft" align="right" valign="top"><a id="a7fa9e0e1e45e4f6143a1ae2e6dfc307f"></a>
-static Config &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_mesh_state.html#a7fa9e0e1e45e4f6143a1ae2e6dfc307f">get</a> (int features=WRITE_DEPTH)</td></tr>
-<tr class="memdesc:a7fa9e0e1e45e4f6143a1ae2e6dfc307f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access a state config permutation. <br /></td></tr>
-<tr class="separator:a7fa9e0e1e45e4f6143a1ae2e6dfc307f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9eab56f0b5d1b14f2a108ed2dd832d1b"><td class="memItemLeft" align="right" valign="top"><a id="a9eab56f0b5d1b14f2a108ed2dd832d1b"></a>
+static Config &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_mesh_state.html#a9eab56f0b5d1b14f2a108ed2dd832d1b">get</a> (int features)</td></tr>
+<tr class="memdesc:a9eab56f0b5d1b14f2a108ed2dd832d1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access a state config permutation. <br /></td></tr>
+<tr class="separator:a9eab56f0b5d1b14f2a108ed2dd832d1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>

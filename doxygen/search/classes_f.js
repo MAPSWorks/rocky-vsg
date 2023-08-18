@@ -13,5 +13,6 @@ var searchData=
   ['tilekey_760',['TileKey',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_tile_key.html',1,'ROCKY_NAMESPACE']]],
   ['tilelayer_761',['TileLayer',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_tile_layer.html',1,'ROCKY_NAMESPACE']]],
   ['tmselevationlayer_762',['TMSElevationLayer',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_t_m_s_elevation_layer.html',1,'ROCKY_NAMESPACE']]],
-  ['tmsimagelayer_763',['TMSImageLayer',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_t_m_s_image_layer.html',1,'ROCKY_NAMESPACE']]]
+  ['tmsimagelayer_763',['TMSImageLayer',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_t_m_s_image_layer.html',1,'ROCKY_NAMESPACE']]],
+  ['triangle_764',['Triangle',['../struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_triangle.html',1,'ROCKY_NAMESPACE']]]
 ];
