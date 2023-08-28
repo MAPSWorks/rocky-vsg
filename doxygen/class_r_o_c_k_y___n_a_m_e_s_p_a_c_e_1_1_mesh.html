@@ -70,7 +70,6 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_mesh-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ROCKY_NAMESPACE::Mesh Class Reference</div>  </div>
@@ -79,7 +78,7 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="_mesh_8h_source.html">Mesh.h</a>&gt;</code></p>
 
-<p>Inherits rocky::Inherit&lt; Attachment, Mesh &gt;.</p>
+<p>Inherits <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_node_component.html">ROCKY_NAMESPACE::ECS::NodeComponent</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -95,13 +94,20 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_mesh.html#a929442df4ed70c386a0dd70859f866ee">add</a> (const <a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_triangle.html">Triangle64</a> &amp;tri)</td></tr>
 <tr class="memdesc:a929442df4ed70c386a0dd70859f866ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a triangle to the mesh. <br /></td></tr>
 <tr class="separator:a929442df4ed70c386a0dd70859f866ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b1cbfffc7f92771247c38baec9958ba"><td class="memItemLeft" align="right" valign="top"><a id="a3b1cbfffc7f92771247c38baec9958ba"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_mesh.html#a3b1cbfffc7f92771247c38baec9958ba">dirty</a> ()</td></tr>
+<tr class="memdesc:a3b1cbfffc7f92771247c38baec9958ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">If using style, call this after changing a style to apply it. <br /></td></tr>
+<tr class="separator:a3b1cbfffc7f92771247c38baec9958ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0446168b7cd8b0f13e8dd7872e841117"><td class="memItemLeft" align="right" valign="top"><a id="a0446168b7cd8b0f13e8dd7872e841117"></a>
 <a class="el" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a47a3157b68495813746976f5649f0577">JSON</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_mesh.html#a0446168b7cd8b0f13e8dd7872e841117">to_json</a> () const override</td></tr>
 <tr class="memdesc:a0446168b7cd8b0f13e8dd7872e841117"><td class="mdescLeft">&#160;</td><td class="mdescRight">serialize as JSON string <br /></td></tr>
 <tr class="separator:a0446168b7cd8b0f13e8dd7872e841117"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b1cbfffc7f92771247c38baec9958ba"><td class="memItemLeft" align="right" valign="top"><a id="a3b1cbfffc7f92771247c38baec9958ba"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>dirty</b> ()</td></tr>
-<tr class="separator:a3b1cbfffc7f92771247c38baec9958ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72e61f13a0be240eb77fb70884d342c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_mesh.html#a72e61f13a0be240eb77fb70884d342c2">initializeNode</a> (const <a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_v_s_g___component_params.html">ECS::VSG_ComponentParams</a> &amp;) override</td></tr>
+<tr class="separator:a72e61f13a0be240eb77fb70884d342c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0ef5202df40e55d16fe3ca9b58e575a"><td class="memItemLeft" align="right" valign="top"><a id="ae0ef5202df40e55d16fe3ca9b58e575a"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_mesh.html#ae0ef5202df40e55d16fe3ca9b58e575a">featureMask</a> () const override</td></tr>
+<tr class="memdesc:ae0ef5202df40e55d16fe3ca9b58e575a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mask of features pertaining to this component instance, if applicable. <br /></td></tr>
+<tr class="separator:ae0ef5202df40e55d16fe3ca9b58e575a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -117,16 +123,58 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 std::optional&lt; <a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_mesh_style.html">MeshStyle</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_mesh.html#a14af01d8f9d7cd340ada4eacc6def69e">style</a></td></tr>
 <tr class="memdesc:a14af01d8f9d7cd340ada4eacc6def69e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional dynamic style data. <br /></td></tr>
 <tr class="separator:a14af01d8f9d7cd340ada4eacc6def69e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:a60882451c0b5481b6eb8b11771947759"><td class="memItemLeft" align="right" valign="top"><a id="a60882451c0b5481b6eb8b11771947759"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>createNode</b> (<a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html">Runtime</a> &amp;runtime) override</td></tr>
-<tr class="separator:a60882451c0b5481b6eb8b11771947759"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_node_component"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_node_component')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_node_component.html">ROCKY_NAMESPACE::ECS::NodeComponent</a></td></tr>
+<tr class="memitem:a97432d6b4e82d4961ee771cc3ad4fd13 inherit pub_attribs_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_node_component"><td class="memItemLeft" align="right" valign="top"><a id="a97432d6b4e82d4961ee771cc3ad4fd13"></a>
+vsg::ref_ptr&lt; vsg::Node &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_node_component.html#a97432d6b4e82d4961ee771cc3ad4fd13">node</a></td></tr>
+<tr class="memdesc:a97432d6b4e82d4961ee771cc3ad4fd13 inherit pub_attribs_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_node_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Node that renders this component. <br /></td></tr>
+<tr class="separator:a97432d6b4e82d4961ee771cc3ad4fd13 inherit pub_attribs_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_node_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeba2af1b2fb5c346d0c079ebabf924ae inherit pub_attribs_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_node_component"><td class="memItemLeft" align="right" valign="top"><a id="aeba2af1b2fb5c346d0c079ebabf924ae"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>visible</b> = true</td></tr>
+<tr class="separator:aeba2af1b2fb5c346d0c079ebabf924ae inherit pub_attribs_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_node_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af002e59795480860c3afe2fc35538322 inherit pub_attribs_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_node_component"><td class="memItemLeft" align="right" valign="top"><a id="af002e59795480860c3afe2fc35538322"></a>
+bool *&#160;</td><td class="memItemRight" valign="bottom"><b>visible_ptr</b> = &amp;visible</td></tr>
+<tr class="separator:af002e59795480860c3afe2fc35538322 inherit pub_attribs_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_node_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_component"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_component')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_component.html">ROCKY_NAMESPACE::ECS::Component</a></td></tr>
+<tr class="memitem:a01d286924554068f85bc45360f35c6f3 inherit pub_attribs_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_component"><td class="memItemLeft" align="right" valign="top"><a id="a01d286924554068f85bc45360f35c6f3"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
+<tr class="separator:a01d286924554068f85bc45360f35c6f3 inherit pub_attribs_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaf25c331b4afa9f666fbe8bd8a02b0e inherit pub_attribs_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_component"><td class="memItemLeft" align="right" valign="top"><a id="adaf25c331b4afa9f666fbe8bd8a02b0e"></a>
+entt::entity&#160;</td><td class="memItemRight" valign="bottom"><b>next_entity</b> = entt::null</td></tr>
+<tr class="separator:adaf25c331b4afa9f666fbe8bd8a02b0e inherit pub_attribs_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_triangle.html" title="A triangle.">Triangle</a> mesh attachment </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+<div class="textblock"><p><a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_triangle.html" title="A triangle.">Triangle</a> mesh component </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a72e61f13a0be240eb77fb70884d342c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72e61f13a0be240eb77fb70884d342c2">&#9670;&nbsp;</a></span>initializeNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mesh::initializeNode </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_v_s_g___component_params.html">ECS::VSG_ComponentParams</a> &amp;&#160;</td>
+          <td class="paramname"><em>layout</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Subclass implements to create the "commands" object. This will only be called if commands is nullptr. </p>
+
+<p>Reimplemented from <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_node_component.html#a2860cc83b5c6efb491d208929da1ecf2">ROCKY_NAMESPACE::ECS::NodeComponent</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/rocky_vsg/<a class="el" href="_mesh_8h_source.html">Mesh.h</a></li>
 <li>src/rocky_vsg/Mesh.cpp</li>
 </ul>

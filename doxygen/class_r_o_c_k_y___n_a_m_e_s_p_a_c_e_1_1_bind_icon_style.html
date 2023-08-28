@@ -76,7 +76,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="_icon_state_8h_source.html">IconState.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_icon_8h_source.html">Icon.h</a>&gt;</code></p>
 
 <p>Inherits vsg::Inherit&lt; vsg::BindDescriptorSet, BindIconStyle &gt;.</p>
 <table class="memberdecls">
@@ -84,37 +84,35 @@ $(function() {
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8940e6884adca4f51872b27be0756220"><td class="memItemLeft" align="right" valign="top"><a id="a8940e6884adca4f51872b27be0756220"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_bind_icon_style.html#a8940e6884adca4f51872b27be0756220">BindIconStyle</a> ()</td></tr>
-<tr class="memdesc:a8940e6884adca4f51872b27be0756220"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a default mesh styling command. <br /></td></tr>
+<tr class="memdesc:a8940e6884adca4f51872b27be0756220"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a default styling command. <br /></td></tr>
 <tr class="separator:a8940e6884adca4f51872b27be0756220"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab08b011284f13b143aa7080060fdf40c"><td class="memItemLeft" align="right" valign="top"><a id="ab08b011284f13b143aa7080060fdf40c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_bind_icon_style.html#ab08b011284f13b143aa7080060fdf40c">setStyle</a> (const <a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_icon_style.html">IconStyle</a> &amp;)</td></tr>
-<tr class="memdesc:ab08b011284f13b143aa7080060fdf40c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Style for any linestrings that are children of this node. <br /></td></tr>
-<tr class="separator:ab08b011284f13b143aa7080060fdf40c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1585b16542e20f699c87a347060c362"><td class="memItemLeft" align="right" valign="top"><a id="ad1585b16542e20f699c87a347060c362"></a>
-const <a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_icon_style.html">IconStyle</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>style</b> () const</td></tr>
-<tr class="separator:ad1585b16542e20f699c87a347060c362"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea455c24773353de32e83a31ff837d28"><td class="memItemLeft" align="right" valign="top"><a id="aea455c24773353de32e83a31ff837d28"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_bind_icon_style.html#aea455c24773353de32e83a31ff837d28">setImage</a> (std::shared_ptr&lt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_image.html">Image</a> &gt; image)</td></tr>
-<tr class="memdesc:aea455c24773353de32e83a31ff837d28"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_image.html">Image</a> to render to the icon. <br /></td></tr>
-<tr class="separator:aea455c24773353de32e83a31ff837d28"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd8df15b2305872ccc6f0d684fb8d03c"><td class="memItemLeft" align="right" valign="top"><a id="afd8df15b2305872ccc6f0d684fb8d03c"></a>
-std::shared_ptr&lt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_image.html">Image</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>image</b> () const</td></tr>
-<tr class="separator:afd8df15b2305872ccc6f0d684fb8d03c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5db3e6ace27127552ecb1dd39578bbe9"><td class="memItemLeft" align="right" valign="top"><a id="a5db3e6ace27127552ecb1dd39578bbe9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_bind_icon_style.html#a5db3e6ace27127552ecb1dd39578bbe9">init</a> (vsg::ref_ptr&lt; vsg::PipelineLayout &gt; layout)</td></tr>
+<tr class="memdesc:a5db3e6ace27127552ecb1dd39578bbe9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize this command with the associated layout. <br /></td></tr>
+<tr class="separator:a5db3e6ace27127552ecb1dd39578bbe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1a126f5aaa94961fe8960b73da97361"><td class="memItemLeft" align="right" valign="top"><a id="ac1a126f5aaa94961fe8960b73da97361"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_bind_icon_style.html#ac1a126f5aaa94961fe8960b73da97361">updateStyle</a> (const <a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_icon_style.html">IconStyle</a> &amp;)</td></tr>
+<tr class="memdesc:ac1a126f5aaa94961fe8960b73da97361"><td class="mdescLeft">&#160;</td><td class="mdescRight">Refresh the data buffer contents on the GPU. <br /></td></tr>
+<tr class="separator:ac1a126f5aaa94961fe8960b73da97361"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a21e0bdfa17c2326ca009c07f9066682e"><td class="memItemLeft" align="right" valign="top"><a id="a21e0bdfa17c2326ca009c07f9066682e"></a>
-vsg::ref_ptr&lt; vsg::ubyteArray &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>styleData</b></td></tr>
-<tr class="separator:a21e0bdfa17c2326ca009c07f9066682e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a740e662dd6baaac30eb3dfcf785da5f5"><td class="memItemLeft" align="right" valign="top"><a id="a740e662dd6baaac30eb3dfcf785da5f5"></a>
-vsg::ref_ptr&lt; vsg::Data &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>imageData</b></td></tr>
-<tr class="separator:a740e662dd6baaac30eb3dfcf785da5f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b2a1100e9cbafe66c2d068fec5409d9"><td class="memItemLeft" align="right" valign="top"><a id="a4b2a1100e9cbafe66c2d068fec5409d9"></a>
+std::shared_ptr&lt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_image.html">Image</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_bind_icon_style.html#a4b2a1100e9cbafe66c2d068fec5409d9">_image</a></td></tr>
+<tr class="memdesc:a4b2a1100e9cbafe66c2d068fec5409d9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_image.html">Image</a> to render to the icon. <br /></td></tr>
+<tr class="separator:a4b2a1100e9cbafe66c2d068fec5409d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9a274bd7fe71a19461902cf07b0ef3f"><td class="memItemLeft" align="right" valign="top"><a id="ab9a274bd7fe71a19461902cf07b0ef3f"></a>
+vsg::ref_ptr&lt; vsg::ubyteArray &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_styleData</b></td></tr>
+<tr class="separator:ab9a274bd7fe71a19461902cf07b0ef3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad36471825ade34aa8874a43d554c17e8"><td class="memItemLeft" align="right" valign="top"><a id="ad36471825ade34aa8874a43d554c17e8"></a>
+vsg::ref_ptr&lt; vsg::Data &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_imageData</b></td></tr>
+<tr class="separator:ad36471825ade34aa8874a43d554c17e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Applies a style. </p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
-<li>src/rocky_vsg/engine/<a class="el" href="_icon_state_8h_source.html">IconState.h</a></li>
-<li>src/rocky_vsg/engine/IconState.cpp</li>
+<li>src/rocky_vsg/<a class="el" href="_icon_8h_source.html">Icon.h</a></li>
+<li>src/rocky_vsg/engine/IconSystem.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

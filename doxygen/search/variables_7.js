@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['geometrypool_1212',['geometryPool',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_terrain_engine.html#ada1d86a424348878dcfaad01e310f30d',1,'ROCKY_NAMESPACE::TerrainEngine']]],
-  ['gputessellation_1213',['gpuTessellation',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_terrain_settings.html#a0056eb3eb32073d9aa21c280fe43da8b',1,'ROCKY_NAMESPACE::TerrainSettings']]]
+  ['heading_1219',['heading',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_viewpoint.html#a454835fd32f08c371c729bb7ebd25cdb',1,'ROCKY_NAMESPACE::Viewpoint']]],
+  ['horizonculling_1220',['horizonCulling',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_transform.html#a712e57ff90715f6b4f1566ad28dd1b5b',1,'ROCKY_NAMESPACE::GeoTransform']]]
 ];
