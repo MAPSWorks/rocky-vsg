@@ -92,16 +92,11 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#a522dc4b36f2a770bbe3e62c451f38841">Runtime</a> ()</td></tr>
 <tr class="memdesc:a522dc4b36f2a770bbe3e62c451f38841"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. <br /></td></tr>
 <tr class="separator:a522dc4b36f2a770bbe3e62c451f38841"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a124af71d41a7d25b8605b4a97b4d28d3"><td class="memItemLeft" align="right" valign="top"><a id="a124af71d41a7d25b8605b4a97b4d28d3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#a124af71d41a7d25b8605b4a97b4d28d3">runDuringUpdate</a> (vsg::ref_ptr&lt; vsg::Operation &gt; function, std::function&lt; float()&gt; get_priority=nullptr)</td></tr>
-<tr class="memdesc:a124af71d41a7d25b8605b4a97b4d28d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queue a function to run during the update pass. <br /></td></tr>
+<tr class="memitem:a124af71d41a7d25b8605b4a97b4d28d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#a124af71d41a7d25b8605b4a97b4d28d3">runDuringUpdate</a> (vsg::ref_ptr&lt; vsg::Operation &gt; function, std::function&lt; float()&gt; get_priority=nullptr)</td></tr>
 <tr class="separator:a124af71d41a7d25b8605b4a97b4d28d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f5c20d095c36517f760b7c1f7a8c3db"><td class="memItemLeft" align="right" valign="top"><a id="a6f5c20d095c36517f760b7c1f7a8c3db"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>runDuringUpdate</b> (std::function&lt; void()&gt; function)</td></tr>
+<tr class="memitem:a6f5c20d095c36517f760b7c1f7a8c3db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#a6f5c20d095c36517f760b7c1f7a8c3db">runDuringUpdate</a> (std::function&lt; void()&gt; function)</td></tr>
 <tr class="separator:a6f5c20d095c36517f760b7c1f7a8c3db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32bee88f39c683ccdbb1a73310048e24"><td class="memItemLeft" align="right" valign="top"><a id="a32bee88f39c683ccdbb1a73310048e24"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#a32bee88f39c683ccdbb1a73310048e24">compile</a> (vsg::ref_ptr&lt; vsg::Object &gt; object)</td></tr>
-<tr class="memdesc:a32bee88f39c683ccdbb1a73310048e24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compiles an object and. <br /></td></tr>
+<tr class="memitem:a32bee88f39c683ccdbb1a73310048e24"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#a32bee88f39c683ccdbb1a73310048e24">compile</a> (vsg::ref_ptr&lt; vsg::Object &gt; object)</td></tr>
 <tr class="separator:a32bee88f39c683ccdbb1a73310048e24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb8259186ee5f1b5ef3659b4db710378"><td class="memItemLeft" align="right" valign="top">util::Future&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#abb8259186ee5f1b5ef3659b4db710378">compileAndAddChild</a> (vsg::ref_ptr&lt; vsg::Group &gt; parent, <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#a4a044dcb4398ee00604404edcf9e3da1">NodeFactory</a> factory, const util::job &amp;config={ })</td></tr>
 <tr class="separator:abb8259186ee5f1b5ef3659b4db710378"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -146,6 +141,25 @@ util::Future&lt; vsg::ref_ptr&lt; vsg::Font &gt; &gt;&#160;</td><td class="memIt
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Interface to runtime operations like the VSG compiler, thread pools, shared settings, and asynchronous scene graph functions. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a32bee88f39c683ccdbb1a73310048e24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32bee88f39c683ccdbb1a73310048e24">&#9670;&nbsp;</a></span>compile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Runtime::compile </td>
+          <td>(</td>
+          <td class="paramtype">vsg::ref_ptr&lt; vsg::Object &gt;&#160;</td>
+          <td class="paramname"><em>object</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Compiles an object now. Be careful to only call this from a safe thead </p>
+
+</div>
+</div>
 <a id="abb8259186ee5f1b5ef3659b4db710378"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abb8259186ee5f1b5ef3659b4db710378">&#9670;&nbsp;</a></span>compileAndAddChild()</h2>
 
@@ -204,6 +218,54 @@ util::Future&lt; vsg::ref_ptr&lt; vsg::Font &gt; &gt;&#160;</td><td class="memIt
 </table>
 </div><div class="memdoc">
 <p>TODO: Signal that something has changed that requires shader regen. When we implement this, it will probably fire off a callback that signals listeners to recreate their graphics pipelines so they can incorporate the new shader settings. OR, we can just maintain a revision number and the <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#aa3fc0c6334a6668eb87082e933152621" title="Update any pending compile results.">update()</a> pass can check it as needed. </p>
+
+</div>
+</div>
+<a id="a6f5c20d095c36517f760b7c1f7a8c3db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f5c20d095c36517f760b7c1f7a8c3db">&#9670;&nbsp;</a></span>runDuringUpdate() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Runtime::runDuringUpdate </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void()&gt;&#160;</td>
+          <td class="paramname"><em>function</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Queue a function to run during the update pass. This is a safe way to do things that require modifying the scene or compiling vulkan objects </p>
+
+</div>
+</div>
+<a id="a124af71d41a7d25b8605b4a97b4d28d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a124af71d41a7d25b8605b4a97b4d28d3">&#9670;&nbsp;</a></span>runDuringUpdate() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Runtime::runDuringUpdate </td>
+          <td>(</td>
+          <td class="paramtype">vsg::ref_ptr&lt; vsg::Operation &gt;&#160;</td>
+          <td class="paramname"><em>function</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::function&lt; float()&gt;&#160;</td>
+          <td class="paramname"><em>get_priority</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Queue a function to run during the update pass This is a safe way to do things that require modifying the scene or compiling vulkan objects </p>
 
 </div>
 </div>

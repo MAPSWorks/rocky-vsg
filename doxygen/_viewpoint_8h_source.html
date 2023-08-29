@@ -102,13 +102,13 @@ $(function() {
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_viewpoint.html">Viewpoint</a>(<span class="keyword">const</span> <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_viewpoint.html">Viewpoint</a>&amp;) = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
 <div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_viewpoint.html#a40f0c2d8415180487cb3d85e12688336">   48</a></span>&#160;        <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_point.html">GeoPoint</a>&amp; <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_viewpoint.html#a40f0c2d8415180487cb3d85e12688336">position</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keywordflow">return</span> (target ? target-&gt;position() : point);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keywordflow">return</span> (target ? target-&gt;objectPosition() : point);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        }</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
 <div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_viewpoint.html#a1096e189115240a336bbf68c984a3161">   53</a></span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_viewpoint.html#a1096e189115240a336bbf68c984a3161">valid</a>()<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordflow">return</span></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                point.<a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_point.html#aff4448c3c00286dd150334e1bb138672">valid</a>() ||</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                (target != <span class="keyword">nullptr</span> &amp;&amp; target-&gt;position().valid());</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                (target != <span class="keyword">nullptr</span> &amp;&amp; target-&gt;objectPosition().valid());</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        }</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    };</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>

@@ -104,8 +104,33 @@ $(function() {
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span>&amp; usePrefix();</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_log.html">Log</a>() = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    };</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keyword">struct </span>RedirectingStreamBuf : <span class="keyword">public</span> std::basic_stringbuf&lt;char, std::char_traits&lt;char&gt;&gt; {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <a class="code" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a46b8e71e9eef89d82e49c74847baaadd">LogLevel</a> _level = LogLevel::INFO;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordtype">int</span> sync() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        };</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keyword">struct </span>RedirectingStream : <span class="keyword">public</span> std::basic_ostream&lt;char, std::char_traits&lt;char&gt;&gt; {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            RedirectingStreamBuf _buf;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            RedirectingStream();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        };</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keyword">struct </span>LogStream {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            LogStream(<a class="code" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a46b8e71e9eef89d82e49c74847baaadd">LogLevel</a> level, <span class="keyword">const</span> std::string&amp; prefix, std::ostream&amp; stream, <span class="keyword">const</span> std::string&amp; colorcode);        <span class="comment">// https://stackoverflow.com/questions/8243743/is-there-a-null-stdostream-implementation-in-c-or-libraries</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keyword">mutable</span> std::ofstream _nullStream;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keyword">mutable</span> RedirectingStream _functionStream;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            std::ostream* _stream = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <a class="code" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a46b8e71e9eef89d82e49c74847baaadd">LogLevel</a> _level;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            std::string _prefix;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            std::string _colorcode;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        };</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keyword">static</span> <a class="code" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a8c90d226caa95a96cd5cda692bd222ac">LogFunction</a> g_userFunction;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> g_logUsePrefix;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keyword">static</span> LogStream g_infoStream;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keyword">static</span> LogStream g_warnStream;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    };</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
 <div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_log_html"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_log.html">ROCKY_NAMESPACE::Log</a></div><div class="ttdef"><b>Definition:</b> Log.h:32</div></div>
 <div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_log_html_ade3ee34f6644de65c47e0d979893b352"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_log.html#ade3ee34f6644de65c47e0d979893b352">ROCKY_NAMESPACE::Log::level</a></div><div class="ttdeci">static LogLevel level</div><div class="ttdoc">ignore messages above this level (defaults to INFO)</div><div class="ttdef"><b>Definition:</b> Log.h:39</div></div>
 <div class="ttc" id="anamespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e_html"><div class="ttname"><a href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html">ROCKY_NAMESPACE</a></div><div class="ttdef"><b>Definition:</b> Callbacks.h:13</div></div>

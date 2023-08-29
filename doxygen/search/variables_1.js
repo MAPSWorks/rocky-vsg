@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['attachments_1196',['attachments',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_attachment_group.html#a480baefc05bd1f3dc373f53652a46d7a',1,'ROCKY_NAMESPACE::AttachmentGroup::attachments()'],['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_object.html#a9b09e99c1a4de09ba01ba2740091aff4',1,'ROCKY_NAMESPACE::MapObject::attachments()']]]
+  ['active_1221',['active',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_node_component.html#abe0bc687b6a1e11967d7605bb9d8c052',1,'ROCKY_NAMESPACE::ECS::NodeComponent::active()'],['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_feature_view.html#ab1bf4cbaf4dd0b88ddf4045f0c918804',1,'ROCKY_NAMESPACE::FeatureView::active()']]],
+  ['active_5fptr_1222',['active_ptr',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_node_component.html#ab4556dee280b6b35519d9da53a3b208a',1,'ROCKY_NAMESPACE::ECS::NodeComponent']]]
 ];
