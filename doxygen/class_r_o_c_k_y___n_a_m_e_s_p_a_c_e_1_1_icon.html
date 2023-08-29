@@ -69,7 +69,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_icon-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ROCKY_NAMESPACE::Icon Class Reference</div>  </div>
@@ -78,93 +78,44 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="_icon_8h_source.html">Icon.h</a>&gt;</code></p>
 
-<p>Inherits <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_node_component.html">ROCKY_NAMESPACE::ECS::NodeComponent</a>.</p>
+<p>Inherits rocky::Inherit&lt; Attachment, Icon &gt;.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a2c06009b9034912dea464e9f3c3791f9"><td class="memItemLeft" align="right" valign="top"><a id="a2c06009b9034912dea464e9f3c3791f9"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_icon.html#a2c06009b9034912dea464e9f3c3791f9">Icon</a> ()</td></tr>
-<tr class="memdesc:a2c06009b9034912dea464e9f3c3791f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the component. <br /></td></tr>
+<tr class="memdesc:a2c06009b9034912dea464e9f3c3791f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a mesh attachment. <br /></td></tr>
 <tr class="separator:a2c06009b9034912dea464e9f3c3791f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa79b5438f4fc9bb65d554d6ee171913b"><td class="memItemLeft" align="right" valign="top"><a id="aa79b5438f4fc9bb65d554d6ee171913b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_icon.html#aa79b5438f4fc9bb65d554d6ee171913b">setStyle</a> (const <a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_icon_style.html">IconStyle</a> &amp;value)</td></tr>
+<tr class="memdesc:aa79b5438f4fc9bb65d554d6ee171913b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set to overall style for this mesh. <br /></td></tr>
+<tr class="separator:aa79b5438f4fc9bb65d554d6ee171913b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a122c4e1557b7657977bd2169eb9171ec"><td class="memItemLeft" align="right" valign="top"><a id="a122c4e1557b7657977bd2169eb9171ec"></a>
+const <a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_icon_style.html">IconStyle</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_icon.html#a122c4e1557b7657977bd2169eb9171ec">style</a> () const</td></tr>
+<tr class="memdesc:a122c4e1557b7657977bd2169eb9171ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overall style for the mesh. <br /></td></tr>
+<tr class="separator:a122c4e1557b7657977bd2169eb9171ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4887812cff8ef2d3e59326ffb6d18088"><td class="memItemLeft" align="right" valign="top"><a id="a4887812cff8ef2d3e59326ffb6d18088"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_icon.html#a4887812cff8ef2d3e59326ffb6d18088">setImage</a> (std::shared_ptr&lt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_image.html">Image</a> &gt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_icon.html#a032f1e1917d74fc6f7e8e76be7a500c8">image</a>)</td></tr>
+<tr class="memdesc:a4887812cff8ef2d3e59326ffb6d18088"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the image to render. <br /></td></tr>
+<tr class="separator:a4887812cff8ef2d3e59326ffb6d18088"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a032f1e1917d74fc6f7e8e76be7a500c8"><td class="memItemLeft" align="right" valign="top"><a id="a032f1e1917d74fc6f7e8e76be7a500c8"></a>
+std::shared_ptr&lt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_image.html">Image</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_icon.html#a032f1e1917d74fc6f7e8e76be7a500c8">image</a> () const</td></tr>
+<tr class="memdesc:a032f1e1917d74fc6f7e8e76be7a500c8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_image.html">Image</a> to render. <br /></td></tr>
+<tr class="separator:a032f1e1917d74fc6f7e8e76be7a500c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0db1078bcbac0159b6ad6abc1726ea50"><td class="memItemLeft" align="right" valign="top"><a id="a0db1078bcbac0159b6ad6abc1726ea50"></a>
 <a class="el" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a47a3157b68495813746976f5649f0577">JSON</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_icon.html#a0db1078bcbac0159b6ad6abc1726ea50">to_json</a> () const override</td></tr>
 <tr class="memdesc:a0db1078bcbac0159b6ad6abc1726ea50"><td class="mdescLeft">&#160;</td><td class="mdescRight">serialize as JSON string <br /></td></tr>
 <tr class="separator:a0db1078bcbac0159b6ad6abc1726ea50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa3f3eff195087850115f8bfb222e369"><td class="memItemLeft" align="right" valign="top"><a id="afa3f3eff195087850115f8bfb222e369"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_icon.html#afa3f3eff195087850115f8bfb222e369">dirty</a> ()</td></tr>
-<tr class="memdesc:afa3f3eff195087850115f8bfb222e369"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call after changing the style or image. <br /></td></tr>
-<tr class="separator:afa3f3eff195087850115f8bfb222e369"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84f4bb33a143bd0e627ab9b6830614a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_icon.html#a84f4bb33a143bd0e627ab9b6830614a5">initializeNode</a> (const <a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_node_component_1_1_params.html">ECS::NodeComponent::Params</a> &amp;) override</td></tr>
-<tr class="separator:a84f4bb33a143bd0e627ab9b6830614a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e3ac1b8214b68914b7ef823f1a5cc3b"><td class="memItemLeft" align="right" valign="top"><a id="a1e3ac1b8214b68914b7ef823f1a5cc3b"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_icon.html#a1e3ac1b8214b68914b7ef823f1a5cc3b">featureMask</a> () const override</td></tr>
-<tr class="memdesc:a1e3ac1b8214b68914b7ef823f1a5cc3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mask of features pertaining to this component instance, if applicable. <br /></td></tr>
-<tr class="separator:a1e3ac1b8214b68914b7ef823f1a5cc3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a058cebeee496ad77335a23759d11684f"><td class="memItemLeft" align="right" valign="top"><a id="a058cebeee496ad77335a23759d11684f"></a>
-<a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_icon_style.html">IconStyle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_icon.html#a058cebeee496ad77335a23759d11684f">style</a></td></tr>
-<tr class="memdesc:a058cebeee496ad77335a23759d11684f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dynamic styling for the icon. <br /></td></tr>
-<tr class="separator:a058cebeee496ad77335a23759d11684f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac1b0704fee8541fa4b641174fed78b6"><td class="memItemLeft" align="right" valign="top"><a id="aac1b0704fee8541fa4b641174fed78b6"></a>
-std::shared_ptr&lt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_image.html">Image</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_icon.html#aac1b0704fee8541fa4b641174fed78b6">image</a></td></tr>
-<tr class="memdesc:aac1b0704fee8541fa4b641174fed78b6"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_image.html">Image</a> to use for the icon texture. <br /></td></tr>
-<tr class="separator:aac1b0704fee8541fa4b641174fed78b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_attribs_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_node_component"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_node_component')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_node_component.html">ROCKY_NAMESPACE::ECS::NodeComponent</a></td></tr>
-<tr class="memitem:a97432d6b4e82d4961ee771cc3ad4fd13 inherit pub_attribs_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_node_component"><td class="memItemLeft" align="right" valign="top"><a id="a97432d6b4e82d4961ee771cc3ad4fd13"></a>
-vsg::ref_ptr&lt; vsg::Node &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_node_component.html#a97432d6b4e82d4961ee771cc3ad4fd13">node</a></td></tr>
-<tr class="memdesc:a97432d6b4e82d4961ee771cc3ad4fd13 inherit pub_attribs_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_node_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">VSG node that renders this component. <br /></td></tr>
-<tr class="separator:a97432d6b4e82d4961ee771cc3ad4fd13 inherit pub_attribs_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_node_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe0bc687b6a1e11967d7605bb9d8c052 inherit pub_attribs_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_node_component"><td class="memItemLeft" align="right" valign="top"><a id="abe0bc687b6a1e11967d7605bb9d8c052"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_node_component.html#abe0bc687b6a1e11967d7605bb9d8c052">active</a> = true</td></tr>
-<tr class="memdesc:abe0bc687b6a1e11967d7605bb9d8c052 inherit pub_attribs_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_node_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to draw this component. <br /></td></tr>
-<tr class="separator:abe0bc687b6a1e11967d7605bb9d8c052 inherit pub_attribs_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_node_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4556dee280b6b35519d9da53a3b208a inherit pub_attribs_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_node_component"><td class="memItemLeft" align="right" valign="top">bool *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_node_component.html#ab4556dee280b6b35519d9da53a3b208a">active_ptr</a> = &amp;<a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_node_component.html#abe0bc687b6a1e11967d7605bb9d8c052">active</a></td></tr>
-<tr class="separator:ab4556dee280b6b35519d9da53a3b208a inherit pub_attribs_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_node_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_attribs_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_component"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_component')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_component.html">ROCKY_NAMESPACE::ECS::Component</a></td></tr>
-<tr class="memitem:a01d286924554068f85bc45360f35c6f3 inherit pub_attribs_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_component"><td class="memItemLeft" align="right" valign="top"><a id="a01d286924554068f85bc45360f35c6f3"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_component.html#a01d286924554068f85bc45360f35c6f3">name</a></td></tr>
-<tr class="memdesc:a01d286924554068f85bc45360f35c6f3 inherit pub_attribs_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_component.html">Component</a> readable name. <br /></td></tr>
-<tr class="separator:a01d286924554068f85bc45360f35c6f3 inherit pub_attribs_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adaf25c331b4afa9f666fbe8bd8a02b0e inherit pub_attribs_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_component"><td class="memItemLeft" align="right" valign="top"><a id="adaf25c331b4afa9f666fbe8bd8a02b0e"></a>
-entt::entity&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_component.html#adaf25c331b4afa9f666fbe8bd8a02b0e">next_entity</a> = entt::null</td></tr>
-<tr class="memdesc:adaf25c331b4afa9f666fbe8bd8a02b0e inherit pub_attribs_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Link to another entity in a collection. <br /></td></tr>
-<tr class="separator:adaf25c331b4afa9f666fbe8bd8a02b0e inherit pub_attribs_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a9d2e0846db1e026b390f91d930c77d37"><td class="memItemLeft" align="right" valign="top"><a id="a9d2e0846db1e026b390f91d930c77d37"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>createNode</b> (<a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html">Runtime</a> &amp;runtime) override</td></tr>
+<tr class="separator:a9d2e0846db1e026b390f91d930c77d37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_icon.html">Icon</a> Component - an icon is a 2D billboard with a texture at a geolocation. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a84f4bb33a143bd0e627ab9b6830614a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84f4bb33a143bd0e627ab9b6830614a5">&#9670;&nbsp;</a></span>initializeNode()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Icon::initializeNode </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_node_component_1_1_params.html">ECS::NodeComponent::Params</a> &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Subclass implements to create and VSG objects. Called by the System if the component's node is nullptr. </p>
-
-<p>Reimplemented from <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_node_component.html#a747fd3920c0c134ff4ad07fbea6acc7e">ROCKY_NAMESPACE::ECS::NodeComponent</a>.</p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<div class="textblock"><p><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_icon.html">Icon</a> attachment </p>
+</div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/rocky_vsg/<a class="el" href="_icon_8h_source.html">Icon.h</a></li>
 <li>src/rocky_vsg/Icon.cpp</li>
 </ul>
