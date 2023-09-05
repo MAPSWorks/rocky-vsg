@@ -70,6 +70,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_node-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ROCKY_NAMESPACE::MapNode Class Reference</div>  </div>
@@ -140,10 +141,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a45075cb3ce41230d17df37211940d64e"><td class="memItemLeft" align="right" valign="top"><a id="a45075cb3ce41230d17df37211940d64e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (const vsg::FrameStamp *)</td></tr>
 <tr class="separator:a45075cb3ce41230d17df37211940d64e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5145ba1a47f0043eb426039a49c9aeae"><td class="memItemLeft" align="right" valign="top"><a id="a5145ba1a47f0043eb426039a49c9aeae"></a>
-vsg::ref_ptr&lt; vsg::Node &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_node.html#a5145ba1a47f0043eb426039a49c9aeae">terrainNode</a> () const</td></tr>
-<tr class="memdesc:a5145ba1a47f0043eb426039a49c9aeae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access to the underlying terrain node graph. <br /></td></tr>
-<tr class="separator:a5145ba1a47f0043eb426039a49c9aeae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99ad516f085c7149b14d9c08ab60f7ac"><td class="memItemLeft" align="right" valign="top"><a id="a99ad516f085c7149b14d9c08ab60f7ac"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>accept</b> (vsg::RecordTraversal &amp;) const override</td></tr>
 <tr class="separator:a99ad516f085c7149b14d9c08ab60f7ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -152,6 +149,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>accept</b> (vsg::Reco
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a844b2983235291762a9843feebaf0737"><td class="memItemLeft" align="right" valign="top">static shared_ptr&lt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_node.html">MapNode</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_node.html#a844b2983235291762a9843feebaf0737">get</a> (const vsg::Node *graph, unsigned travMask=~0)</td></tr>
 <tr class="separator:a844b2983235291762a9843feebaf0737"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a5b34ce3e714d044443d1cd612d99c418"><td class="memItemLeft" align="right" valign="top"><a id="a5b34ce3e714d044443d1cd612d99c418"></a>
+vsg::ref_ptr&lt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_terrain_node.html">TerrainNode</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_node.html#a5b34ce3e714d044443d1cd612d99c418">terrain</a></td></tr>
+<tr class="memdesc:a5b34ce3e714d044443d1cd612d99c418"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access to the underlying terrain node graph. <br /></td></tr>
+<tr class="separator:a5b34ce3e714d044443d1cd612d99c418"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>VSG Node that renders a map. This node is a "view" component that renders data from a "Map" data model. </p>
