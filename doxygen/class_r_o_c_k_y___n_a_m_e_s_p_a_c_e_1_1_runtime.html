@@ -90,8 +90,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6f5c20d095c36517f760b7c1f7a8c3db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32bee88f39c683ccdbb1a73310048e24"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#a32bee88f39c683ccdbb1a73310048e24">compile</a> (vsg::ref_ptr&lt; vsg::Object &gt; object)</td></tr>
 <tr class="separator:a32bee88f39c683ccdbb1a73310048e24"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b676d362886c39968a5cf7b895c6175"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#a6b676d362886c39968a5cf7b895c6175">destroy</a> (vsg::ref_ptr&lt; vsg::Object &gt; object)</td></tr>
-<tr class="separator:a6b676d362886c39968a5cf7b895c6175"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abec00bb492c489759cf6da4480058774"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#abec00bb492c489759cf6da4480058774">dispose</a> (vsg::ref_ptr&lt; vsg::Object &gt; object)</td></tr>
+<tr class="separator:abec00bb492c489759cf6da4480058774"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1a99df9bca34eec28545383a71d43be"><td class="memItemLeft" align="right" valign="top">util::Future&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#ad1a99df9bca34eec28545383a71d43be">compileAndAddChild</a> (vsg::ref_ptr&lt; vsg::Group &gt; parent, std::function&lt; vsg::ref_ptr&lt; vsg::Node &gt;(<a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_cancelable.html">Cancelable</a> &amp;)&gt; factory, const util::job &amp;config={ })</td></tr>
 <tr class="separator:ad1a99df9bca34eec28545383a71d43be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa16de15e7e83c6f44ce8261df1bae0e6"><td class="memItemLeft" align="right" valign="top"><a id="aa16de15e7e83c6f44ce8261df1bae0e6"></a>
@@ -133,15 +133,11 @@ util::Future&lt; vsg::ref_ptr&lt; vsg::Font &gt; &gt;&#160;</td><td class="memIt
 <tr class="separator:ab062912583bd17db99cd32c7b3bd08c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeedc54d1c8fb0519cc10d0cafaea0b9f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#aeedc54d1c8fb0519cc10d0cafaea0b9f">asyncCompile</a> = true</td></tr>
 <tr class="separator:aeedc54d1c8fb0519cc10d0cafaea0b9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba86580f568ab1a27be51e72b54290fa"><td class="memItemLeft" align="right" valign="top"><a id="aba86580f568ab1a27be51e72b54290fa"></a>
-std::shared_mutex&#160;</td><td class="memItemRight" valign="bottom"><b>_deferred_unref_mutex</b></td></tr>
-<tr class="separator:aba86580f568ab1a27be51e72b54290fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d7da5b9d9f3fd9fbe165cc4fa0d2eff"><td class="memItemLeft" align="right" valign="top"><a id="a7d7da5b9d9f3fd9fbe165cc4fa0d2eff"></a>
-std::list&lt; std::vector&lt; vsg::ref_ptr&lt; vsg::Object &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_deferred_unref_queue</b></td></tr>
-<tr class="separator:a7d7da5b9d9f3fd9fbe165cc4fa0d2eff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf300a439df1f27df59e752351fe1759"><td class="memItemLeft" align="right" valign="top">std::function&lt; void(vsg::ref_ptr&lt; vsg::Object &gt;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#aaf300a439df1f27df59e752351fe1759">disposer</a></td></tr>
+<tr class="separator:aaf300a439df1f27df59e752351fe1759"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Interface to runtime operations like the VSG compiler, thread pools, shared settings, and asynchronous scene graph functions. </p>
+<div class="textblock"><p>Properties and operations needed for interfacing with VSG. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a32bee88f39c683ccdbb1a73310048e24"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a32bee88f39c683ccdbb1a73310048e24">&#9670;&nbsp;</a></span>compile()</h2>
@@ -197,25 +193,6 @@ std::list&lt; std::vector&lt; vsg::ref_ptr&lt; vsg::Object &gt; &gt; &gt;&#160;<
 
 </div>
 </div>
-<a id="a6b676d362886c39968a5cf7b895c6175"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6b676d362886c39968a5cf7b895c6175">&#9670;&nbsp;</a></span>destroy()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Runtime::destroy </td>
-          <td>(</td>
-          <td class="paramtype">vsg::ref_ptr&lt; vsg::Object &gt;&#160;</td>
-          <td class="paramname"><em>object</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Destroys a VSG object, eventually. Call this to get rid of descriptor sets you plan to replace. You can't just let them go since they recycle internally and you could end up trying to destroy a vulkan object while compiling new objects, which will result in a validation error and leaked memory. <a href="https://github.com/vsg-dev/VulkanSceneGraph/discussions/949">https://github.com/vsg-dev/VulkanSceneGraph/discussions/949</a> </p>
-
-</div>
-</div>
 <a id="a269f5b61c4e532503e1c446fa495c739"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a269f5b61c4e532503e1c446fa495c739">&#9670;&nbsp;</a></span>dirtyShaders()</h2>
 
@@ -239,6 +216,25 @@ std::list&lt; std::vector&lt; vsg::ref_ptr&lt; vsg::Object &gt; &gt; &gt;&#160;<
 </table>
 </div><div class="memdoc">
 <p>TODO: Signal that something has changed that requires shader regen. When we implement this, it will probably fire off a callback that signals listeners to recreate their graphics pipelines so they can incorporate the new shader settings. OR, we can just maintain a revision number and the <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#aa3fc0c6334a6668eb87082e933152621" title="Update any pending compile results.">update()</a> pass can check it as needed. </p>
+
+</div>
+</div>
+<a id="abec00bb492c489759cf6da4480058774"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abec00bb492c489759cf6da4480058774">&#9670;&nbsp;</a></span>dispose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Runtime::dispose </td>
+          <td>(</td>
+          <td class="paramtype">vsg::ref_ptr&lt; vsg::Object &gt;&#160;</td>
+          <td class="paramname"><em>object</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Destroys a VSG object, eventually. Call this to get rid of descriptor sets you plan to replace. You can't just let them go since they recycle internally and you could end up trying to destroy a vulkan object while compiling new objects, which will result in a validation error and leaked memory. <a href="https://github.com/vsg-dev/VulkanSceneGraph/discussions/949">https://github.com/vsg-dev/VulkanSceneGraph/discussions/949</a> </p>
 
 </div>
 </div>
@@ -303,6 +299,21 @@ std::list&lt; std::vector&lt; vsg::ref_ptr&lt; vsg::Object &gt; &gt; &gt;&#160;<
       </table>
 </div><div class="memdoc">
 <p>If true, <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#a32bee88f39c683ccdbb1a73310048e24">compile()</a> will operate immediately regardless of the calling thread. If false, compilation is deferred until the next call to <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#aa3fc0c6334a6668eb87082e933152621" title="Update any pending compile results.">update()</a>. </p>
+
+</div>
+</div>
+<a id="aaf300a439df1f27df59e752351fe1759"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf300a439df1f27df59e752351fe1759">&#9670;&nbsp;</a></span>disposer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::function&lt;void(vsg::ref_ptr&lt;vsg::Object&gt;)&gt; ROCKY_NAMESPACE::Runtime::disposer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Custom vsg object disposer (optional) By default <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html">Runtime</a> uses its own round-robin object disposer </p>
 
 </div>
 </div>
