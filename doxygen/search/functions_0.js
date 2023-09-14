@@ -5,7 +5,7 @@ var searchData=
   ['adddataextent_791',['addDataExtent',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_tile_layer.html#a91490b1005427f8012155a587f288b6d',1,'ROCKY_NAMESPACE::TileLayer']]],
   ['addedtomap_792',['addedToMap',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_layer_reference.html#a855f32a8d68324267719ac7f18194e72',1,'ROCKY_NAMESPACE::LayerReference']]],
   ['all_793',['all',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_layer_collection.html#a80d47e52999a2cd73c4266dabf5822c9',1,'ROCKY_NAMESPACE::LayerCollection']]],
-  ['append_794',['append',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_entities.html#a9230d87e9ac2c2833c6b8a898f92eff5',1,'ROCKY_NAMESPACE::ECS::Entities']]],
+  ['append_794',['append',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_registry.html#ae15fc5f9c8af2bfa0d0444775ca03d7a',1,'ROCKY_NAMESPACE::ECS::Registry']]],
   ['applyprofileoverrides_795',['applyProfileOverrides',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_tile_layer.html#a208f9df4fc5f9dcdf0729aff9855c502',1,'ROCKY_NAMESPACE::TileLayer']]],
   ['area_796',['area',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_extent.html#ac7c262c8be156629fab178e441585216',1,'ROCKY_NAMESPACE::GeoExtent']]],
   ['as_797',['as',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_color.html#a723aedf3013e2fbe2c2b752325231578',1,'ROCKY_NAMESPACE::Color']]],

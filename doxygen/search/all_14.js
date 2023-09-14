@@ -18,7 +18,7 @@ var searchData=
   ['text_557',['text',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_label.html#a9ce8f809f52b55789ed0bf46fe4368a8',1,'ROCKY_NAMESPACE::Label']]],
   ['texture_558',['texture',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_mesh.html#a64e9e1cb4afcab1f7d8fe203a36b81f7',1,'ROCKY_NAMESPACE::Mesh']]],
   ['texturedef_559',['TextureDef',['../struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_terrain_state_1_1_texture_def.html',1,'ROCKY_NAMESPACE::TerrainState']]],
-  ['textures_560',['textures',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_terrain_state.html#a2f940aaf1aeb6948eca1f32eabcd314a',1,'ROCKY_NAMESPACE::TerrainState']]],
+  ['texturedefs_560',['texturedefs',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_terrain_state.html#a9b7c6d860da974569404ea4621dc26ba',1,'ROCKY_NAMESPACE::TerrainState']]],
   ['tick_561',['tick',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_system_node.html#aca8bcd9ebb54f761804f94f2202c5b57',1,'ROCKY_NAMESPACE::ECS::SystemNode::tick()'],['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_entity_motion_system.html#a8ad924422dc17a322629bde43f161786',1,'ROCKY_NAMESPACE::EntityMotionSystem::tick()']]],
   ['tiledimensions_562',['tileDimensions',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_profile.html#ab389e846ee9f9251380e121fccbbe5ce',1,'ROCKY_NAMESPACE::Profile']]],
   ['tileextent_563',['tileExtent',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_profile.html#a1506bd4d277ff33c30a7a0d2a23dad3e',1,'ROCKY_NAMESPACE::Profile']]],
@@ -44,7 +44,7 @@ var searchData=
   ['transformrange_583',['transformRange',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s_operation.html#a679cf85daa813a82b108307dc8587f3d',1,'ROCKY_NAMESPACE::SRSOperation']]],
   ['transformunits_584',['transformUnits',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s.html#a5e9ad33ec07def3e9816da3d62018ecc',1,'ROCKY_NAMESPACE::SRS::transformUnits(double input, const SRS &amp;fromSRS, const SRS &amp;toSRS, const Angle &amp;latitude)'],['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s.html#afa8331a3237eed9c3f9f8666ad4fd9e5',1,'ROCKY_NAMESPACE::SRS::transformUnits(const Distance &amp;distance, const SRS &amp;outSRS, const Angle &amp;latitude)']]],
   ['triangle_585',['Triangle',['../struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_triangle.html',1,'ROCKY_NAMESPACE']]],
-  ['type_586',['Type',['../struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geometry.html#a236f01ed442e26a87265212a53c09ea1',1,'ROCKY_NAMESPACE::Geometry']]],
-  ['type_587',['type',['../struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geometry.html#ab8bbd93edeaaf6912b3a96afd98aa6a7',1,'ROCKY_NAMESPACE::Geometry']]],
+  ['type_586',['type',['../struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geometry.html#ab8bbd93edeaaf6912b3a96afd98aa6a7',1,'ROCKY_NAMESPACE::Geometry']]],
+  ['type_587',['Type',['../struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geometry.html#a236f01ed442e26a87265212a53c09ea1',1,'ROCKY_NAMESPACE::Geometry']]],
   ['typetostring_588',['typeToString',['../struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geometry.html#adcbd61fb0903d2a5c8868dd4b62697bb',1,'ROCKY_NAMESPACE::Geometry']]]
 ];

@@ -14,5 +14,6 @@ var searchData=
   ['dirtydataextents_868',['dirtyDataExtents',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_tile_layer.html#a8704cd5d52b358fe27ff1f64dbf65c5e',1,'ROCKY_NAMESPACE::TileLayer']]],
   ['dirtyshaders_869',['dirtyShaders',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#a269f5b61c4e532503e1c446fa495c739',1,'ROCKY_NAMESPACE::Runtime']]],
   ['disable_870',['disable',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_tile_layer.html#a986e04bdd12a70b2e8468620a195b044',1,'ROCKY_NAMESPACE::TileLayer']]],
-  ['driver_871',['Driver',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_g_d_a_l_1_1_driver.html#aefa7ec779d44500954aaf59125847396',1,'ROCKY_NAMESPACE::GDAL::Driver']]]
+  ['dispose_871',['dispose',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#abec00bb492c489759cf6da4480058774',1,'ROCKY_NAMESPACE::Runtime']]],
+  ['driver_872',['Driver',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_g_d_a_l_1_1_driver.html#aefa7ec779d44500954aaf59125847396',1,'ROCKY_NAMESPACE::GDAL::Driver']]]
 ];

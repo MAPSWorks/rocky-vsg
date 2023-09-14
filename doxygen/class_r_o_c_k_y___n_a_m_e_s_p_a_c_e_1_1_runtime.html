@@ -68,7 +68,6 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime-members.html">List of all members</a>  </div>
@@ -79,27 +78,22 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="_runtime_8h_source.html">Runtime.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:a4a044dcb4398ee00604404edcf9e3da1"><td class="memItemLeft" align="right" valign="top"><a id="a4a044dcb4398ee00604404edcf9e3da1"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#a4a044dcb4398ee00604404edcf9e3da1">NodeFactory</a> = std::function&lt; vsg::ref_ptr&lt; vsg::Node &gt;(<a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_cancelable.html">Cancelable</a> &amp;)&gt;</td></tr>
-<tr class="memdesc:a4a044dcb4398ee00604404edcf9e3da1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that creates a node. <br /></td></tr>
-<tr class="separator:a4a044dcb4398ee00604404edcf9e3da1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a522dc4b36f2a770bbe3e62c451f38841"><td class="memItemLeft" align="right" valign="top"><a id="a522dc4b36f2a770bbe3e62c451f38841"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#a522dc4b36f2a770bbe3e62c451f38841">Runtime</a> ()</td></tr>
 <tr class="memdesc:a522dc4b36f2a770bbe3e62c451f38841"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. <br /></td></tr>
 <tr class="separator:a522dc4b36f2a770bbe3e62c451f38841"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a124af71d41a7d25b8605b4a97b4d28d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#a124af71d41a7d25b8605b4a97b4d28d3">runDuringUpdate</a> (vsg::ref_ptr&lt; vsg::Operation &gt; function, std::function&lt; float()&gt; get_priority=nullptr)</td></tr>
-<tr class="separator:a124af71d41a7d25b8605b4a97b4d28d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab88627297b6a01acc0db000f7e576fde"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#ab88627297b6a01acc0db000f7e576fde">runDuringUpdate</a> (vsg::ref_ptr&lt; vsg::Operation &gt; function, std::function&lt; float()&gt; get_priority={})</td></tr>
+<tr class="separator:ab88627297b6a01acc0db000f7e576fde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f5c20d095c36517f760b7c1f7a8c3db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#a6f5c20d095c36517f760b7c1f7a8c3db">runDuringUpdate</a> (std::function&lt; void()&gt; function)</td></tr>
 <tr class="separator:a6f5c20d095c36517f760b7c1f7a8c3db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32bee88f39c683ccdbb1a73310048e24"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#a32bee88f39c683ccdbb1a73310048e24">compile</a> (vsg::ref_ptr&lt; vsg::Object &gt; object)</td></tr>
 <tr class="separator:a32bee88f39c683ccdbb1a73310048e24"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb8259186ee5f1b5ef3659b4db710378"><td class="memItemLeft" align="right" valign="top">util::Future&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#abb8259186ee5f1b5ef3659b4db710378">compileAndAddChild</a> (vsg::ref_ptr&lt; vsg::Group &gt; parent, <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#a4a044dcb4398ee00604404edcf9e3da1">NodeFactory</a> factory, const util::job &amp;config={ })</td></tr>
-<tr class="separator:abb8259186ee5f1b5ef3659b4db710378"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abec00bb492c489759cf6da4480058774"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#abec00bb492c489759cf6da4480058774">dispose</a> (vsg::ref_ptr&lt; vsg::Object &gt; object)</td></tr>
+<tr class="separator:abec00bb492c489759cf6da4480058774"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1a99df9bca34eec28545383a71d43be"><td class="memItemLeft" align="right" valign="top">util::Future&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#ad1a99df9bca34eec28545383a71d43be">compileAndAddChild</a> (vsg::ref_ptr&lt; vsg::Group &gt; parent, std::function&lt; vsg::ref_ptr&lt; vsg::Node &gt;(<a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_cancelable.html">Cancelable</a> &amp;)&gt; factory, const util::job &amp;config={ })</td></tr>
+<tr class="separator:ad1a99df9bca34eec28545383a71d43be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa16de15e7e83c6f44ce8261df1bae0e6"><td class="memItemLeft" align="right" valign="top"><a id="aa16de15e7e83c6f44ce8261df1bae0e6"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#aa16de15e7e83c6f44ce8261df1bae0e6">removeNode</a> (vsg::Group *parent, unsigned index)</td></tr>
 <tr class="memdesc:aa16de15e7e83c6f44ce8261df1bae0e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safely removes a node from the scene graph (async) <br /></td></tr>
@@ -137,12 +131,13 @@ util::Future&lt; vsg::ref_ptr&lt; vsg::Font &gt; &gt;&#160;</td><td class="memIt
 <tr class="separator:aef76367fc28a2b4cf720029593ed5719"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab062912583bd17db99cd32c7b3bd08c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#af01f4eb53e72c4be729979cd946c295d">Revision</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#ab062912583bd17db99cd32c7b3bd08c8">shaderSettingsRevision</a> = 0</td></tr>
 <tr class="separator:ab062912583bd17db99cd32c7b3bd08c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeedc54d1c8fb0519cc10d0cafaea0b9f"><td class="memItemLeft" align="right" valign="top"><a id="aeedc54d1c8fb0519cc10d0cafaea0b9f"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>asyncCompile</b> = false</td></tr>
+<tr class="memitem:aeedc54d1c8fb0519cc10d0cafaea0b9f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#aeedc54d1c8fb0519cc10d0cafaea0b9f">asyncCompile</a> = true</td></tr>
 <tr class="separator:aeedc54d1c8fb0519cc10d0cafaea0b9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf300a439df1f27df59e752351fe1759"><td class="memItemLeft" align="right" valign="top">std::function&lt; void(vsg::ref_ptr&lt; vsg::Object &gt;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#aaf300a439df1f27df59e752351fe1759">disposer</a></td></tr>
+<tr class="separator:aaf300a439df1f27df59e752351fe1759"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Interface to runtime operations like the VSG compiler, thread pools, shared settings, and asynchronous scene graph functions. </p>
+<div class="textblock"><p>Properties and operations needed for interfacing with VSG. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a32bee88f39c683ccdbb1a73310048e24"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a32bee88f39c683ccdbb1a73310048e24">&#9670;&nbsp;</a></span>compile()</h2>
@@ -163,8 +158,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>asyncCompile</b> = fa
 
 </div>
 </div>
-<a id="abb8259186ee5f1b5ef3659b4db710378"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb8259186ee5f1b5ef3659b4db710378">&#9670;&nbsp;</a></span>compileAndAddChild()</h2>
+<a id="ad1a99df9bca34eec28545383a71d43be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1a99df9bca34eec28545383a71d43be">&#9670;&nbsp;</a></span>compileAndAddChild()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -178,7 +173,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>asyncCompile</b> = fa
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#a4a044dcb4398ee00604404edcf9e3da1">NodeFactory</a>&#160;</td>
+          <td class="paramtype">std::function&lt; vsg::ref_ptr&lt; vsg::Node &gt;(<a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_cancelable.html">Cancelable</a> &amp;)&gt;&#160;</td>
           <td class="paramname"><em>factory</em>, </td>
         </tr>
         <tr>
@@ -224,6 +219,25 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>asyncCompile</b> = fa
 
 </div>
 </div>
+<a id="abec00bb492c489759cf6da4480058774"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abec00bb492c489759cf6da4480058774">&#9670;&nbsp;</a></span>dispose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Runtime::dispose </td>
+          <td>(</td>
+          <td class="paramtype">vsg::ref_ptr&lt; vsg::Object &gt;&#160;</td>
+          <td class="paramname"><em>object</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Destroys a VSG object, eventually. Call this to get rid of descriptor sets you plan to replace. You can't just let them go since they recycle internally and you could end up trying to destroy a vulkan object while compiling new objects, which will result in a validation error and leaked memory. <a href="https://github.com/vsg-dev/VulkanSceneGraph/discussions/949">https://github.com/vsg-dev/VulkanSceneGraph/discussions/949</a> </p>
+
+</div>
+</div>
 <a id="a6f5c20d095c36517f760b7c1f7a8c3db"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6f5c20d095c36517f760b7c1f7a8c3db">&#9670;&nbsp;</a></span>runDuringUpdate() <span class="overload">[1/2]</span></h2>
 
@@ -243,8 +257,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>asyncCompile</b> = fa
 
 </div>
 </div>
-<a id="a124af71d41a7d25b8605b4a97b4d28d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a124af71d41a7d25b8605b4a97b4d28d3">&#9670;&nbsp;</a></span>runDuringUpdate() <span class="overload">[2/2]</span></h2>
+<a id="ab88627297b6a01acc0db000f7e576fde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab88627297b6a01acc0db000f7e576fde">&#9670;&nbsp;</a></span>runDuringUpdate() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -259,7 +273,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>asyncCompile</b> = fa
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::function&lt; float()&gt;&#160;</td>
-          <td class="paramname"><em>get_priority</em> = <code>nullptr</code>&#160;</td>
+          <td class="paramname"><em>get_priority</em> = <code>{}</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -273,6 +287,36 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>asyncCompile</b> = fa
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="aeedc54d1c8fb0519cc10d0cafaea0b9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeedc54d1c8fb0519cc10d0cafaea0b9f">&#9670;&nbsp;</a></span>asyncCompile</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ROCKY_NAMESPACE::Runtime::asyncCompile = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>If true, <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#a32bee88f39c683ccdbb1a73310048e24">compile()</a> will operate immediately regardless of the calling thread. If false, compilation is deferred until the next call to <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#aa3fc0c6334a6668eb87082e933152621" title="Update any pending compile results.">update()</a>. </p>
+
+</div>
+</div>
+<a id="aaf300a439df1f27df59e752351fe1759"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf300a439df1f27df59e752351fe1759">&#9670;&nbsp;</a></span>disposer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::function&lt;void(vsg::ref_ptr&lt;vsg::Object&gt;)&gt; ROCKY_NAMESPACE::Runtime::disposer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Custom vsg object disposer (optional) By default <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html">Runtime</a> uses its own round-robin object disposer </p>
+
+</div>
+</div>
 <a id="aef76367fc28a2b4cf720029593ed5719"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aef76367fc28a2b4cf720029593ed5719">&#9670;&nbsp;</a></span>shaderCompileSettings</h2>
 
