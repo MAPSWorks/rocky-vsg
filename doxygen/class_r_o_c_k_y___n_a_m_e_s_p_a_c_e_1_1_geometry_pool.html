@@ -70,7 +70,6 @@ $(function() {
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geometry_pool-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ROCKY_NAMESPACE::GeometryPool Class Reference</div>  </div>
@@ -97,49 +96,18 @@ Public Member Functions</h2></td></tr>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geometry_pool.html#a4736eb668b746bdea0cfc09cb6a23c3e">getNumSkirtElements</a> (const Settings &amp;settings) const</td></tr>
 <tr class="memdesc:a4736eb668b746bdea0cfc09cb6a23c3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of elements (incides) in the terrain skirt if applicable. <br /></td></tr>
 <tr class="separator:a4736eb668b746bdea0cfc09cb6a23c3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a321840294b365876986e161298998184"><td class="memItemLeft" align="right" valign="top"><a id="a321840294b365876986e161298998184"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geometry_pool.html#a321840294b365876986e161298998184">isEnabled</a> () const</td></tr>
-<tr class="memdesc:a321840294b365876986e161298998184"><td class="mdescLeft">&#160;</td><td class="mdescRight">Are we doing pooling? <br /></td></tr>
-<tr class="separator:a321840294b365876986e161298998184"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2355abda3bda9fe01e4def5d4f8e8cc"><td class="memItemLeft" align="right" valign="top"><a id="ae2355abda3bda9fe01e4def5d4f8e8cc"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geometry_pool.html#ae2355abda3bda9fe01e4def5d4f8e8cc">clear</a> ()</td></tr>
 <tr class="memdesc:ae2355abda3bda9fe01e4def5d4f8e8cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear and reset the pool. <br /></td></tr>
 <tr class="separator:ae2355abda3bda9fe01e4def5d4f8e8cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac637ea517993f57ad49639dbd3f93c2f"><td class="memItemLeft" align="right" valign="top"><a id="ac637ea517993f57ad49639dbd3f93c2f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>createKeyForTileKey</b> (const <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_tile_key.html">TileKey</a> &amp;tileKey, unsigned size, GeometryKey &amp;out) const</td></tr>
-<tr class="separator:ac637ea517993f57ad49639dbd3f93c2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e901cb68543e2a885f2c6330afa48cd"><td class="memItemLeft" align="right" valign="top"><a id="a6e901cb68543e2a885f2c6330afa48cd"></a>
-vsg::ref_ptr&lt; SharedGeometry &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>createGeometry</b> (const <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_tile_key.html">TileKey</a> &amp;tileKey, const Settings &amp;settings, <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_cancelable.html">Cancelable</a> *progress) const</td></tr>
-<tr class="separator:a6e901cb68543e2a885f2c6330afa48cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afae54e0590589efd3982ceb3ede9a172"><td class="memItemLeft" align="right" valign="top"><a id="afae54e0590589efd3982ceb3ede9a172"></a>
-vsg::ref_ptr&lt; vsg::ushortArray &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>createIndices</b> (const Settings &amp;settings) const</td></tr>
-<tr class="separator:afae54e0590589efd3982ceb3ede9a172"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:ac6ba616b564bd4b5a357e9beb149a392"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s.html">SRS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geometry_pool.html#ac6ba616b564bd4b5a357e9beb149a392">_worldSRS</a></td></tr>
-<tr class="separator:ac6ba616b564bd4b5a357e9beb149a392"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a121c7f471b41cc2bc10f255c1cae9858"><td class="memItemLeft" align="right" valign="top"><a id="a121c7f471b41cc2bc10f255c1cae9858"></a>
-util::Gate&lt; GeometryKey &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_keygate</b></td></tr>
-<tr class="separator:a121c7f471b41cc2bc10f255c1cae9858"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11a1bf7f8a20b13152a1ae31b393ccc5"><td class="memItemLeft" align="right" valign="top"><a id="a11a1bf7f8a20b13152a1ae31b393ccc5"></a>
-std::mutex&#160;</td><td class="memItemRight" valign="bottom"><b>_mutex</b></td></tr>
-<tr class="separator:a11a1bf7f8a20b13152a1ae31b393ccc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4a32e94579cee1b31895dbaadf75fb8"><td class="memItemLeft" align="right" valign="top"><a id="af4a32e94579cee1b31895dbaadf75fb8"></a>
-SharedGeometries&#160;</td><td class="memItemRight" valign="bottom"><b>_sharedGeometries</b></td></tr>
-<tr class="separator:af4a32e94579cee1b31895dbaadf75fb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98546a668e65295566fad84bb0911cfb"><td class="memItemLeft" align="right" valign="top"><a id="a98546a668e65295566fad84bb0911cfb"></a>
-vsg::ref_ptr&lt; vsg::ushortArray &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_defaultIndices</b></td></tr>
-<tr class="separator:a98546a668e65295566fad84bb0911cfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34ee8d2285f8b89e0ca4c3c1b3a85b2f"><td class="memItemLeft" align="right" valign="top"><a id="a34ee8d2285f8b89e0ca4c3c1b3a85b2f"></a>
-Settings&#160;</td><td class="memItemRight" valign="bottom"><b>_defaultIndicesSettings</b></td></tr>
-<tr class="separator:a34ee8d2285f8b89e0ca4c3c1b3a85b2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9cdb30f208171d723881c39fcf75cdfd"><td class="memItemLeft" align="right" valign="top"><a id="a9cdb30f208171d723881c39fcf75cdfd"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>_enabled</b> = false</td></tr>
-<tr class="separator:a9cdb30f208171d723881c39fcf75cdfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18796bd27a922792af8dd7770ef5bb0e"><td class="memItemLeft" align="right" valign="top"><a id="a18796bd27a922792af8dd7770ef5bb0e"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>_debug</b> = false</td></tr>
-<tr class="separator:a18796bd27a922792af8dd7770ef5bb0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa320faf2640cfd3834bc03ea776fcb6d"><td class="memItemLeft" align="right" valign="top"><a id="aa320faf2640cfd3834bc03ea776fcb6d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geometry_pool.html#aa320faf2640cfd3834bc03ea776fcb6d">sweep</a> (<a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html">Runtime</a> &amp;runtime)</td></tr>
+<tr class="memdesc:aa320faf2640cfd3834bc03ea776fcb6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove unused entries from the pool. <br /></td></tr>
+<tr class="separator:aa320faf2640cfd3834bc03ea776fcb6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d6fcfc85577851548ca30c00f5c403f"><td class="memItemLeft" align="right" valign="top"><a id="a7d6fcfc85577851548ca30c00f5c403f"></a>
+std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geometry_pool.html#a7d6fcfc85577851548ca30c00f5c403f">size</a> () const</td></tr>
+<tr class="memdesc:a7d6fcfc85577851548ca30c00f5c403f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of geometries in the pool. <br /></td></tr>
+<tr class="separator:a7d6fcfc85577851548ca30c00f5c403f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Pool of terrain tile geometries.</p>
@@ -178,22 +146,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>_debug</b> = false</t
       </table>
 </div><div class="memdoc">
 <p>Gets the <a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geometry.html">Geometry</a> associated with a tile key, creating a new one if necessary and storing it in the pool. </p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="ac6ba616b564bd4b5a357e9beb149a392"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6ba616b564bd4b5a357e9beb149a392">&#9670;&nbsp;</a></span>_worldSRS</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s.html">SRS</a> ROCKY_NAMESPACE::GeometryPool::_worldSRS</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Perform an update traversal to check for unused resources. </p>
 
 </div>
 </div>

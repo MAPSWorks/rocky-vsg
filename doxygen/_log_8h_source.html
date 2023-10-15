@@ -74,68 +74,21 @@ $(function() {
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;rocky/Common.h&gt;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;mutex&gt;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;strstream&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html">ROCKY_NAMESPACE</a></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a46b8e71e9eef89d82e49c74847baaadd">   18</a></span>&#160;    <span class="keyword">enum class</span> <a class="code" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a46b8e71e9eef89d82e49c74847baaadd">LogLevel</a></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        SILENT=0, WARN=1, INFO=2, ALL=3</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    };</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a8c90d226caa95a96cd5cda692bd222ac">   24</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a8c90d226caa95a96cd5cda692bd222ac">LogFunction</a> = std::function&lt;void(<a class="code" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a46b8e71e9eef89d82e49c74847baaadd">LogLevel</a>, <span class="keyword">const</span> std::string&amp;)&gt;;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_log.html">   31</a></span>&#160;    <span class="keyword">class </span>ROCKY_EXPORT <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_log.html">Log</a></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keyword">static</span> std::ostream&amp; log(<a class="code" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a46b8e71e9eef89d82e49c74847baaadd">LogLevel</a> level);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keyword">static</span> std::ostream&amp; info();</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keyword">static</span> std::ostream&amp; warn();</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_log.html#ade3ee34f6644de65c47e0d979893b352">   39</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a46b8e71e9eef89d82e49c74847baaadd">LogLevel</a> <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_log.html#ade3ee34f6644de65c47e0d979893b352">level</a>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keyword">static</span> <a class="code" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a8c90d226caa95a96cd5cda692bd222ac">LogFunction</a>&amp; userFunction();</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span>&amp; usePrefix();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_log.html">Log</a>() = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keyword">struct </span>RedirectingStreamBuf : <span class="keyword">public</span> std::basic_stringbuf&lt;char, std::char_traits&lt;char&gt;&gt; {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <a class="code" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a46b8e71e9eef89d82e49c74847baaadd">LogLevel</a> _level = LogLevel::INFO;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordtype">int</span> sync() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        };</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keyword">struct </span>RedirectingStream : <span class="keyword">public</span> std::basic_ostream&lt;char, std::char_traits&lt;char&gt;&gt; {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            RedirectingStreamBuf _buf;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            RedirectingStream();</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        };</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keyword">struct </span>LogStream {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            LogStream(<a class="code" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a46b8e71e9eef89d82e49c74847baaadd">LogLevel</a> level, <span class="keyword">const</span> std::string&amp; prefix, std::ostream&amp; stream, <span class="keyword">const</span> std::string&amp; colorcode);        <span class="comment">// https://stackoverflow.com/questions/8243743/is-there-a-null-stdostream-implementation-in-c-or-libraries</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keyword">mutable</span> std::ofstream _nullStream;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keyword">mutable</span> RedirectingStream _functionStream;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            std::ostream* _stream = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <a class="code" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a46b8e71e9eef89d82e49c74847baaadd">LogLevel</a> _level;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            std::string _prefix;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            std::string _colorcode;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        };</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keyword">static</span> <a class="code" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a8c90d226caa95a96cd5cda692bd222ac">LogFunction</a> g_userFunction;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> g_logUsePrefix;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keyword">static</span> LogStream g_infoStream;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keyword">static</span> LogStream g_warnStream;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    };</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
-<div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_log_html"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_log.html">ROCKY_NAMESPACE::Log</a></div><div class="ttdef"><b>Definition:</b> Log.h:32</div></div>
-<div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_log_html_ade3ee34f6644de65c47e0d979893b352"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_log.html#ade3ee34f6644de65c47e0d979893b352">ROCKY_NAMESPACE::Log::level</a></div><div class="ttdeci">static LogLevel level</div><div class="ttdoc">ignore messages above this level (defaults to INFO)</div><div class="ttdef"><b>Definition:</b> Log.h:39</div></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;spdlog/spdlog.h&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html">ROCKY_NAMESPACE</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">namespace </span>log = spdlog;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">class </span>ROCKY_EXPORT LogSettings</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        LogSettings();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    };</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">extern</span> ROCKY_EXPORT std::shared_ptr&lt;spdlog::logger&gt; Log();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
 <div class="ttc" id="anamespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e_html"><div class="ttname"><a href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html">ROCKY_NAMESPACE</a></div><div class="ttdef"><b>Definition:</b> Callbacks.h:13</div></div>
-<div class="ttc" id="anamespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e_html_a46b8e71e9eef89d82e49c74847baaadd"><div class="ttname"><a href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a46b8e71e9eef89d82e49c74847baaadd">ROCKY_NAMESPACE::LogLevel</a></div><div class="ttdeci">LogLevel</div><div class="ttdoc">Threshold for logging.</div><div class="ttdef"><b>Definition:</b> Log.h:19</div></div>
-<div class="ttc" id="anamespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e_html_a8c90d226caa95a96cd5cda692bd222ac"><div class="ttname"><a href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a8c90d226caa95a96cd5cda692bd222ac">ROCKY_NAMESPACE::LogFunction</a></div><div class="ttdeci">std::function&lt; void(LogLevel, const std::string &amp;)&gt; LogFunction</div><div class="ttdoc">Function for redirecting log messages from the console.</div><div class="ttdef"><b>Definition:</b> Log.h:24</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -492,77 +492,130 @@ $(function() {
 <div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;    }</div>
 <div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160; </div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;<span class="preprocessor">#if 1</span></div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    <span class="comment">// vec3 * mat4</span></div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;    <span class="comment">//template&lt;typename A, typename B&gt;</span></div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    <span class="comment">//A pre_mult(const A&amp; v, const B&amp; _mat) {</span></div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;    <span class="comment">//    double d = 1.0f / (_mat[0][3] * v.x + _mat[1][3] * v.y + _mat[2][3] * v.z + _mat[3][3]);</span></div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;    <span class="comment">//    return A(</span></div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;    <span class="comment">//        (_mat[0][0] * v.x + _mat[1][0] * v.y + _mat[2][0] * v.z + _mat[3][0])*d,</span></div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;    <span class="comment">//        (_mat[0][1] * v.x + _mat[1][1] * v.y + _mat[2][1] * v.z + _mat[3][1])*d,</span></div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;    <span class="comment">//        (_mat[0][2] * v.x + _mat[1][2] * v.y + _mat[2][2] * v.z + _mat[3][2])*d);</span></div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;    <span class="comment">//}</span></div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160; </div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> M&gt;</div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    M pre_mult(<span class="keyword">const</span> M&amp; a, <span class="keyword">const</span> M&amp; b) {</div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;        <span class="keywordflow">return</span> a * b;</div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    }</div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160; </div>
-<div class="line"><a name="l00443"></a><span class="lineno"><a class="line" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a85811cb1f5e42ea71ef18639b21c0135">  443</a></span>&#160;    <span class="keyword">inline</span> glm::fvec3 operator * (<span class="keyword">const</span> glm::fmat4&amp; mat, <span class="keyword">const</span> glm::fvec3&amp; v) {</div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;        <span class="keywordflow">return</span> glm::fvec3(mat * glm::fvec4(v, 1));</div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;    }</div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160; </div>
-<div class="line"><a name="l00448"></a><span class="lineno"><a class="line" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a7eba63cf158a21f421936b6748e9a3f4">  448</a></span>&#160;    <span class="keyword">inline</span> glm::dvec3 operator * (<span class="keyword">const</span> glm::dmat4&amp; mat, <span class="keyword">const</span> glm::dvec3&amp; v) {</div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;        <span class="keywordflow">return</span> glm::dvec3(mat * glm::dvec4(v, 1));</div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;    }</div>
-<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160; </div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;<span class="preprocessor">#if 0</span></div>
-<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;    <span class="keyword">struct </span>ROCKY_EXPORT ProjectionMatrix</div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;    {</div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;        <span class="keyword">using</span> Type = <span class="keyword">enum</span> {</div>
-<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;            STANDARD,</div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;            REVERSE_Z,</div>
-<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;            UNKNOWN</div>
-<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;        };</div>
-<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160; </div>
-<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> isOrtho(</div>
-<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;            <span class="keyword">const</span> dmat4&amp; m);</div>
-<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160; </div>
-<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> isPerspective(</div>
-<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;            <span class="keyword">const</span> dmat4&amp; m);</div>
-<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160; </div>
-<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;        <span class="keyword">static</span> Type getType(</div>
-<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;            <span class="keyword">const</span> dmat4&amp; m);</div>
-<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160; </div>
-<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> setPerspective(</div>
-<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;            dmat4&amp; m,</div>
-<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;            <span class="keywordtype">double</span> vfov, <span class="keywordtype">double</span> ar, <span class="keywordtype">double</span> N, <span class="keywordtype">double</span> F,</div>
-<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;            Type = UNKNOWN);</div>
-<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160; </div>
-<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> getPerspective(</div>
-<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;            <span class="keyword">const</span> dmat4&amp; m,</div>
-<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;            <span class="keywordtype">double</span>&amp; vfov, <span class="keywordtype">double</span>&amp; ar, <span class="keywordtype">double</span>&amp; N, <span class="keywordtype">double</span>&amp; F);</div>
-<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160; </div>
-<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> getPerspective(</div>
-<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;            <span class="keyword">const</span> dmat4&amp; m,</div>
-<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;            <span class="keywordtype">double</span>&amp; L, <span class="keywordtype">double</span>&amp; R, <span class="keywordtype">double</span>&amp; B, <span class="keywordtype">double</span>&amp; T, <span class="keywordtype">double</span>&amp; N, <span class="keywordtype">double</span>&amp; F);</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> M&gt;</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    M pre_mult(<span class="keyword">const</span> M&amp; a, <span class="keyword">const</span> M&amp; b) {</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;        <span class="keywordflow">return</span> a * b;</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    }</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160; </div>
+<div class="line"><a name="l00432"></a><span class="lineno"><a class="line" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a85811cb1f5e42ea71ef18639b21c0135">  432</a></span>&#160;    <span class="keyword">inline</span> glm::fvec3 operator * (<span class="keyword">const</span> glm::fmat4&amp; mat, <span class="keyword">const</span> glm::fvec3&amp; v) {</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;        <span class="keywordflow">return</span> glm::fvec3(mat * glm::fvec4(v, 1));</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;    }</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160; </div>
+<div class="line"><a name="l00437"></a><span class="lineno"><a class="line" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a7eba63cf158a21f421936b6748e9a3f4">  437</a></span>&#160;    <span class="keyword">inline</span> glm::dvec3 operator * (<span class="keyword">const</span> glm::dmat4&amp; mat, <span class="keyword">const</span> glm::dvec3&amp; v) {</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;        <span class="keywordflow">return</span> glm::dvec3(mat * glm::dvec4(v, 1));</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    }</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160; </div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Q&gt;</div>
+<div class="line"><a name="l00444"></a><span class="lineno"><a class="line" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a39184f9c76922aad75d7d1ec0b07a3a9">  444</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a39184f9c76922aad75d7d1ec0b07a3a9">euler_radians_to_quaternion</a>(<span class="keywordtype">double</span> xaxis, <span class="keywordtype">double</span> yaxis, <span class="keywordtype">double</span> zaxis, Q&amp; q)</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;    {</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;        <span class="comment">// x-axis rotation:</span></div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;        <span class="keywordtype">double</span> cx = cos(xaxis * 0.5);</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;        <span class="keywordtype">double</span> sx = sin(xaxis * 0.5);</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;        <span class="comment">// y-axis rotation:</span></div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;        <span class="keywordtype">double</span> cy = cos(yaxis * 0.5);</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;        <span class="keywordtype">double</span> sy = sin(yaxis * 0.5);</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;        <span class="comment">// z-axis rotation:</span></div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;        <span class="keywordtype">double</span> cz = cos(zaxis * 0.5);</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;        <span class="keywordtype">double</span> sz = sin(zaxis * 0.5);</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160; </div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;        q.w = cx * cy * cz + sx * sy * sz;</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;        q.x = sx * cy * cz - cx * sy * sz;</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;        q.y = cx * sy * cz + sx * cy * sz;</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;        q.z = cx * cy * sz - sx * sy * cz;</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;    }</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160; </div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Q&gt;</div>
+<div class="line"><a name="l00464"></a><span class="lineno"><a class="line" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a02cc34c0e9859b87885ef58911518a4e">  464</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a02cc34c0e9859b87885ef58911518a4e">euler_degrees_to_quaternion</a>(<span class="keywordtype">double</span> xaxis, <span class="keywordtype">double</span> yaxis, <span class="keywordtype">double</span> zaxis, Q&amp; q)</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;    {</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;        <a class="code" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a39184f9c76922aad75d7d1ec0b07a3a9">euler_radians_to_quaternion</a>(deg2rad(xaxis), deg2rad(yaxis), deg2rad(zaxis), q);</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;    }</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160; </div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Q&gt;</div>
+<div class="line"><a name="l00472"></a><span class="lineno"><a class="line" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a89cdd740925b3c257b147f1a21e110a9">  472</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a89cdd740925b3c257b147f1a21e110a9">quaternion_to_euler_radians</a>(<span class="keyword">const</span> Q&amp; q, <span class="keywordtype">double</span>&amp; xaxis, <span class="keywordtype">double</span>&amp; yaxis, <span class="keywordtype">double</span>&amp; zaxis)</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;    {</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;        <span class="comment">// x-axis rotation</span></div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;        <span class="keywordtype">double</span> sinr_cosp = 2 * (q.w * q.x + q.y * q.z);</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;        <span class="keywordtype">double</span> cosr_cosp = 1 - 2 * (q.x * q.x + q.y * q.y);</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;        xaxis = std::atan2(sinr_cosp, cosr_cosp);</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;        <span class="comment">// y-axis rotation</span></div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;        <span class="keywordtype">double</span> sinp = std::sqrt(1 + 2 * (q.w * q.y - q.x * q.z));</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;        <span class="keywordtype">double</span> cosp = std::sqrt(1 - 2 * (q.w * q.y - q.x * q.z));</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;        yaxis = (2 * std::atan2(sinp, cosp) - M_PI / 2);</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;        <span class="comment">// z-axis rotation</span></div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;        <span class="keywordtype">double</span> siny_cosp = 2 * (q.w * q.z + q.x * q.y);</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;        <span class="keywordtype">double</span> cosy_cosp = 1 - 2 * (q.y * q.y + q.z * q.z);</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;        zaxis = std::atan2(siny_cosp, cosy_cosp);</div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;    }</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160; </div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Q&gt;</div>
+<div class="line"><a name="l00490"></a><span class="lineno"><a class="line" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#aa422e6e345de08e027955b6e99b82e82">  490</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#aa422e6e345de08e027955b6e99b82e82">quaternion_to_euler_degrees</a>(<span class="keyword">const</span> Q&amp; q, <span class="keywordtype">double</span>&amp; xaxis, <span class="keywordtype">double</span>&amp; yaxis, <span class="keywordtype">double</span>&amp; zaxis)</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;    {</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;        <a class="code" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a89cdd740925b3c257b147f1a21e110a9">quaternion_to_euler_radians</a>(q, xaxis, yaxis, zaxis);</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;        xaxis = rad2deg(xaxis), yaxis = rad2deg(yaxis), zaxis = rad2deg(zaxis);</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;    }</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160; </div>
 <div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160; </div>
-<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> setOrtho(</div>
-<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;            dmat4&amp; m,</div>
-<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;            <span class="keywordtype">double</span> L, <span class="keywordtype">double</span> R, <span class="keywordtype">double</span> B, <span class="keywordtype">double</span> T, <span class="keywordtype">double</span> N, <span class="keywordtype">double</span> F,</div>
-<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;            Type = UNKNOWN);</div>
-<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160; </div>
-<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> getOrtho(</div>
-<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;            <span class="keyword">const</span> dmat4&amp; m,</div>
-<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;            <span class="keywordtype">double</span>&amp; L, <span class="keywordtype">double</span>&amp; R, <span class="keywordtype">double</span>&amp; B, <span class="keywordtype">double</span>&amp; T, <span class="keywordtype">double</span>&amp; N, <span class="keywordtype">double</span>&amp; F);</div>
-<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;    };</div>
-<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;    <span class="comment">// from OpenSceneGraph</span></div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> M, <span class="keyword">typename</span> Q&gt;</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> get_rotation_from_matrix(<span class="keyword">const</span> M&amp; _mat, Q&amp; q)</div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;    {</div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;        <span class="keywordtype">double</span> s;</div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;        <span class="keywordtype">double</span> tq[4];</div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;        <span class="keywordtype">int</span> i, j;</div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160; </div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;        <span class="comment">// Use tq to store the largest trace</span></div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;        tq[0] = 1 + _mat[0][0] + _mat[1][1] + _mat[2][2];</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;        tq[1] = 1 + _mat[0][0] - _mat[1][1] - _mat[2][2];</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;        tq[2] = 1 - _mat[0][0] + _mat[1][1] - _mat[2][2];</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;        tq[3] = 1 - _mat[0][0] - _mat[1][1] + _mat[2][2];</div>
 <div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160; </div>
-<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;}</div>
-<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160; </div>
-<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160; </div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;        <span class="comment">// Find the maximum (could also use stacked if&#39;s later)</span></div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;        j = 0;</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;        <span class="keywordflow">for</span> (i = 1; i &lt; 4; i++) j = (tq[i] &gt; tq[j]) ? i : j;</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160; </div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;        <span class="comment">// check the diagonal</span></div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;        <span class="keywordflow">if</span> (j == 0)</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;        {</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;            <span class="comment">/* perform instant calculation */</span></div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;            q.w = tq[0];</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;            q.x = _mat[1][2] - _mat[2][1];</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;            q.y = _mat[2][0] - _mat[0][2];</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;            q.z = _mat[0][1] - _mat[1][0];</div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;        }</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (j == 1)</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;        {</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;            q.w = _mat[1][2] - _mat[2][1];</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;            q.x = tq[1];</div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;            q.y = _mat[0][1] + _mat[1][0];</div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;            q.z = _mat[2][0] + _mat[0][2];</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;        }</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (j == 2)</div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;        {</div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;            q.w = _mat[2][0] - _mat[0][2];</div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;            q.x = _mat[0][1] + _mat[1][0];</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;            q.y = tq[2];</div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;            q.z = _mat[1][2] + _mat[2][1];</div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;        }</div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;        <span class="keywordflow">else</span> <span class="comment">/* if (j==3) */</span></div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;        {</div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;            q.w = _mat[0][1] - _mat[1][0];</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;            q.x = _mat[2][0] + _mat[0][2];</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;            q.y = _mat[1][2] + _mat[2][1];</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;            q.z = tq[3];</div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;        }</div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160; </div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;        s = sqrt(0.25 / tq[j]);</div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;        q.w *= s;</div>
+<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;        q.x *= s;</div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;        q.y *= s;</div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;        q.z *= s;</div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;    }</div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;}</div>
 <div class="ttc" id="anamespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e_html"><div class="ttname"><a href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html">ROCKY_NAMESPACE</a></div><div class="ttdef"><b>Definition:</b> Callbacks.h:13</div></div>
+<div class="ttc" id="anamespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e_html_a02cc34c0e9859b87885ef58911518a4e"><div class="ttname"><a href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a02cc34c0e9859b87885ef58911518a4e">ROCKY_NAMESPACE::euler_degrees_to_quaternion</a></div><div class="ttdeci">void euler_degrees_to_quaternion(double xaxis, double yaxis, double zaxis, Q &amp;q)</div><div class="ttdoc">Convert Euler angles, in degrees, to a quaternion.</div><div class="ttdef"><b>Definition:</b> Math.h:464</div></div>
+<div class="ttc" id="anamespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e_html_a39184f9c76922aad75d7d1ec0b07a3a9"><div class="ttname"><a href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a39184f9c76922aad75d7d1ec0b07a3a9">ROCKY_NAMESPACE::euler_radians_to_quaternion</a></div><div class="ttdeci">void euler_radians_to_quaternion(double xaxis, double yaxis, double zaxis, Q &amp;q)</div><div class="ttdef"><b>Definition:</b> Math.h:444</div></div>
+<div class="ttc" id="anamespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e_html_a89cdd740925b3c257b147f1a21e110a9"><div class="ttname"><a href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a89cdd740925b3c257b147f1a21e110a9">ROCKY_NAMESPACE::quaternion_to_euler_radians</a></div><div class="ttdeci">void quaternion_to_euler_radians(const Q &amp;q, double &amp;xaxis, double &amp;yaxis, double &amp;zaxis)</div><div class="ttdef"><b>Definition:</b> Math.h:472</div></div>
+<div class="ttc" id="anamespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e_html_aa422e6e345de08e027955b6e99b82e82"><div class="ttname"><a href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#aa422e6e345de08e027955b6e99b82e82">ROCKY_NAMESPACE::quaternion_to_euler_degrees</a></div><div class="ttdeci">void quaternion_to_euler_degrees(const Q &amp;q, double &amp;xaxis, double &amp;yaxis, double &amp;zaxis)</div><div class="ttdoc">Convert a quat to Euler angles in degrees.</div><div class="ttdef"><b>Definition:</b> Math.h:490</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

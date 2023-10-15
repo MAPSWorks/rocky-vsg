@@ -85,18 +85,6 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3c5d8ae079a331945d3f87b1cb424ca4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_image_layer.html#a3c5d8ae079a331945d3f87b1cb424ca4">setAcceptDraping</a> (bool value)</td></tr>
-<tr class="separator:a3c5d8ae079a331945d3f87b1cb424ca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16461370be543aa34b80315a1f8cfba3"><td class="memItemLeft" align="right" valign="top"><a id="a16461370be543aa34b80315a1f8cfba3"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>getAcceptDraping</b> () const</td></tr>
-<tr class="separator:a16461370be543aa34b80315a1f8cfba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95c6b83b3e2af65c79c7d1519d57f359"><td class="memItemLeft" align="right" valign="top"><a id="a95c6b83b3e2af65c79c7d1519d57f359"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_image_layer.html#a95c6b83b3e2af65c79c7d1519d57f359">setCoverage</a> (bool value)</td></tr>
-<tr class="memdesc:a95c6b83b3e2af65c79c7d1519d57f359"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the layer contains coverage data. <br /></td></tr>
-<tr class="separator:a95c6b83b3e2af65c79c7d1519d57f359"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac024563188c3261d5ab82c34b324dfdc"><td class="memItemLeft" align="right" valign="top"><a id="ac024563188c3261d5ab82c34b324dfdc"></a>
-const <a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1optional.html">optional</a>&lt; bool &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>coverage</b> () const</td></tr>
-<tr class="separator:ac024563188c3261d5ab82c34b324dfdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a382e3ccc2ed963b7c14a78843e66fc7b"><td class="memItemLeft" align="right" valign="top"><a id="a382e3ccc2ed963b7c14a78843e66fc7b"></a>
 shared_ptr&lt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_image.html">Image</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getEmptyImage</b> () const</td></tr>
 <tr class="separator:a382e3ccc2ed963b7c14a78843e66fc7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -153,9 +141,6 @@ shared_ptr&lt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_image
 <tr class="memitem:aa769be34b72cc198cda1bf286e24138f"><td class="memItemLeft" align="right" valign="top"><a id="aa769be34b72cc198cda1bf286e24138f"></a>
 <a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1optional.html">optional</a>&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_textureCompression</b></td></tr>
 <tr class="separator:aa769be34b72cc198cda1bf286e24138f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55b984da77bf03b627f151ba04b96731"><td class="memItemLeft" align="right" valign="top"><a id="a55b984da77bf03b627f151ba04b96731"></a>
-<a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1optional.html">optional</a>&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_acceptDraping</b> = false</td></tr>
-<tr class="separator:a55b984da77bf03b627f151ba04b96731"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A map terrain layer containing bitmap image data. </p>
@@ -315,25 +300,6 @@ shared_ptr&lt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_image
 </table>
 </div><div class="memdoc">
 <p>Override to do something to an image before returning it from createImage (including a <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_image.html">GeoImage</a> read from the cache) </p>
-
-</div>
-</div>
-<a id="a3c5d8ae079a331945d3f87b1cb424ca4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c5d8ae079a331945d3f87b1cb424ca4">&#9670;&nbsp;</a></span>setAcceptDraping()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ImageLayer::setAcceptDraping </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Sets whether this layer should allow draped overlays to render on it. This is most applicable to layers with a non-zero altitude (setAltitude). Default is true. </p>
 
 </div>
 </div>

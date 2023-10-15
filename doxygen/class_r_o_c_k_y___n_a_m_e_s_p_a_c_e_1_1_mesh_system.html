@@ -68,9 +68,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_mesh_system-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ROCKY_NAMESPACE::MeshSystem Class Reference</div>  </div>
@@ -79,45 +77,56 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="_mesh_system_8h_source.html">MeshSystem.h</a>&gt;</code></p>
 
-<p>Inherits vsg::Inherit&lt; ECS::SystemNode, MeshSystem &gt;.</p>
+<p>Inherits <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_v_s_g___system.html">ROCKY_NAMESPACE::ECS::VSG_System</a>.</p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:a16be37c470186bf843fe41c57b58c10f"><td class="memItemLeft" align="right" valign="top"><a id="a16be37c470186bf843fe41c57b58c10f"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>Features</b> { <br />
-&#160;&#160;<b>NONE</b> = 0x0
-, <b>TEXTURE</b> = 0x1
-, <b>DYNAMIC_STYLE</b> = 0x2
-, <b>WRITE_DEPTH</b> = 0x4
-, <br />
-&#160;&#160;<b>NUM_PIPELINES</b> = 8
-<br />
- }</td></tr>
-<tr class="separator:a16be37c470186bf843fe41c57b58c10f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6988e307b282438f33705577e5180f02"><td class="memItemLeft" align="right" valign="top"><a id="a6988e307b282438f33705577e5180f02"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_mesh_system.html#a6988e307b282438f33705577e5180f02">MeshSystem</a> (entt::registry &amp;registry)</td></tr>
-<tr class="memdesc:a6988e307b282438f33705577e5180f02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the mesh renderer. <br /></td></tr>
-<tr class="separator:a6988e307b282438f33705577e5180f02"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0a57731c4a0aaa8415c2e27eae652d4"><td class="memItemLeft" align="right" valign="top"><a id="ae0a57731c4a0aaa8415c2e27eae652d4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>initialize</b> (<a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html">Runtime</a> &amp;) override</td></tr>
-<tr class="separator:ae0a57731c4a0aaa8415c2e27eae652d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ea7820c9b1dc203764b3e8484510aef"><td class="memItemLeft" align="right" valign="top"><a id="a8ea7820c9b1dc203764b3e8484510aef"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ROCKY_VSG_SYSTEM_HELPER</b> (<a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_mesh.html">Mesh</a>, helper)</td></tr>
-<tr class="separator:a8ea7820c9b1dc203764b3e8484510aef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ff24704ceb2d76bf56a8e6f5e281dcb"><td class="memItemLeft" align="right" valign="top"><a id="a7ff24704ceb2d76bf56a8e6f5e281dcb"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MeshSystem</b> (entt::registry &amp;<a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_system.html#a2263bf883fd511aafc1aa92111ed64ce">registry</a>)</td></tr>
+<tr class="separator:a7ff24704ceb2d76bf56a8e6f5e281dcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39f5872b38a683cf8da5441fcf210b93"><td class="memItemLeft" align="right" valign="top"><a id="a39f5872b38a683cf8da5441fcf210b93"></a>
+vsg::ref_ptr&lt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_v_s_g___system_node.html">ECS::VSG_SystemNode</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_mesh_system.html#a39f5872b38a683cf8da5441fcf210b93">getOrCreateNode</a> () override</td></tr>
+<tr class="memdesc:a39f5872b38a683cf8da5441fcf210b93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a VSG node for this system, or return the existing one. <br /></td></tr>
+<tr class="separator:a39f5872b38a683cf8da5441fcf210b93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_v_s_g___system"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_v_s_g___system')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_v_s_g___system.html">ROCKY_NAMESPACE::ECS::VSG_System</a></td></tr>
+<tr class="memitem:ae356d021b412ff27129735bbc5693dc2 inherit pub_methods_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_v_s_g___system"><td class="memItemLeft" align="right" valign="top"><a id="ae356d021b412ff27129735bbc5693dc2"></a>
+const <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_status.html">Status</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_v_s_g___system.html#ae356d021b412ff27129735bbc5693dc2">status</a> () const override</td></tr>
+<tr class="memdesc:ae356d021b412ff27129735bbc5693dc2 inherit pub_methods_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_v_s_g___system"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_status.html">Status</a> of this system. <br /></td></tr>
+<tr class="separator:ae356d021b412ff27129735bbc5693dc2 inherit pub_methods_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_v_s_g___system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_system"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_system')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_system.html">ROCKY_NAMESPACE::ECS::System</a></td></tr>
+<tr class="memitem:a7beddc5638973022e4c7bdce22843790 inherit pub_methods_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_system"><td class="memItemLeft" align="right" valign="top"><a id="a7beddc5638973022e4c7bdce22843790"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_system.html#a7beddc5638973022e4c7bdce22843790">update</a> (time_point time)</td></tr>
+<tr class="memdesc:a7beddc5638973022e4c7bdce22843790 inherit pub_methods_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the system with a time stamp. <br /></td></tr>
+<tr class="separator:a7beddc5638973022e4c7bdce22843790 inherit pub_methods_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:abd7fb844c2b0f72e7ff4100a0be4157a"><td class="memItemLeft" align="right" valign="top"><a id="abd7fb844c2b0f72e7ff4100a0be4157a"></a>
-static int&#160;</td><td class="memItemRight" valign="bottom"><b>featureMask</b> (const <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_mesh.html">Mesh</a> &amp;mesh)</td></tr>
-<tr class="separator:abd7fb844c2b0f72e7ff4100a0be4157a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_attribs_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_v_s_g___system"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_v_s_g___system')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_v_s_g___system.html">ROCKY_NAMESPACE::ECS::VSG_System</a></td></tr>
+<tr class="memitem:a36a93e07e9b0bb7652eb5f695cd97dc6 inherit pub_attribs_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_v_s_g___system"><td class="memItemLeft" align="right" valign="top"><a id="a36a93e07e9b0bb7652eb5f695cd97dc6"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_v_s_g___system.html#a36a93e07e9b0bb7652eb5f695cd97dc6">active</a> = true</td></tr>
+<tr class="memdesc:a36a93e07e9b0bb7652eb5f695cd97dc6 inherit pub_attribs_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_v_s_g___system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to render this system's components. <br /></td></tr>
+<tr class="separator:a36a93e07e9b0bb7652eb5f695cd97dc6 inherit pub_attribs_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_v_s_g___system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af635ca0e65c2ec43d253259a09e750f8 inherit pub_attribs_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_v_s_g___system"><td class="memItemLeft" align="right" valign="top"><a id="af635ca0e65c2ec43d253259a09e750f8"></a>
+vsg::ref_ptr&lt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_v_s_g___system_node.html">VSG_SystemNode</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>node</b></td></tr>
+<tr class="separator:af635ca0e65c2ec43d253259a09e750f8 inherit pub_attribs_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_v_s_g___system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_system"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_system')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_system.html">ROCKY_NAMESPACE::ECS::System</a></td></tr>
+<tr class="memitem:a2263bf883fd511aafc1aa92111ed64ce inherit pub_attribs_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_system"><td class="memItemLeft" align="right" valign="top"><a id="a2263bf883fd511aafc1aa92111ed64ce"></a>
+entt::registry &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_system.html#a2263bf883fd511aafc1aa92111ed64ce">registry</a></td></tr>
+<tr class="memdesc:a2263bf883fd511aafc1aa92111ed64ce inherit pub_attribs_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s.html" title="Entity Component System support.">ECS</a> entity registry. <br /></td></tr>
+<tr class="separator:a2263bf883fd511aafc1aa92111ed64ce inherit pub_attribs_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_v_s_g___system"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_v_s_g___system')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_v_s_g___system.html">ROCKY_NAMESPACE::ECS::VSG_System</a></td></tr>
+<tr class="memitem:a8fb770014361e6ba90e833affadfdbcc inherit pro_methods_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_v_s_g___system"><td class="memItemLeft" align="right" valign="top"><a id="a8fb770014361e6ba90e833affadfdbcc"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>VSG_System</b> (entt::registry &amp;registry_)</td></tr>
+<tr class="separator:a8fb770014361e6ba90e833affadfdbcc inherit pro_methods_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_v_s_g___system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_system"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_system')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_system.html">ROCKY_NAMESPACE::ECS::System</a></td></tr>
+<tr class="memitem:aa494d0a18489515abb2c64214e3c919a inherit pro_methods_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_system"><td class="memItemLeft" align="right" valign="top"><a id="aa494d0a18489515abb2c64214e3c919a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>System</b> (entt::registry &amp;registry_)</td></tr>
+<tr class="separator:aa494d0a18489515abb2c64214e3c919a inherit pro_methods_class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_e_c_s_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Creates commands for rendering mesh primitives and holds the singleton pipeline configurator for their drawing state. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/rocky_vsg/engine/<a class="el" href="_mesh_system_8h_source.html">MeshSystem.h</a></li>
-<li>src/rocky_vsg/engine/MeshSystem.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
