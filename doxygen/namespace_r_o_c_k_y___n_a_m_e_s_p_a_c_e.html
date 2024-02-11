@@ -135,9 +135,6 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_image_layer.html">ImageLayer</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_cancelable.html">Cancelable</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">General purpose interface things that can be canceled.  <a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_cancelable.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_cache.html">Cache</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for a cache.  <a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_cache.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -196,6 +193,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_visible_layer.html">VisibleLayer</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for a layer supporting visibility and opacity controls.  <a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_visible_layer.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_display_manager.html">DisplayManager</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_transform.html">Transform</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -325,8 +324,9 @@ using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nam
 <tr class="memitem:a5cd2c7f8a9f558630454124395068467"><td class="memItemLeft" align="right" valign="top"><a id="a5cd2c7f8a9f558630454124395068467"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>DataExtentList</b> = std::vector&lt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_data_extent.html">DataExtent</a> &gt;</td></tr>
 <tr class="separator:a5cd2c7f8a9f558630454124395068467"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a125f63f016555490e8058e1e10ca8bbb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a125f63f016555490e8058e1e10ca8bbb">ReadImageURIService</a> = std::function&lt; <a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_result.html">Result</a>&lt; shared_ptr&lt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_image.html">Image</a> &gt; &gt;(const std::string &amp;location, const IOOptions &amp;)&gt;</td></tr>
-<tr class="memdesc:a125f63f016555490e8058e1e10ca8bbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Service providing a Log.  <a href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a125f63f016555490e8058e1e10ca8bbb">More...</a><br /></td></tr>
+<tr class="memitem:a125f63f016555490e8058e1e10ca8bbb"><td class="memItemLeft" align="right" valign="top"><a id="a125f63f016555490e8058e1e10ca8bbb"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a125f63f016555490e8058e1e10ca8bbb">ReadImageURIService</a> = std::function&lt; <a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_result.html">Result</a>&lt; shared_ptr&lt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_image.html">Image</a> &gt; &gt;(const std::string &amp;location, const IOOptions &amp;)&gt;</td></tr>
+<tr class="memdesc:a125f63f016555490e8058e1e10ca8bbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Service for reading an image from a URL. <br /></td></tr>
 <tr class="separator:a125f63f016555490e8058e1e10ca8bbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b1c609b56d8bfa28f43dfa3fbb9014d"><td class="memItemLeft" align="right" valign="top"><a id="a6b1c609b56d8bfa28f43dfa3fbb9014d"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>ReadImageStreamService</b> = std::function&lt; <a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_result.html">Result</a>&lt; shared_ptr&lt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_image.html">Image</a> &gt; &gt;(std::istream &amp;stream, std::string contentType, const IOOptions &amp;io)&gt;</td></tr>
@@ -354,6 +354,9 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>Headers</b> = std::u
 using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a91df5719391c623b97bc9c263d675ade">SpatialReference</a> = <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s.html">SRS</a></td></tr>
 <tr class="memdesc:a91df5719391c623b97bc9c263d675ade"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenient symonym. <br /></td></tr>
 <tr class="separator:a91df5719391c623b97bc9c263d675ade"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55f95bff1179ddd6fa214496eb6958dd"><td class="memItemLeft" align="right" valign="top"><a id="a55f95bff1179ddd6fa214496eb6958dd"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>Cancelable</b> = jobs::cancelable</td></tr>
+<tr class="separator:a55f95bff1179ddd6fa214496eb6958dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9cb99c4e085fc545f0232b678099e150"><td class="memItemLeft" align="right" valign="top"><a id="a9cb99c4e085fc545f0232b678099e150"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>Triangle32</b> = <a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_triangle.html">Triangle</a>&lt;&gt;</td></tr>
 <tr class="separator:a9cb99c4e085fc545f0232b678099e150"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -789,23 +792,6 @@ constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>VSG_VIEW_DEP
 <div class="textblock"><p>rocky c++ Copyright 2023 Pelican Mapping MIT License</p>
 <p>rocky c++ Copyright 2023 Pelican Mapping MIT License A collection of types used by the various I/O systems. </p>
 </div><h2 class="groupheader">Typedef Documentation</h2>
-<a id="a125f63f016555490e8058e1e10ca8bbb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a125f63f016555490e8058e1e10ca8bbb">&#9670;&nbsp;</a></span>ReadImageURIService</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a125f63f016555490e8058e1e10ca8bbb">ROCKY_NAMESPACE::ReadImageURIService</a> = typedef std::function&lt; <a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_result.html">Result</a>&lt;shared_ptr&lt;<a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_image.html">Image</a>&gt; &gt;(const std::string&amp; location, const IOOptions&amp;)&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Service providing a Log. </p>
-<p>Service for reading an image from a URL </p>
-
-</div>
-</div>
 <a id="acf867874ef84693046eb1830f384cee0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acf867874ef84693046eb1830f384cee0">&#9670;&nbsp;</a></span>TimeSpan</h2>
 

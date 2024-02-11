@@ -92,8 +92,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a32bee88f39c683ccdbb1a73310048e24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abec00bb492c489759cf6da4480058774"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#abec00bb492c489759cf6da4480058774">dispose</a> (vsg::ref_ptr&lt; vsg::Object &gt; object)</td></tr>
 <tr class="separator:abec00bb492c489759cf6da4480058774"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1a99df9bca34eec28545383a71d43be"><td class="memItemLeft" align="right" valign="top">util::Future&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#ad1a99df9bca34eec28545383a71d43be">compileAndAddChild</a> (vsg::ref_ptr&lt; vsg::Group &gt; parent, std::function&lt; vsg::ref_ptr&lt; vsg::Node &gt;(<a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_cancelable.html">Cancelable</a> &amp;)&gt; factory, const util::job &amp;config={ })</td></tr>
-<tr class="separator:ad1a99df9bca34eec28545383a71d43be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2be2d1c41aed6e00e4abfa1d332bf499"><td class="memItemLeft" align="right" valign="top">jobs::future&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#a2be2d1c41aed6e00e4abfa1d332bf499">compileAndAddChild</a> (vsg::ref_ptr&lt; vsg::Group &gt; parent, std::function&lt; vsg::ref_ptr&lt; vsg::Node &gt;(Cancelable &amp;)&gt; factory, const jobs::context &amp;config={ })</td></tr>
+<tr class="separator:a2be2d1c41aed6e00e4abfa1d332bf499"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa16de15e7e83c6f44ce8261df1bae0e6"><td class="memItemLeft" align="right" valign="top"><a id="aa16de15e7e83c6f44ce8261df1bae0e6"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html#aa16de15e7e83c6f44ce8261df1bae0e6">removeNode</a> (vsg::Group *parent, unsigned index)</td></tr>
 <tr class="memdesc:aa16de15e7e83c6f44ce8261df1bae0e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safely removes a node from the scene graph (async) <br /></td></tr>
@@ -158,14 +158,14 @@ vsg::ref_ptr&lt; vsg::Font &gt;&#160;</td><td class="memItemRight" valign="botto
 
 </div>
 </div>
-<a id="ad1a99df9bca34eec28545383a71d43be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad1a99df9bca34eec28545383a71d43be">&#9670;&nbsp;</a></span>compileAndAddChild()</h2>
+<a id="a2be2d1c41aed6e00e4abfa1d332bf499"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2be2d1c41aed6e00e4abfa1d332bf499">&#9670;&nbsp;</a></span>compileAndAddChild()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">util::Future&lt; bool &gt; Runtime::compileAndAddChild </td>
+          <td class="memname">jobs::future&lt; bool &gt; Runtime::compileAndAddChild </td>
           <td>(</td>
           <td class="paramtype">vsg::ref_ptr&lt; vsg::Group &gt;&#160;</td>
           <td class="paramname"><em>parent</em>, </td>
@@ -173,13 +173,13 @@ vsg::ref_ptr&lt; vsg::Font &gt;&#160;</td><td class="memItemRight" valign="botto
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::function&lt; vsg::ref_ptr&lt; vsg::Node &gt;(<a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_cancelable.html">Cancelable</a> &amp;)&gt;&#160;</td>
+          <td class="paramtype">std::function&lt; vsg::ref_ptr&lt; vsg::Node &gt;(Cancelable &amp;)&gt;&#160;</td>
           <td class="paramname"><em>factory</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const util::job &amp;&#160;</td>
+          <td class="paramtype">const jobs::context &amp;&#160;</td>
           <td class="paramname"><em>config</em> = <code>{&#160;}</code>&#160;</td>
         </tr>
         <tr>

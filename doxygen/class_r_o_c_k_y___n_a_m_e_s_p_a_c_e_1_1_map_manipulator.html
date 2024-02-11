@@ -70,8 +70,8 @@ $(function() {
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-types">Protected Types</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
@@ -213,6 +213,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_manipulator.html#a50d910882f4ba880c2d85c75ac649192">isTethering</a> () const</td></tr>
 <tr class="memdesc:a50d910882f4ba880c2d85c75ac649192"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the user set a <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_viewpoint.html">Viewpoint</a> with a tethering target. <br /></td></tr>
 <tr class="separator:a50d910882f4ba880c2d85c75ac649192"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc2be95a353c857e705b609775b3d086"><td class="memItemLeft" align="right" valign="top"><a id="abc2be95a353c857e705b609775b3d086"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_manipulator.html#abc2be95a353c857e705b609775b3d086">put</a> (vsg::ref_ptr&lt; vsg::Object &gt; object)</td></tr>
+<tr class="memdesc:abc2be95a353c857e705b609775b3d086"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store a reference to this manipulator in another object. <br /></td></tr>
+<tr class="separator:abc2be95a353c857e705b609775b3d086"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a095abedfc782498afc0e0445be0f7009"><td class="memItemLeft" align="right" valign="top"><a id="a095abedfc782498afc0e0445be0f7009"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (vsg::KeyPressEvent &amp;keyPress) override</td></tr>
 <tr class="separator:a095abedfc782498afc0e0445be0f7009"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -250,17 +254,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>applySettings</b> (sh
 shared_ptr&lt; Settings &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getSettings</b> () const</td></tr>
 <tr class="separator:a307586e3cef28317babaa4434c28e922"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a7fb2824322d92fc85d8b3cdf9a787b4c"><td class="memItemLeft" align="right" valign="top"><a id="a7fb2824322d92fc85d8b3cdf9a787b4c"></a>
+static vsg::ref_ptr&lt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_manipulator.html">MapManipulator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_manipulator.html#a7fb2824322d92fc85d8b3cdf9a787b4c">get</a> (vsg::ref_ptr&lt; vsg::Object &gt; object)</td></tr>
+<tr class="memdesc:a7fb2824322d92fc85d8b3cdf9a787b4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve a reference to a mapmanipulator from and object. <br /></td></tr>
+<tr class="separator:a7fb2824322d92fc85d8b3cdf9a787b4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ab78290c6b9ea3c68208a9d71004c3afc"><td class="memItemLeft" align="right" valign="top"><a id="ab78290c6b9ea3c68208a9d71004c3afc"></a>
 shared_ptr&lt; Settings &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_settings</b></td></tr>
 <tr class="separator:ab78290c6b9ea3c68208a9d71004c3afc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
-Static Public Attributes</h2></td></tr>
-<tr class="memitem:a21b01437548dc9c1a6ae2cd971e2233d"><td class="memItemLeft" align="right" valign="top"><a id="a21b01437548dc9c1a6ae2cd971e2233d"></a>
-static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>tag</b> = &quot;rocky.manipulator&quot;</td></tr>
-<tr class="separator:a21b01437548dc9c1a6ae2cd971e2233d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-types"></a>
 Protected Types</h2></td></tr>
