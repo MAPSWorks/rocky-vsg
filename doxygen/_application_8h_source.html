@@ -103,7 +103,7 @@ $(function() {
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordtype">bool</span> frame();</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordtype">void</span> queue(std::function&lt;<span class="keywordtype">void</span>()&gt; func);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordtype">void</span> onNextUpdate(std::function&lt;<span class="keywordtype">void</span>()&gt; func);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">void</span> setViewer(vsg::ref_ptr&lt;vsg::Viewer&gt; viewer);</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
@@ -118,7 +118,7 @@ $(function() {
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        entt::registry entities;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        ECS::SystemsManager ecs;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        rocky::InstanceVSG instance;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        rocky::InstanceVSG <a class="code" href="namespace_w_e_e_j_o_b_s___n_a_m_e_s_p_a_c_e.html#a6712df141c6649164eab909560294b26">instance</a>;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        vsg::ref_ptr&lt;rocky::MapNode&gt; mapNode;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        vsg::ref_ptr&lt;rocky::SkyNode&gt; skyNode;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        vsg::ref_ptr&lt;vsg::Viewer&gt; viewer;</div>
@@ -168,6 +168,7 @@ $(function() {
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
 <div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_display_manager_html"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_display_manager.html">ROCKY_NAMESPACE::DisplayManager</a></div><div class="ttdef"><b>Definition:</b> DisplayManager.h:30</div></div>
 <div class="ttc" id="anamespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e_html"><div class="ttname"><a href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html">ROCKY_NAMESPACE</a></div><div class="ttdef"><b>Definition:</b> Callbacks.h:13</div></div>
+<div class="ttc" id="anamespace_w_e_e_j_o_b_s___n_a_m_e_s_p_a_c_e_html_a6712df141c6649164eab909560294b26"><div class="ttname"><a href="namespace_w_e_e_j_o_b_s___n_a_m_e_s_p_a_c_e.html#a6712df141c6649164eab909560294b26">WEEJOBS_NAMESPACE::instance</a></div><div class="ttdeci">WEEJOBS_EXPORT detail::runtime &amp; instance()</div><div class="ttdoc">Access to the runtime singleton - users need not call this.</div></div>
 <div class="ttc" id="astruct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_application_1_1_stats_html"><div class="ttname"><a href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_application_1_1_stats.html">ROCKY_NAMESPACE::Application::Stats</a></div><div class="ttdoc">Runtime timing statistics.</div><div class="ttdef"><b>Definition:</b> Application.h:80</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

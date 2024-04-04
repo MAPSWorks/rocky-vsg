@@ -530,97 +530,95 @@ $(function() {
 <div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> handleKeyboardAction(<span class="keyword">const</span> Action&amp; action, vsg::time_point time, <span class="keywordtype">double</span> duration_s = DBL_MAX);</div>
 <div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> handleScrollAction(<span class="keyword">const</span> Action&amp; action, vsg::time_point time, <span class="keywordtype">double</span> duration_s = DBL_MAX);</div>
 <div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> handlePointAction(<span class="keyword">const</span> Action&amp; type, <span class="keywordtype">float</span> mx, <span class="keywordtype">float</span> my, vsg::time_point time);</div>
-<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> handleMovementAction(<span class="keyword">const</span> ActionType&amp; type, vsg::dvec2 delta, vsg::time_point time);</div>
-<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> handleContinuousAction(<span class="keyword">const</span> Action&amp; action, vsg::time_point time);</div>
-<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160; </div>
-<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;        <span class="keywordtype">void</span> clearEvents();</div>
-<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;        vsg::ref_ptr&lt;MapNode&gt; getMapNode() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160; </div>
-<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;        <span class="keyword">struct </span>State</div>
-<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;        {</div>
-<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;            <span class="comment">// The world coordinate of the focal point.</span></div>
-<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;            vsg::dvec3 center;</div>
-<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160; </div>
-<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;            <span class="comment">// Reference frame for the local ENU tangent plane to the elllipoid centered</span></div>
-<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;            <span class="comment">// at &quot;_center&quot; with (X=east, Y=north, Z=up)</span></div>
-<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;            vsg::dmat4 centerRotation;</div>
-<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160; </div>
-<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;            <span class="comment">// Quaternion that applies a heading and pitch in the local tangent plane</span></div>
-<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;            <span class="comment">// established by _center and _centerRotation.</span></div>
-<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;            vsg::dquat localRotation;</div>
-<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160; </div>
-<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;            <span class="comment">// distance from camera to _center.</span></div>
-<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;            <span class="keywordtype">double</span> distance;</div>
-<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160; </div>
-<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;            <span class="comment">// XYZ offsets of the focal point in the local tangent plane coordinate system</span></div>
-<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;            <span class="comment">// of the focal point.</span></div>
-<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;            vsg::dvec3 localPositionOffset;</div>
-<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160; </div>
-<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;            <span class="comment">// XY offsets (left/right, down/up) of the focal point in the plane normal to</span></div>
-<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;            <span class="comment">// the view heading.</span></div>
-<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;            vsg::dvec2 viewOffset;</div>
-<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160; </div>
-<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;            vsg::dquat tetherRotation;</div>
-<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160; </div>
-<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;            std::optional&lt;Viewpoint&gt; setVP0;</div>
-<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;            std::optional&lt;Viewpoint&gt; setVP1; <span class="comment">// Final viewpoint</span></div>
-<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;            optional&lt;vsg::time_point&gt; setVPStartTime; <span class="comment">// Time of call to setViewpoint</span></div>
-<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;            std::chrono::duration&lt;float&gt; setVPDuration; <span class="comment">// Transition time for setViewpoint</span></div>
-<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;            <span class="keywordtype">double</span> setVPAccel, setVPAccel2; <span class="comment">// Acceleration factors for setViewpoint</span></div>
-<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;            <span class="keywordtype">double</span> setVPArcHeight; <span class="comment">// Altitude arcing height for setViewpoint</span></div>
-<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;            vsg::dquat tetherRotationVP0;</div>
-<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;            vsg::dquat tetherRotationVP1;</div>
-<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;            TetherMode lastTetherMode = TETHER_CENTER;</div>
-<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160; </div>
-<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;            State() :</div>
-<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;                localRotation(0, 0, 0, 1),</div>
-<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;                distance(1.0),</div>
-<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;                tetherRotation(0, 0, 0, 1)</div>
-<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;            { }</div>
-<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;        };</div>
-<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160; </div>
-<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;        vsg::observer_ptr&lt;MapNode&gt; _mapNode_weakptr;</div>
-<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;        vsg::observer_ptr&lt;vsg::Window&gt; _window_weakptr;</div>
-<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;        vsg::observer_ptr&lt;vsg::Camera&gt; _camera_weakptr;</div>
-<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;        SRS _worldSRS;</div>
-<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160; </div>
-<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;        optional&lt;vsg::MoveEvent&gt; _previousMove;</div>
-<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;        optional&lt;vsg::ButtonPressEvent&gt; _buttonPress;</div>
-<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;        optional&lt;vsg::KeyPressEvent&gt; _keyPress;</div>
-<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;        vsg::time_point _previousTime;</div>
-<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160; </div>
-<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;        <span class="keywordtype">bool</span> _thrown;</div>
-<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;        vsg::dvec2 _throwDelta;</div>
-<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;        vsg::dvec2 _delta;</div>
-<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;        vsg::dmat4 _viewMatrix;</div>
-<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;        State _state;</div>
-<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;        Task _task;</div>
-<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;        <span class="keywordtype">bool</span> _continuous;</div>
-<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;        vsg::dvec2 _continuousDelta;</div>
-<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;        vsg::time_point _last_continuous_action_time;</div>
-<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;        vsg::dvec2 _singleAxis;</div>
-<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;        vsg::dmat4 _mapNodeFrame, _mapNodeFrameInverse;</div>
-<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;        Action _lastAction;</div>
-<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;        Action _continuousAction;</div>
-<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160; </div>
-<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;        <span class="comment">// rendering required b/c something changed.</span></div>
-<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;        <span class="keywordtype">bool</span> _dirty;</div>
+<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> handleMovementAction(<span class="keyword">const</span> ActionType&amp; type, vsg::dvec2 delta);</div>
+<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160; </div>
+<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;        <span class="keywordtype">void</span> clearEvents();</div>
+<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;        vsg::ref_ptr&lt;MapNode&gt; getMapNode() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160; </div>
+<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;        <span class="keyword">struct </span>State</div>
+<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;        {</div>
+<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;            <span class="comment">// The world coordinate of the focal point.</span></div>
+<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;            vsg::dvec3 center;</div>
+<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160; </div>
+<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;            <span class="comment">// Reference frame for the local ENU tangent plane to the elllipoid centered</span></div>
+<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;            <span class="comment">// at &quot;_center&quot; with (X=east, Y=north, Z=up)</span></div>
+<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;            vsg::dmat4 centerRotation;</div>
+<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160; </div>
+<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;            <span class="comment">// Quaternion that applies a heading and pitch in the local tangent plane</span></div>
+<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;            <span class="comment">// established by _center and _centerRotation.</span></div>
+<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;            vsg::dquat localRotation;</div>
+<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160; </div>
+<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;            <span class="comment">// distance from camera to _center.</span></div>
+<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;            <span class="keywordtype">double</span> distance;</div>
+<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160; </div>
+<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;            <span class="comment">// XYZ offsets of the focal point in the local tangent plane coordinate system</span></div>
+<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;            <span class="comment">// of the focal point.</span></div>
+<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;            vsg::dvec3 localPositionOffset;</div>
+<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160; </div>
+<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;            <span class="comment">// XY offsets (left/right, down/up) of the focal point in the plane normal to</span></div>
+<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;            <span class="comment">// the view heading.</span></div>
+<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;            vsg::dvec2 viewOffset;</div>
+<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160; </div>
+<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;            vsg::dquat tetherRotation;</div>
+<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160; </div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;            std::optional&lt;Viewpoint&gt; setVP0;</div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;            std::optional&lt;Viewpoint&gt; setVP1; <span class="comment">// Final viewpoint</span></div>
+<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;            optional&lt;vsg::time_point&gt; setVPStartTime; <span class="comment">// Time of call to setViewpoint</span></div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;            std::chrono::duration&lt;float&gt; setVPDuration; <span class="comment">// Transition time for setViewpoint</span></div>
+<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;            <span class="keywordtype">double</span> setVPAccel, setVPAccel2; <span class="comment">// Acceleration factors for setViewpoint</span></div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;            <span class="keywordtype">double</span> setVPArcHeight; <span class="comment">// Altitude arcing height for setViewpoint</span></div>
+<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;            vsg::dquat tetherRotationVP0;</div>
+<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;            vsg::dquat tetherRotationVP1;</div>
+<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;            TetherMode lastTetherMode = TETHER_CENTER;</div>
+<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160; </div>
+<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;            State() :</div>
+<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;                localRotation(0, 0, 0, 1),</div>
+<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;                distance(1.0),</div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;                tetherRotation(0, 0, 0, 1)</div>
+<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;            { }</div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;        };</div>
+<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160; </div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;        vsg::observer_ptr&lt;MapNode&gt; _mapNode_weakptr;</div>
+<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;        vsg::observer_ptr&lt;vsg::Window&gt; _window_weakptr;</div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;        vsg::observer_ptr&lt;vsg::Camera&gt; _camera_weakptr;</div>
+<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;        SRS _worldSRS;</div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160; </div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;        optional&lt;vsg::MoveEvent&gt; _previousMove;</div>
+<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;        optional&lt;vsg::ButtonPressEvent&gt; _buttonPress;</div>
+<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;        optional&lt;vsg::KeyPressEvent&gt; _keyPress;</div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;        vsg::time_point _previousTime;</div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160; </div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;        <span class="keywordtype">bool</span> _thrown;</div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;        vsg::dvec2 _throwDelta;</div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;        vsg::dvec2 _delta;</div>
+<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;        vsg::dmat4 _viewMatrix;</div>
+<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;        State _state;</div>
+<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;        Task _task;</div>
+<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;        <span class="keywordtype">bool</span> _continuous;</div>
+<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;        vsg::dvec2 _continuousDelta;</div>
+<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;        vsg::dvec2 _singleAxis;</div>
+<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;        vsg::dmat4 _mapNodeFrame, _mapNodeFrameInverse;</div>
+<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;        Action _lastAction;</div>
+<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;        Action _continuousAction;</div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160; </div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;        <span class="comment">// rendering required b/c something changed.</span></div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;        <span class="keywordtype">bool</span> _dirty;</div>
+<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160; </div>
+<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;        <span class="keywordtype">bool</span> withinRenderArea(<span class="keyword">const</span> vsg::PointerEvent&amp; pointerEvent) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160; </div>
-<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;        <span class="keywordtype">bool</span> withinRenderArea(<span class="keyword">const</span> vsg::PointerEvent&amp; pointerEvent) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;        vsg::dvec2 ndc(<span class="keyword">const</span> vsg::PointerEvent&amp;) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160; </div>
-<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;        vsg::dvec2 ndc(<span class="keyword">const</span> vsg::PointerEvent&amp;) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160; </div>
-<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">bool</span> isSettingViewpoint()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;            <span class="keywordflow">return</span> _state.setVP0.has_value() &amp;&amp; _state.setVP1.has_value();</div>
-<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;        }</div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">bool</span> isSettingViewpoint()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;            <span class="keywordflow">return</span> _state.setVP0.has_value() &amp;&amp; _state.setVP1.has_value();</div>
+<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;        }</div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160; </div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;        <span class="keywordtype">double</span> setViewpointFrame(<span class="keyword">const</span> vsg::time_point&amp;);</div>
 <div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160; </div>
-<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;        <span class="keywordtype">double</span> setViewpointFrame(<span class="keyword">const</span> vsg::time_point&amp;);</div>
+<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;        <span class="keywordtype">void</span> updateTether(<span class="keyword">const</span> vsg::time_point&amp; t);</div>
 <div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160; </div>
-<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;        <span class="keywordtype">void</span> updateTether(<span class="keyword">const</span> vsg::time_point&amp; t);</div>
-<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160; </div>
-<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;        <span class="keywordtype">void</span> updateCamera();</div>
-<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;    };</div>
-<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;}</div>
+<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;        <span class="keywordtype">void</span> updateCamera();</div>
+<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;    };</div>
+<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;}</div>
 <div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_manipulator_html"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_manipulator.html">ROCKY_NAMESPACE::MapManipulator</a></div><div class="ttdef"><b>Definition:</b> MapManipulator.h:38</div></div>
 <div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_manipulator_html_a29ff4aeb5d816515dd0e0d70cdb16ac7"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_manipulator.html#a29ff4aeb5d816515dd0e0d70cdb16ac7">ROCKY_NAMESPACE::MapManipulator::ActionType</a></div><div class="ttdeci">ActionType</div><div class="ttdoc">Bindable manipulator actions.</div><div class="ttdef"><b>Definition:</b> MapManipulator.h:110</div></div>
 <div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_manipulator_html_a50d910882f4ba880c2d85c75ac649192"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_manipulator.html#a50d910882f4ba880c2d85c75ac649192">ROCKY_NAMESPACE::MapManipulator::isTethering</a></div><div class="ttdeci">bool isTethering() const</div><div class="ttdoc">True if the user set a Viewpoint with a tethering target.</div><div class="ttdef"><b>Definition:</b> MapManipulator.h:85</div></div>

@@ -105,12 +105,16 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_w_e_e_j_o_b_s___n_a_m_e_s_p_a_c_e_1_1jobpool.html#ac8bfe59489808d987124a641f219e1d1">concurrency</a> () const</td></tr>
 <tr class="memdesc:ac8bfe59489808d987124a641f219e1d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the target concurrency (thread count) <br /></td></tr>
 <tr class="separator:ac8bfe59489808d987124a641f219e1d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4177d3d40331614caf5d932cce7f9c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_w_e_e_j_o_b_s___n_a_m_e_s_p_a_c_e_1_1jobpool.html#ab4177d3d40331614caf5d932cce7f9c1">set_can_steal_work</a> (bool value)</td></tr>
+<tr class="separator:ab4177d3d40331614caf5d932cce7f9c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade733d5c721aed8f9657c0830c3f0978"><td class="memItemLeft" align="right" valign="top"><a id="ade733d5c721aed8f9657c0830c3f0978"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_w_e_e_j_o_b_s___n_a_m_e_s_p_a_c_e_1_1jobpool.html#ade733d5c721aed8f9657c0830c3f0978">cancel_all</a> ()</td></tr>
 <tr class="memdesc:ade733d5c721aed8f9657c0830c3f0978"><td class="mdescLeft">&#160;</td><td class="mdescRight">Discard all queued jobs. <br /></td></tr>
 <tr class="separator:ade733d5c721aed8f9657c0830c3f0978"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab9754a0bd609bf8e6d5b1e435127ce4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_w_e_e_j_o_b_s___n_a_m_e_s_p_a_c_e_1_1jobpool.html#aab9754a0bd609bf8e6d5b1e435127ce4">dispatch</a> (std::function&lt; bool()&gt; &amp;delegate, const <a class="el" href="struct_w_e_e_j_o_b_s___n_a_m_e_s_p_a_c_e_1_1context.html">context</a> &amp;<a class="el" href="struct_w_e_e_j_o_b_s___n_a_m_e_s_p_a_c_e_1_1context.html">context</a>)</td></tr>
-<tr class="separator:aab9754a0bd609bf8e6d5b1e435127ce4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30d167803140de44dda0c71cebade6f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_w_e_e_j_o_b_s___n_a_m_e_s_p_a_c_e_1_1jobpool.html#a30d167803140de44dda0c71cebade6f6">_dispatch_delegate</a> (std::function&lt; bool()&gt; &amp;delegate, const <a class="el" href="struct_w_e_e_j_o_b_s___n_a_m_e_s_p_a_c_e_1_1context.html">context</a> &amp;<a class="el" href="struct_w_e_e_j_o_b_s___n_a_m_e_s_p_a_c_e_1_1context.html">context</a>)</td></tr>
+<tr class="separator:a30d167803140de44dda0c71cebade6f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60a2c37bce5ddde491274d6a8142decf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_w_e_e_j_o_b_s___n_a_m_e_s_p_a_c_e_1_1jobpool.html#a60a2c37bce5ddde491274d6a8142decf">_take_job</a> (detail::job &amp;output, bool lock)</td></tr>
+<tr class="separator:a60a2c37bce5ddde491274d6a8142decf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7110ac24cc1e3279bb462be0f013c577"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_w_e_e_j_o_b_s___n_a_m_e_s_p_a_c_e_1_1jobpool.html#a7110ac24cc1e3279bb462be0f013c577">jobpool</a> (const std::string &amp;<a class="el" href="class_w_e_e_j_o_b_s___n_a_m_e_s_p_a_c_e_1_1jobpool.html#a4fdaa42afa0c6448265cbdc363556953">name</a>, unsigned <a class="el" href="class_w_e_e_j_o_b_s___n_a_m_e_s_p_a_c_e_1_1jobpool.html#ac8bfe59489808d987124a641f219e1d1">concurrency</a>)</td></tr>
 <tr class="separator:a7110ac24cc1e3279bb462be0f013c577"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc20faebd3bc7d7e2095bcea18dfe842"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_w_e_e_j_o_b_s___n_a_m_e_s_p_a_c_e_1_1jobpool.html#adc20faebd3bc7d7e2095bcea18dfe842">run</a> ()</td></tr>
@@ -130,21 +134,24 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a06d6efdd12a6081d4f934bad395fbd2c"><td class="memItemLeft" align="right" valign="top"><a id="a06d6efdd12a6081d4f934bad395fbd2c"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>_name</b></td></tr>
-<tr class="separator:a06d6efdd12a6081d4f934bad395fbd2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13701b36cb35ad836c4fd4be44930107"><td class="memItemLeft" align="right" valign="top"><a id="a13701b36cb35ad836c4fd4be44930107"></a>
-std::vector&lt; job &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_queue</b></td></tr>
-<tr class="separator:a13701b36cb35ad836c4fd4be44930107"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f1dd51998eaf6e2f13f87fcd458c4a1"><td class="memItemLeft" align="right" valign="top"><a id="a1f1dd51998eaf6e2f13f87fcd458c4a1"></a>
-std::mutex&#160;</td><td class="memItemRight" valign="bottom"><b>_queueMutex</b></td></tr>
-<tr class="separator:a1f1dd51998eaf6e2f13f87fcd458c4a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26cdc1a2574b26d3cf5eff1bb7cf8860"><td class="memItemLeft" align="right" valign="top"><a id="a26cdc1a2574b26d3cf5eff1bb7cf8860"></a>
-std::mutex&#160;</td><td class="memItemRight" valign="bottom"><b>_quitMutex</b></td></tr>
-<tr class="separator:a26cdc1a2574b26d3cf5eff1bb7cf8860"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec2a012a7ebf644c25e3c3d2c052c4e6"><td class="memItemLeft" align="right" valign="top"><a id="aec2a012a7ebf644c25e3c3d2c052c4e6"></a>
-std::atomic&lt; unsigned &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_targetConcurrency</b></td></tr>
-<tr class="separator:aec2a012a7ebf644c25e3c3d2c052c4e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c3c1c1a507ea0fab3649bda1e294696"><td class="memItemLeft" align="right" valign="top"><a id="a2c3c1c1a507ea0fab3649bda1e294696"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>_can_steal_work</b> = true</td></tr>
+<tr class="separator:a2c3c1c1a507ea0fab3649bda1e294696"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b9b44830653e2f5a0e078af019aa2b8"><td class="memItemLeft" align="right" valign="top"><a id="a0b9b44830653e2f5a0e078af019aa2b8"></a>
+std::list&lt; detail::job &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_queue</b></td></tr>
+<tr class="separator:a0b9b44830653e2f5a0e078af019aa2b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d30ed730dc83ddd80f685cdc031c4bc"><td class="memItemLeft" align="right" valign="top"><a id="a5d30ed730dc83ddd80f685cdc031c4bc"></a>
+std::atomic_int&#160;</td><td class="memItemRight" valign="bottom"><b>_queue_size</b> = { 0 }</td></tr>
+<tr class="separator:a5d30ed730dc83ddd80f685cdc031c4bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bc60a35bedc70fdc8e4bca5004961ce"><td class="memItemLeft" align="right" valign="top"><a id="a7bc60a35bedc70fdc8e4bca5004961ce"></a>
+std::mutex&#160;</td><td class="memItemRight" valign="bottom"><b>_queue_mutex</b></td></tr>
+<tr class="separator:a7bc60a35bedc70fdc8e4bca5004961ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae74a0e343833f074731bae28dc67d54b"><td class="memItemLeft" align="right" valign="top"><a id="ae74a0e343833f074731bae28dc67d54b"></a>
+std::mutex&#160;</td><td class="memItemRight" valign="bottom"><b>_quit_mutex</b></td></tr>
+<tr class="separator:ae74a0e343833f074731bae28dc67d54b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a541fba222fe1d2836a6f984db37141"><td class="memItemLeft" align="right" valign="top"><a id="a0a541fba222fe1d2836a6f984db37141"></a>
+std::atomic&lt; unsigned &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_target_concurrency</b></td></tr>
+<tr class="separator:a0a541fba222fe1d2836a6f984db37141"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27aa60f805517f7d00dfbfe5628fe3dd"><td class="memItemLeft" align="right" valign="top"><a id="a27aa60f805517f7d00dfbfe5628fe3dd"></a>
 std::condition_variable_any&#160;</td><td class="memItemRight" valign="bottom"><b>_block</b></td></tr>
 <tr class="separator:a27aa60f805517f7d00dfbfe5628fe3dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -199,8 +206,8 @@ std::vector&lt; std::thread &gt;&#160;</td><td class="memItemRight" valign="bott
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aab9754a0bd609bf8e6d5b1e435127ce4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aab9754a0bd609bf8e6d5b1e435127ce4">&#9670;&nbsp;</a></span>dispatch()</h2>
+<a id="a30d167803140de44dda0c71cebade6f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30d167803140de44dda0c71cebade6f6">&#9670;&nbsp;</a></span>_dispatch_delegate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -209,7 +216,7 @@ std::vector&lt; std::thread &gt;&#160;</td><td class="memItemRight" valign="bott
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void WEEJOBS_NAMESPACE::jobpool::dispatch </td>
+          <td class="memname">void WEEJOBS_NAMESPACE::jobpool::_dispatch_delegate </td>
           <td>(</td>
           <td class="paramtype">std::function&lt; bool()&gt; &amp;&#160;</td>
           <td class="paramname"><em>delegate</em>, </td>
@@ -242,6 +249,43 @@ std::vector&lt; std::thread &gt;&#160;</td><td class="memItemRight" valign="bott
 
 </div>
 </div>
+<a id="a60a2c37bce5ddde491274d6a8142decf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60a2c37bce5ddde491274d6a8142decf">&#9670;&nbsp;</a></span>_take_job()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool WEEJOBS_NAMESPACE::jobpool::_take_job </td>
+          <td>(</td>
+          <td class="paramtype">detail::job &amp;&#160;</td>
+          <td class="paramname"><em>output</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>lock</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>removes the highest priority job from the queue and places it in output. Returns true if a job was taken, false if the queue was empty. </p>
+
+</div>
+</div>
 <a id="adc20faebd3bc7d7e2095bcea18dfe842"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adc20faebd3bc7d7e2095bcea18dfe842">&#9670;&nbsp;</a></span>run()</h2>
 
@@ -265,6 +309,33 @@ std::vector&lt; std::thread &gt;&#160;</td><td class="memItemRight" valign="bott
 </table>
 </div><div class="memdoc">
 <p>Pulls queued jobs and runs them in whatever thread <a class="el" href="class_w_e_e_j_o_b_s___n_a_m_e_s_p_a_c_e_1_1jobpool.html#adc20faebd3bc7d7e2095bcea18dfe842">run()</a> is called from. Runs in a loop until _done is set. </p>
+
+</div>
+</div>
+<a id="ab4177d3d40331614caf5d932cce7f9c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4177d3d40331614caf5d932cce7f9c1">&#9670;&nbsp;</a></span>set_can_steal_work()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WEEJOBS_NAMESPACE::jobpool::set_can_steal_work </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Whether this job pool is allowed to steal work from other job pools when it is idle. Default = true. </p>
 
 </div>
 </div>
