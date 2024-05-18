@@ -75,43 +75,58 @@ $(function() {
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;rocky/Common.h&gt;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;rocky/Threading.h&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html">   12</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html">ROCKY_NAMESPACE</a></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> F&gt;</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_callback.html">   26</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_callback.html">Callback</a> {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keyword">mutable</span> std::mutex mutex;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keyword">mutable</span> std::unordered_map&lt;UID, F&gt; functions;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_callback.html#af6b006ceaa5beed21b7f4aebb7f9d874">   31</a></span>&#160;        <a class="code" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a2e83fa7a0f75f3995bbe258156464182">UID</a> <a class="code" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_callback.html#af6b006ceaa5beed21b7f4aebb7f9d874">operator()</a>(<span class="keyword">const</span> F&amp; func)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            std::scoped_lock lock(mutex);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keyword">auto</span> uid = <a class="code" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a8d82c29783195912f7dcade0122a9181">createUID</a>();</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            functions[uid] = func;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keywordflow">return</span> uid;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        }</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_callback.html#a73708e4f3c9484810aef4d1bcb718bc1">   39</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_callback.html#a73708e4f3c9484810aef4d1bcb718bc1">remove</a>(<a class="code" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a2e83fa7a0f75f3995bbe258156464182">UID</a> uid) {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            std::scoped_lock lock(mutex);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            functions.erase(uid);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        }</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Args&gt;</div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_callback.html#ae157971dc466da117dbe589d895fdedf">   46</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_callback.html#ae157971dc466da117dbe589d895fdedf">fire</a>(Args&amp;&amp;... args)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            std::scoped_lock lock(mutex);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; <span class="keyword">function</span> : functions)</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                <span class="keyword">function</span>.second(args...);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        }</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    };</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
-<div class="ttc" id="anamespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e_html"><div class="ttname"><a href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html">ROCKY_NAMESPACE</a></div><div class="ttdef"><b>Definition:</b> Callbacks.h:13</div></div>
-<div class="ttc" id="anamespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e_html_a2e83fa7a0f75f3995bbe258156464182"><div class="ttname"><a href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a2e83fa7a0f75f3995bbe258156464182">ROCKY_NAMESPACE::UID</a></div><div class="ttdeci">std::int32_t UID</div><div class="ttdoc">application-wide unique ID.</div><div class="ttdef"><b>Definition:</b> Common.h:47</div></div>
-<div class="ttc" id="anamespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e_html_a8d82c29783195912f7dcade0122a9181"><div class="ttname"><a href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a8d82c29783195912f7dcade0122a9181">ROCKY_NAMESPACE::createUID</a></div><div class="ttdeci">ROCKY_EXPORT UID createUID()</div><div class="ttdoc">Generate an application-wide unique identifier.</div><div class="ttdef"><b>Definition:</b> Instance.cpp:118</div></div>
-<div class="ttc" id="astruct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_callback_html"><div class="ttname"><a href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_callback.html">ROCKY_NAMESPACE::Callback</a></div><div class="ttdef"><b>Definition:</b> Callbacks.h:26</div></div>
-<div class="ttc" id="astruct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_callback_html_a73708e4f3c9484810aef4d1bcb718bc1"><div class="ttname"><a href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_callback.html#a73708e4f3c9484810aef4d1bcb718bc1">ROCKY_NAMESPACE::Callback::remove</a></div><div class="ttdeci">void remove(UID uid)</div><div class="ttdoc">Removed a callback function with the UID returned from ()</div><div class="ttdef"><b>Definition:</b> Callbacks.h:39</div></div>
-<div class="ttc" id="astruct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_callback_html_ae157971dc466da117dbe589d895fdedf"><div class="ttname"><a href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_callback.html#ae157971dc466da117dbe589d895fdedf">ROCKY_NAMESPACE::Callback::fire</a></div><div class="ttdeci">void fire(Args &amp;&amp;... args) const</div><div class="ttdoc">Executes all callback functions with the provided args.</div><div class="ttdef"><b>Definition:</b> Callbacks.h:46</div></div>
-<div class="ttc" id="astruct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_callback_html_af6b006ceaa5beed21b7f4aebb7f9d874"><div class="ttname"><a href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_callback.html#af6b006ceaa5beed21b7f4aebb7f9d874">ROCKY_NAMESPACE::Callback::operator()</a></div><div class="ttdeci">UID operator()(const F &amp;func) const</div><div class="ttdoc">Adds a callback function.</div><div class="ttdef"><b>Definition:</b> Callbacks.h:31</div></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;atomic&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;mutex&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html">   15</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html">ROCKY_NAMESPACE</a></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> F&gt;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_callback.html">   30</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_callback.html">Callback</a></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keyword">using</span> Entry = <span class="keyword">typename</span> std::pair&lt;int, std::function&lt;F&gt;&gt;;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keyword">mutable</span> <span class="keywordtype">int</span> uidgen = 0;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keyword">mutable</span> std::vector&lt;Entry&gt; entries;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keyword">mutable</span> std::mutex mutex;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keyword">mutable</span> std::atomic_bool firing = { <span class="keyword">false</span> };</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_callback.html#aeb0d8e57c0ca07b2b75726a969cb7c49">   41</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_callback.html#aeb0d8e57c0ca07b2b75726a969cb7c49">operator()</a>(std::function&lt;F&gt;&amp;&amp; func)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            std::lock_guard&lt;std::mutex&gt; lock(mutex);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keyword">auto</span> uid = ++uidgen;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            entries.emplace_back(uid, func);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keywordflow">return</span> uid;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_callback.html#a0c9eefe4d006aef0632652dfe52300a4">   49</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_callback.html#a0c9eefe4d006aef0632652dfe52300a4">remove</a>(<span class="keywordtype">int</span> uid)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            std::lock_guard&lt;std::mutex&gt; lock(mutex);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">auto</span> iter = entries.begin(); iter != entries.end(); ++iter) {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <span class="keywordflow">if</span> (iter-&gt;first == uid) {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                    entries.erase(iter);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_callback.html#ae157971dc466da117dbe589d895fdedf">   61</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_callback.html#ae157971dc466da117dbe589d895fdedf">fire</a>(Args&amp;&amp;... args)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keywordflow">if</span> (firing.exchange(<span class="keyword">true</span>) == <span class="keyword">false</span>) {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                std::lock_guard&lt;std::mutex&gt; lock(mutex);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; e : entries)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                    e.second(args...);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                firing = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    };</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+<div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_callback_html"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_callback.html">ROCKY_NAMESPACE::Callback</a></div><div class="ttdef"><b>Definition:</b> Callbacks.h:31</div></div>
+<div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_callback_html_a0c9eefe4d006aef0632652dfe52300a4"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_callback.html#a0c9eefe4d006aef0632652dfe52300a4">ROCKY_NAMESPACE::Callback::remove</a></div><div class="ttdeci">void remove(int uid) const</div><div class="ttdoc">Removed a callback function with the UID returned from ()</div><div class="ttdef"><b>Definition:</b> Callbacks.h:49</div></div>
+<div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_callback_html_ae157971dc466da117dbe589d895fdedf"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_callback.html#ae157971dc466da117dbe589d895fdedf">ROCKY_NAMESPACE::Callback::fire</a></div><div class="ttdeci">void fire(Args &amp;&amp;... args) const</div><div class="ttdoc">Executes all callback functions with the provided args.</div><div class="ttdef"><b>Definition:</b> Callbacks.h:61</div></div>
+<div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_callback_html_aeb0d8e57c0ca07b2b75726a969cb7c49"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_callback.html#aeb0d8e57c0ca07b2b75726a969cb7c49">ROCKY_NAMESPACE::Callback::operator()</a></div><div class="ttdeci">int operator()(std::function&lt; F &gt; &amp;&amp;func) const</div><div class="ttdoc">Adds a callback function.</div><div class="ttdef"><b>Definition:</b> Callbacks.h:41</div></div>
+<div class="ttc" id="anamespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e_html"><div class="ttname"><a href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html">ROCKY_NAMESPACE</a></div><div class="ttdef"><b>Definition:</b> Callbacks.h:16</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

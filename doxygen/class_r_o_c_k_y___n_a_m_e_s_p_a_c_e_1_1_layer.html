@@ -100,14 +100,6 @@ Public Types</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a81f42475cc4fa775fb9b86381a14edd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">How (and if) to use this layer when rendering terrain tiles.  <a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_layer.html#a81f42475cc4fa775fb9b86381a14edd1">More...</a><br /></td></tr>
 <tr class="separator:a81f42475cc4fa775fb9b86381a14edd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee26e93b1a1262714aefadd34c1a3c67"><td class="memItemLeft" align="right" valign="top"><a id="aee26e93b1a1262714aefadd34c1a3c67"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_layer.html#aee26e93b1a1262714aefadd34c1a3c67">LayerOpened</a> = std::function&lt; void(shared_ptr&lt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_layer.html">Layer</a> &gt;)&gt;</td></tr>
-<tr class="memdesc:aee26e93b1a1262714aefadd34c1a3c67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a callback for layer open. <br /></td></tr>
-<tr class="separator:aee26e93b1a1262714aefadd34c1a3c67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f9607b65b467dffa47f70a1233026f4"><td class="memItemLeft" align="right" valign="top"><a id="a9f9607b65b467dffa47f70a1233026f4"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_layer.html#a9f9607b65b467dffa47f70a1233026f4">LayerClosed</a> = std::function&lt; void(shared_ptr&lt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_layer.html">Layer</a> &gt;)&gt;</td></tr>
-<tr class="memdesc:a9f9607b65b467dffa47f70a1233026f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a callback for layer close. <br /></td></tr>
-<tr class="separator:a9f9607b65b467dffa47f70a1233026f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -184,7 +176,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:a007bd0a72e8c3ed01dde578ddde82563"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6eb187dc859bafb631a679cbecb7bdc5"><td class="memItemLeft" align="right" valign="top"><a id="a6eb187dc859bafb631a679cbecb7bdc5"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_layer.html#a6eb187dc859bafb631a679cbecb7bdc5">modifyTileBoundingBox</a> (const <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_tile_key.html">TileKey</a> &amp;key, const Box &amp;box) const</td></tr>
-<tr class="memdesc:a6eb187dc859bafb631a679cbecb7bdc5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_callback.html">Callback</a> that modifies the layer's bounding box for a given tile key. <br /></td></tr>
+<tr class="memdesc:a6eb187dc859bafb631a679cbecb7bdc5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_callback.html">Callback</a> that modifies the layer's bounding box for a given tile key. <br /></td></tr>
 <tr class="separator:a6eb187dc859bafb631a679cbecb7bdc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1afd945115af3dd08b96d224ba363388"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#af01f4eb53e72c4be729979cd946c295d">Revision</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_layer.html#a1afd945115af3dd08b96d224ba363388">revision</a> () const</td></tr>
 <tr class="memdesc:a1afd945115af3dd08b96d224ba363388"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map.html">Map</a> will call this function when this <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_layer.html">Layer</a> is added to a <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map.html">Map</a>.  <a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_layer.html#a1afd945115af3dd08b96d224ba363388">More...</a><br /></td></tr>
@@ -198,12 +190,14 @@ const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a cl
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ac72fa960f3b0682f897586aa85d0b127"><td class="memItemLeft" align="right" valign="top"><a id="ac72fa960f3b0682f897586aa85d0b127"></a>
-<a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_callback.html">Callback</a>&lt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_layer.html#aee26e93b1a1262714aefadd34c1a3c67">LayerOpened</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>onLayerOpened</b></td></tr>
-<tr class="separator:ac72fa960f3b0682f897586aa85d0b127"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36c255343f5004ddf72d7c552eeceff5"><td class="memItemLeft" align="right" valign="top"><a id="a36c255343f5004ddf72d7c552eeceff5"></a>
-<a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_callback.html">Callback</a>&lt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_layer.html#a9f9607b65b467dffa47f70a1233026f4">LayerClosed</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>onLayerClosed</b></td></tr>
-<tr class="separator:a36c255343f5004ddf72d7c552eeceff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29b4fe5f93e1ee36a663bdf30cdff948"><td class="memItemLeft" align="right" valign="top"><a id="a29b4fe5f93e1ee36a663bdf30cdff948"></a>
+<a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_callback.html">Callback</a>&lt; void(shared_ptr&lt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_layer.html">Layer</a> &gt;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_layer.html#a29b4fe5f93e1ee36a663bdf30cdff948">onLayerOpened</a></td></tr>
+<tr class="memdesc:a29b4fe5f93e1ee36a663bdf30cdff948"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a callback for layer open. <br /></td></tr>
+<tr class="separator:a29b4fe5f93e1ee36a663bdf30cdff948"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0374147f68a639de4dddc821e638dcdd"><td class="memItemLeft" align="right" valign="top"><a id="a0374147f68a639de4dddc821e638dcdd"></a>
+<a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_callback.html">Callback</a>&lt; void(shared_ptr&lt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_layer.html">Layer</a> &gt;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_layer.html#a0374147f68a639de4dddc821e638dcdd">onLayerClosed</a></td></tr>
+<tr class="memdesc:a0374147f68a639de4dddc821e638dcdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a callback for layer close. <br /></td></tr>
+<tr class="separator:a0374147f68a639de4dddc821e638dcdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>

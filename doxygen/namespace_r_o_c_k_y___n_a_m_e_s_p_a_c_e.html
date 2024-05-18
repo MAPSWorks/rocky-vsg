@@ -83,7 +83,7 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_callback.html">Callback</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_callback.html">Callback</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_color.html">Color</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -332,9 +332,9 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>CacheService</b> = s
 <tr class="memitem:a633e65eb06cbe48ee36712950f21d4f4"><td class="memItemLeft" align="right" valign="top"><a id="a633e65eb06cbe48ee36712950f21d4f4"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>DataService</b> = std::function&lt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_data_interface.html">DataInterface</a> &amp;()&gt;</td></tr>
 <tr class="separator:a633e65eb06cbe48ee36712950f21d4f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65dba9a47d04dfefec03b19818924292"><td class="memItemLeft" align="right" valign="top"><a id="a65dba9a47d04dfefec03b19818924292"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>ContentCache</b> = util::LRUCache&lt; std::string, <a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_result.html">Result</a>&lt; Content &gt; &gt;</td></tr>
-<tr class="separator:a65dba9a47d04dfefec03b19818924292"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a917097fa4fa238ebbd12fa6d0d7608cd"><td class="memItemLeft" align="right" valign="top"><a id="a917097fa4fa238ebbd12fa6d0d7608cd"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>ContentCache</b> = rocky::util::LRUCache&lt; std::string, <a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_result.html">Result</a>&lt; Content &gt; &gt;</td></tr>
+<tr class="separator:a917097fa4fa238ebbd12fa6d0d7608cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53068a23cb1e405d3fe9548c9e4173b1"><td class="memItemLeft" align="right" valign="top"><a id="a53068a23cb1e405d3fe9548c9e4173b1"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>Headers</b> = std::unordered_map&lt; std::string, std::string &gt;</td></tr>
 <tr class="separator:a53068a23cb1e405d3fe9548c9e4173b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -492,156 +492,6 @@ glm::dvec3&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> (
 <tr class="memitem:abd124ecf7b22f6e977757d3942a173e5"><td class="memItemLeft" align="right" valign="top"><a id="abd124ecf7b22f6e977757d3942a173e5"></a>
 glm::fvec3&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> (const glm::fvec3 &amp;a, const glm::fmat4 &amp;b)</td></tr>
 <tr class="separator:abd124ecf7b22f6e977757d3942a173e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af55bd4ace987b329cbf0712b117d6aaf"><td class="memTemplParams" colspan="2"><a id="af55bd4ace987b329cbf0712b117d6aaf"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:af55bd4ace987b329cbf0712b117d6aaf"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><b>lengthSquared</b> (const T &amp;v)</td></tr>
-<tr class="separator:af55bd4ace987b329cbf0712b117d6aaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7d69ba54dbf44bdf173c3c565eb3844"><td class="memTemplParams" colspan="2"><a id="ab7d69ba54dbf44bdf173c3c565eb3844"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ab7d69ba54dbf44bdf173c3c565eb3844"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><b>deg2rad</b> (T v)</td></tr>
-<tr class="separator:ab7d69ba54dbf44bdf173c3c565eb3844"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf4872838926c76e3c14bc276a68b9ee"><td class="memTemplParams" colspan="2"><a id="acf4872838926c76e3c14bc276a68b9ee"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:acf4872838926c76e3c14bc276a68b9ee"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><b>rad2deg</b> (T v)</td></tr>
-<tr class="separator:acf4872838926c76e3c14bc276a68b9ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a105081c144f168d51fd1de9655c89a8f"><td class="memTemplParams" colspan="2"><a id="a105081c144f168d51fd1de9655c89a8f"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a105081c144f168d51fd1de9655c89a8f"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><b>step</b> (const T &amp;edge, const T &amp;x)</td></tr>
-<tr class="separator:a105081c144f168d51fd1de9655c89a8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adabd82c355394ee982ff576ec397f472"><td class="memTemplParams" colspan="2"><a id="adabd82c355394ee982ff576ec397f472"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:adabd82c355394ee982ff576ec397f472"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><b>clamp</b> (const T &amp;x, const T &amp;lo, const T &amp;hi)</td></tr>
-<tr class="separator:adabd82c355394ee982ff576ec397f472"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5552c12892db69aeff99d5f4bbd4250"><td class="memTemplParams" colspan="2"><a id="ad5552c12892db69aeff99d5f4bbd4250"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ad5552c12892db69aeff99d5f4bbd4250"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><b>lerpstep</b> (T lo, T hi, T x)</td></tr>
-<tr class="separator:ad5552c12892db69aeff99d5f4bbd4250"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a738d4b02f75ead7a847a4cd71cab6931"><td class="memTemplParams" colspan="2"><a id="a738d4b02f75ead7a847a4cd71cab6931"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a738d4b02f75ead7a847a4cd71cab6931"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><b>smoothstep</b> (T lo, T hi, T x)</td></tr>
-<tr class="separator:a738d4b02f75ead7a847a4cd71cab6931"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97f4c907f107c384a89082c004c66456"><td class="memTemplParams" colspan="2"><a id="a97f4c907f107c384a89082c004c66456"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a97f4c907f107c384a89082c004c66456"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><b>decel</b> (T x)</td></tr>
-<tr class="separator:a97f4c907f107c384a89082c004c66456"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55edede675bac10f29f2760e1d51f14b"><td class="memTemplParams" colspan="2"><a id="a55edede675bac10f29f2760e1d51f14b"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a55edede675bac10f29f2760e1d51f14b"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><b>accel</b> (T x)</td></tr>
-<tr class="separator:a55edede675bac10f29f2760e1d51f14b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e6aad9d5ad10346dc3987b31135b09c"><td class="memTemplParams" colspan="2"><a id="a8e6aad9d5ad10346dc3987b31135b09c"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a8e6aad9d5ad10346dc3987b31135b09c"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><b>threshold</b> (T x, T thresh, T buf)</td></tr>
-<tr class="separator:a8e6aad9d5ad10346dc3987b31135b09c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a817101faaadf3fea717331d5754883b1"><td class="memTemplParams" colspan="2"><a id="a817101faaadf3fea717331d5754883b1"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a817101faaadf3fea717331d5754883b1"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><b>fract</b> (T x)</td></tr>
-<tr class="separator:a817101faaadf3fea717331d5754883b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9135c7533c1bdc5c51588f0fd9e6e68"><td class="memTemplParams" colspan="2"><a id="af9135c7533c1bdc5c51588f0fd9e6e68"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:af9135c7533c1bdc5c51588f0fd9e6e68"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><b>unitremap</b> (T a, T lo, T hi)</td></tr>
-<tr class="separator:af9135c7533c1bdc5c51588f0fd9e6e68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1157cabb5de77cd171b326dc9f703e5"><td class="memTemplParams" colspan="2"><a id="ad1157cabb5de77cd171b326dc9f703e5"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ad1157cabb5de77cd171b326dc9f703e5"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><b>mix</b> (const T &amp;a, const T &amp;b, float c)</td></tr>
-<tr class="separator:ad1157cabb5de77cd171b326dc9f703e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ac506e079467f70993a07ec77829805"><td class="memTemplParams" colspan="2"><a id="a8ac506e079467f70993a07ec77829805"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a8ac506e079467f70993a07ec77829805"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><b>dot2D</b> (const T &amp;a, const T &amp;b)</td></tr>
-<tr class="separator:a8ac506e079467f70993a07ec77829805"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05842aa1dbe1caa1b4d465c4a2e2e667"><td class="memTemplParams" colspan="2"><a id="a05842aa1dbe1caa1b4d465c4a2e2e667"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a05842aa1dbe1caa1b4d465c4a2e2e667"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><b>dot3D</b> (const T &amp;a, const T &amp;b)</td></tr>
-<tr class="separator:a05842aa1dbe1caa1b4d465c4a2e2e667"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3692ae43542177ba4f15c7db5613da45"><td class="memTemplParams" colspan="2"><a id="a3692ae43542177ba4f15c7db5613da45"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a3692ae43542177ba4f15c7db5613da45"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><b>distanceSquared2D</b> (const T &amp;a, const T &amp;b)</td></tr>
-<tr class="separator:a3692ae43542177ba4f15c7db5613da45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28dbab3cd40a413d042764a2592975a7"><td class="memTemplParams" colspan="2"><a id="a28dbab3cd40a413d042764a2592975a7"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a28dbab3cd40a413d042764a2592975a7"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><b>distanceSquared3D</b> (const T &amp;a, const T &amp;b)</td></tr>
-<tr class="separator:a28dbab3cd40a413d042764a2592975a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a020f1a059ffcf418b971d78449b49096"><td class="memTemplParams" colspan="2"><a id="a020f1a059ffcf418b971d78449b49096"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a020f1a059ffcf418b971d78449b49096"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><b>distance2D</b> (const T &amp;a, const T &amp;b)</td></tr>
-<tr class="separator:a020f1a059ffcf418b971d78449b49096"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5748fcd4ea3cc3ea5d23e06c761e1e75"><td class="memTemplParams" colspan="2"><a id="a5748fcd4ea3cc3ea5d23e06c761e1e75"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a5748fcd4ea3cc3ea5d23e06c761e1e75"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><b>distance3D</b> (const T &amp;a, const T &amp;b)</td></tr>
-<tr class="separator:a5748fcd4ea3cc3ea5d23e06c761e1e75"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab32880cd021b95edd6110597c96a78ae"><td class="memTemplParams" colspan="2"><a id="ab32880cd021b95edd6110597c96a78ae"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ab32880cd021b95edd6110597c96a78ae"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><b>square</b> (const T &amp;a)</td></tr>
-<tr class="separator:ab32880cd021b95edd6110597c96a78ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80cb6dfa1148141feaeedc5ccc00914c"><td class="memTemplParams" colspan="2"><a id="a80cb6dfa1148141feaeedc5ccc00914c"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a80cb6dfa1148141feaeedc5ccc00914c"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><b>normalize</b> (const T &amp;a)</td></tr>
-<tr class="separator:a80cb6dfa1148141feaeedc5ccc00914c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1ea0452ec3fc616d4f736c281230a2f"><td class="memTemplParams" colspan="2"><a id="ab1ea0452ec3fc616d4f736c281230a2f"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ab1ea0452ec3fc616d4f736c281230a2f"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><b>align</b> (T x, T multiple)</td></tr>
-<tr class="separator:ab1ea0452ec3fc616d4f736c281230a2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a314f10b2f3bb07991d04913a1968ccbc"><td class="memTemplParams" colspan="2"><a id="a314f10b2f3bb07991d04913a1968ccbc"></a>
-template&lt;typename A , typename B &gt; </td></tr>
-<tr class="memitem:a314f10b2f3bb07991d04913a1968ccbc"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>equiv</b> (A x, B y, double epsilon)</td></tr>
-<tr class="separator:a314f10b2f3bb07991d04913a1968ccbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3063da7b1c04c5e023e0d54f7bb96d6"><td class="memTemplParams" colspan="2"><a id="af3063da7b1c04c5e023e0d54f7bb96d6"></a>
-template&lt;typename A , typename B &gt; </td></tr>
-<tr class="memitem:af3063da7b1c04c5e023e0d54f7bb96d6"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>equiv</b> (A x, B y)</td></tr>
-<tr class="separator:af3063da7b1c04c5e023e0d54f7bb96d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae98656726272265f28885bbdcd7ca637"><td class="memItemLeft" align="right" valign="top"><a id="ae98656726272265f28885bbdcd7ca637"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:ae98656726272265f28885bbdcd7ca637"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>equiv&lt; glm::dvec3 &gt;</b> (glm::dvec3 a, glm::dvec3 b, double E)</td></tr>
-<tr class="separator:ae98656726272265f28885bbdcd7ca637"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b8625cdd4aef3f9de3334008a65459f"><td class="memItemLeft" align="right" valign="top"><a id="a8b8625cdd4aef3f9de3334008a65459f"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:a8b8625cdd4aef3f9de3334008a65459f"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>equiv&lt; glm::dvec3 &gt;</b> (glm::dvec3 a, glm::dvec3 b)</td></tr>
-<tr class="separator:a8b8625cdd4aef3f9de3334008a65459f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a584c2bb5b09b40ce8447f1350271e7b0"><td class="memItemLeft" align="right" valign="top"><a id="a584c2bb5b09b40ce8447f1350271e7b0"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>nextPowerOf2</b> (int x)</td></tr>
-<tr class="separator:a584c2bb5b09b40ce8447f1350271e7b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf91fbc180fad094df3ee2b2593ba317"><td class="memTemplParams" colspan="2"><a id="aaf91fbc180fad094df3ee2b2593ba317"></a>
-template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:aaf91fbc180fad094df3ee2b2593ba317"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><b>smallest</b> (Args... a)</td></tr>
-<tr class="separator:aaf91fbc180fad094df3ee2b2593ba317"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d666688073df4ee637902a0721b94f7"><td class="memTemplParams" colspan="2"><a id="a0d666688073df4ee637902a0721b94f7"></a>
-template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:a0d666688073df4ee637902a0721b94f7"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><b>largest</b> (Args... a)</td></tr>
-<tr class="separator:a0d666688073df4ee637902a0721b94f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00d979667f3b907e56816d07e4bfc726"><td class="memTemplParams" colspan="2"><a id="a00d979667f3b907e56816d07e4bfc726"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a00d979667f3b907e56816d07e4bfc726"><td class="memTemplItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><b>hash_value_unsigned</b> (T val)</td></tr>
-<tr class="separator:a00d979667f3b907e56816d07e4bfc726"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff4daa0997fcb26558f532e1fee8b029"><td class="memItemLeft" align="right" valign="top"><a id="aff4daa0997fcb26558f532e1fee8b029"></a>
-std::size_t&#160;</td><td class="memItemRight" valign="bottom"><b>hash_value_unsigned</b> (bool val)</td></tr>
-<tr class="separator:aff4daa0997fcb26558f532e1fee8b029"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adacba8fb9a27dbde0891732090c1d3ad"><td class="memTemplParams" colspan="2"><a id="adacba8fb9a27dbde0891732090c1d3ad"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:adacba8fb9a27dbde0891732090c1d3ad"><td class="memTemplItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><b>hash_value_unsigned</b> (const <a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1optional.html">optional</a>&lt; T &gt; &amp;val)</td></tr>
-<tr class="separator:adacba8fb9a27dbde0891732090c1d3ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96ed3359c206a078582b50ea599d9165"><td class="memTemplParams" colspan="2"><a id="a96ed3359c206a078582b50ea599d9165"></a>
-template&lt;typename A , typename B &gt; </td></tr>
-<tr class="memitem:a96ed3359c206a078582b50ea599d9165"><td class="memTemplItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><b>hash_value_unsigned</b> (A a, B b)</td></tr>
-<tr class="separator:a96ed3359c206a078582b50ea599d9165"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b4a0569e3793094396e54db11894208"><td class="memTemplParams" colspan="2"><a id="a6b4a0569e3793094396e54db11894208"></a>
-template&lt;typename A , typename B , typename C &gt; </td></tr>
-<tr class="memitem:a6b4a0569e3793094396e54db11894208"><td class="memTemplItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><b>hash_value_unsigned</b> (A a, B b, C c)</td></tr>
-<tr class="separator:a6b4a0569e3793094396e54db11894208"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adbcfce7aa5662a06b8b365925c7b7e7b"><td class="memTemplParams" colspan="2"><a id="adbcfce7aa5662a06b8b365925c7b7e7b"></a>
-template&lt;typename A , typename B , typename C , typename D &gt; </td></tr>
-<tr class="memitem:adbcfce7aa5662a06b8b365925c7b7e7b"><td class="memTemplItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><b>hash_value_unsigned</b> (A a, B b, C c, D d)</td></tr>
-<tr class="separator:adbcfce7aa5662a06b8b365925c7b7e7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25ae6a7bb4fe631924847829b13b9464"><td class="memTemplParams" colspan="2"><a id="a25ae6a7bb4fe631924847829b13b9464"></a>
-template&lt;typename A , typename B , typename C , typename D , typename E &gt; </td></tr>
-<tr class="memitem:a25ae6a7bb4fe631924847829b13b9464"><td class="memTemplItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><b>hash_value_unsigned</b> (A a, B b, C c, D d, E e)</td></tr>
-<tr class="separator:a25ae6a7bb4fe631924847829b13b9464"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab138cd920415d8734e839e41bca17b5c"><td class="memTemplParams" colspan="2"><a id="ab138cd920415d8734e839e41bca17b5c"></a>
-template&lt;int C, int R, typename T , glm::qualifier Q&gt; </td></tr>
-<tr class="memitem:ab138cd920415d8734e839e41bca17b5c"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>is_identity</b> (const glm::mat&lt; C, R, T, Q &gt; &amp;m)</td></tr>
-<tr class="separator:ab138cd920415d8734e839e41bca17b5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0cd19b42503bee91f2c4f1b7d1c7fda4"><td class="memTemplParams" colspan="2"><a id="a0cd19b42503bee91f2c4f1b7d1c7fda4"></a>
-template&lt;typename M &gt; </td></tr>
-<tr class="memitem:a0cd19b42503bee91f2c4f1b7d1c7fda4"><td class="memTemplItemLeft" align="right" valign="top">M&#160;</td><td class="memTemplItemRight" valign="bottom"><b>pre_mult</b> (const M &amp;a, const M &amp;b)</td></tr>
-<tr class="separator:a0cd19b42503bee91f2c4f1b7d1c7fda4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85811cb1f5e42ea71ef18639b21c0135"><td class="memItemLeft" align="right" valign="top"><a id="a85811cb1f5e42ea71ef18639b21c0135"></a>
 glm::fvec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a85811cb1f5e42ea71ef18639b21c0135">operator*</a> (const glm::fmat4 &amp;mat, const glm::fvec3 &amp;v)</td></tr>
 <tr class="memdesc:a85811cb1f5e42ea71ef18639b21c0135"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience function to transform a 3D vector using a 4D matrix. <br /></td></tr>
@@ -650,26 +500,6 @@ glm::fvec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 glm::dvec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a7eba63cf158a21f421936b6748e9a3f4">operator*</a> (const glm::dmat4 &amp;mat, const glm::dvec3 &amp;v)</td></tr>
 <tr class="memdesc:a7eba63cf158a21f421936b6748e9a3f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience function to transform a 3D vector using a 4D matrix. <br /></td></tr>
 <tr class="separator:a7eba63cf158a21f421936b6748e9a3f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39184f9c76922aad75d7d1ec0b07a3a9"><td class="memTemplParams" colspan="2">template&lt;typename Q &gt; </td></tr>
-<tr class="memitem:a39184f9c76922aad75d7d1ec0b07a3a9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a39184f9c76922aad75d7d1ec0b07a3a9">euler_radians_to_quaternion</a> (double xaxis, double yaxis, double zaxis, Q &amp;q)</td></tr>
-<tr class="separator:a39184f9c76922aad75d7d1ec0b07a3a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02cc34c0e9859b87885ef58911518a4e"><td class="memTemplParams" colspan="2"><a id="a02cc34c0e9859b87885ef58911518a4e"></a>
-template&lt;typename Q &gt; </td></tr>
-<tr class="memitem:a02cc34c0e9859b87885ef58911518a4e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a02cc34c0e9859b87885ef58911518a4e">euler_degrees_to_quaternion</a> (double xaxis, double yaxis, double zaxis, Q &amp;q)</td></tr>
-<tr class="memdesc:a02cc34c0e9859b87885ef58911518a4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert Euler angles, in degrees, to a quaternion. <br /></td></tr>
-<tr class="separator:a02cc34c0e9859b87885ef58911518a4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89cdd740925b3c257b147f1a21e110a9"><td class="memTemplParams" colspan="2">template&lt;typename Q &gt; </td></tr>
-<tr class="memitem:a89cdd740925b3c257b147f1a21e110a9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#a89cdd740925b3c257b147f1a21e110a9">quaternion_to_euler_radians</a> (const Q &amp;q, double &amp;xaxis, double &amp;yaxis, double &amp;zaxis)</td></tr>
-<tr class="separator:a89cdd740925b3c257b147f1a21e110a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa422e6e345de08e027955b6e99b82e82"><td class="memTemplParams" colspan="2"><a id="aa422e6e345de08e027955b6e99b82e82"></a>
-template&lt;typename Q &gt; </td></tr>
-<tr class="memitem:aa422e6e345de08e027955b6e99b82e82"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_r_o_c_k_y___n_a_m_e_s_p_a_c_e.html#aa422e6e345de08e027955b6e99b82e82">quaternion_to_euler_degrees</a> (const Q &amp;q, double &amp;xaxis, double &amp;yaxis, double &amp;zaxis)</td></tr>
-<tr class="memdesc:aa422e6e345de08e027955b6e99b82e82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a quat to Euler angles in degrees. <br /></td></tr>
-<tr class="separator:aa422e6e345de08e027955b6e99b82e82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2bcf2bfc5f572bad3928730f55993b80"><td class="memTemplParams" colspan="2"><a id="a2bcf2bfc5f572bad3928730f55993b80"></a>
-template&lt;typename M , typename Q &gt; </td></tr>
-<tr class="memitem:a2bcf2bfc5f572bad3928730f55993b80"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>get_rotation_from_matrix</b> (const M &amp;_mat, Q &amp;q)</td></tr>
-<tr class="separator:a2bcf2bfc5f572bad3928730f55993b80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d46f308cd0bf132de74df2fc9c37ee8"><td class="memItemLeft" align="right" valign="top"><a id="a3d46f308cd0bf132de74df2fc9c37ee8"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>to_json</b> (json &amp;j, const <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_profile.html">Profile</a> &amp;obj)</td></tr>
 <tr class="separator:a3d46f308cd0bf132de74df2fc9c37ee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -831,109 +661,6 @@ constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>VSG_VIEW_DEP
 </table>
 </div><div class="memdoc">
 <p>How to interpolate points along a line segment on a geodetic map </p>
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a39184f9c76922aad75d7d1ec0b07a3a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a39184f9c76922aad75d7d1ec0b07a3a9">&#9670;&nbsp;</a></span>euler_radians_to_quaternion()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Q &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ROCKY_NAMESPACE::euler_radians_to_quaternion </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>xaxis</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>yaxis</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>zaxis</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Q &amp;&#160;</td>
-          <td class="paramname"><em>q</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Convert Euler angles, in radians, to a quaternion. <a href="https://en.wikipedia.org/wiki/Conversion_between_quaternions_and_Euler_angles">https://en.wikipedia.org/wiki/Conversion_between_quaternions_and_Euler_angles</a> </p>
-
-</div>
-</div>
-<a id="a89cdd740925b3c257b147f1a21e110a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a89cdd740925b3c257b147f1a21e110a9">&#9670;&nbsp;</a></span>quaternion_to_euler_radians()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Q &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ROCKY_NAMESPACE::quaternion_to_euler_radians </td>
-          <td>(</td>
-          <td class="paramtype">const Q &amp;&#160;</td>
-          <td class="paramname"><em>q</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double &amp;&#160;</td>
-          <td class="paramname"><em>xaxis</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double &amp;&#160;</td>
-          <td class="paramname"><em>yaxis</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double &amp;&#160;</td>
-          <td class="paramname"><em>zaxis</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Convert a quat to Euler angles in radians. <a href="https://en.wikipedia.org/wiki/Conversion_between_quaternions_and_Euler_angles">https://en.wikipedia.org/wiki/Conversion_between_quaternions_and_Euler_angles</a> </p>
 
 </div>
 </div>

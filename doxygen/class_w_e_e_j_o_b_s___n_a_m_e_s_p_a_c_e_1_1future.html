@@ -142,9 +142,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:a7f1d56ff726f191bdbd72234534dd4ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6ff7244571ba552097b97a4eb7c1c8f"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_w_e_e_j_o_b_s___n_a_m_e_s_p_a_c_e_1_1future.html#aa6ff7244571ba552097b97a4eb7c1c8f">refs</a> () const</td></tr>
 <tr class="separator:aa6ff7244571ba552097b97a4eb7c1c8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa02117438466e7add3c693a6933610dc"><td class="memTemplParams" colspan="2">template&lt;typename FUNC , typename R  = typename detail::result_of_t&lt;FUNC(const T&amp;, cancelable&amp;)&gt;&gt; </td></tr>
-<tr class="memitem:aa02117438466e7add3c693a6933610dc"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_w_e_e_j_o_b_s___n_a_m_e_s_p_a_c_e_1_1future.html">future</a>&lt; R &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_w_e_e_j_o_b_s___n_a_m_e_s_p_a_c_e_1_1future.html#aa02117438466e7add3c693a6933610dc">then_dispatch</a> (FUNC func, const <a class="el" href="struct_w_e_e_j_o_b_s___n_a_m_e_s_p_a_c_e_1_1context.html">context</a> &amp;con={})</td></tr>
-<tr class="separator:aa02117438466e7add3c693a6933610dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4f12ad2b4d52c4aa85355123d8095d0"><td class="memTemplParams" colspan="2">template&lt;typename F , typename R  = typename detail::result_of_t&lt;F(const T&amp;, cancelable&amp;)&gt;&gt; </td></tr>
+<tr class="memitem:aa4f12ad2b4d52c4aa85355123d8095d0"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_w_e_e_j_o_b_s___n_a_m_e_s_p_a_c_e_1_1future.html">future</a>&lt; R &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_w_e_e_j_o_b_s___n_a_m_e_s_p_a_c_e_1_1future.html#aa4f12ad2b4d52c4aa85355123d8095d0">then_dispatch</a> (F func, const <a class="el" href="struct_w_e_e_j_o_b_s___n_a_m_e_s_p_a_c_e_1_1context.html">context</a> &amp;con={})</td></tr>
+<tr class="separator:aa4f12ad2b4d52c4aa85355123d8095d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17171aa639c823be34ec402733f73885"><td class="memTemplParams" colspan="2">template&lt;typename R &gt; </td></tr>
 <tr class="memitem:a17171aa639c823be34ec402733f73885"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_w_e_e_j_o_b_s___n_a_m_e_s_p_a_c_e_1_1future.html">future</a>&lt; R &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_w_e_e_j_o_b_s___n_a_m_e_s_p_a_c_e_1_1future.html#a17171aa639c823be34ec402733f73885">then_dispatch</a> (std::function&lt; void(const T &amp;, <a class="el" href="class_w_e_e_j_o_b_s___n_a_m_e_s_p_a_c_e_1_1future.html">future</a>&lt; R &gt; &amp;)&gt; func, const <a class="el" href="struct_w_e_e_j_o_b_s___n_a_m_e_s_p_a_c_e_1_1context.html">context</a> &amp;con={})</td></tr>
 <tr class="separator:a17171aa639c823be34ec402733f73885"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -301,15 +301,15 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="aa02117438466e7add3c693a6933610dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa02117438466e7add3c693a6933610dc">&#9670;&nbsp;</a></span>then_dispatch() <span class="overload">[1/3]</span></h2>
+<a id="aa4f12ad2b4d52c4aa85355123d8095d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4f12ad2b4d52c4aa85355123d8095d0">&#9670;&nbsp;</a></span>then_dispatch() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T &gt; </div>
 <div class="memtemplate">
-template&lt;typename FUNC , typename R &gt; </div>
+template&lt;typename F , typename R &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -317,7 +317,7 @@ template&lt;typename FUNC , typename R &gt; </div>
         <tr>
           <td class="memname"><a class="el" href="class_w_e_e_j_o_b_s___n_a_m_e_s_p_a_c_e_1_1future.html">future</a>&lt; R &gt; <a class="el" href="class_w_e_e_j_o_b_s___n_a_m_e_s_p_a_c_e_1_1future.html">WEEJOBS_NAMESPACE::future</a>&lt; T &gt;::then_dispatch </td>
           <td>(</td>
-          <td class="paramtype">FUNC&#160;</td>
+          <td class="paramtype">F&#160;</td>
           <td class="paramname"><em>func</em>, </td>
         </tr>
         <tr>
