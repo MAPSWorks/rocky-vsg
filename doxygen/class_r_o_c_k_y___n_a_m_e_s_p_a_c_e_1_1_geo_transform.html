@@ -70,7 +70,6 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_transform-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ROCKY_NAMESPACE::GeoTransform Class Reference</div>  </div>
@@ -100,14 +99,15 @@ const <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_point.html
 <tr class="memdesc:a61847b03a95c455f6abe3025c717895a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Center position of the object. <br /></td></tr>
 <tr class="separator:a61847b03a95c455f6abe3025c717895a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1776323a7abbe145a45cca03912b99f5"><td class="memItemLeft" align="right" valign="top"><a id="a1776323a7abbe145a45cca03912b99f5"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>GeoTransform</b> (const <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_transform.html">GeoTransform</a> &amp;rhs)=delete</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_transform.html#a1776323a7abbe145a45cca03912b99f5">GeoTransform</a> (const <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_transform.html">GeoTransform</a> &amp;rhs)=delete</td></tr>
+<tr class="memdesc:a1776323a7abbe145a45cca03912b99f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disables the copy constructor. <br /></td></tr>
 <tr class="separator:a1776323a7abbe145a45cca03912b99f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7852dd3d602f08ce02539ea2a35a583"><td class="memItemLeft" align="right" valign="top"><a id="ad7852dd3d602f08ce02539ea2a35a583"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>accept</b> (vsg::RecordTraversal &amp;) const override</td></tr>
-<tr class="separator:ad7852dd3d602f08ce02539ea2a35a583"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a975f1f7071ba82df1b0bd9d2389a4b29"><td class="memItemLeft" align="right" valign="top"><a id="a975f1f7071ba82df1b0bd9d2389a4b29"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>push</b> (vsg::RecordTraversal &amp;, const vsg::dmat4 &amp;m) const</td></tr>
-<tr class="separator:a975f1f7071ba82df1b0bd9d2389a4b29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad60d87fba44ee857e1df66636d6eda83"><td class="memItemLeft" align="right" valign="top"><a id="ad60d87fba44ee857e1df66636d6eda83"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>traverse</b> (vsg::RecordTraversal &amp;) const override</td></tr>
+<tr class="separator:ad60d87fba44ee857e1df66636d6eda83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6863f11821e088a0acbad35a6eb5b661"><td class="memItemLeft" align="right" valign="top"><a id="a6863f11821e088a0acbad35a6eb5b661"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>push</b> (vsg::RecordTraversal &amp;, const vsg::dmat4 &amp;m, bool cull) const</td></tr>
+<tr class="separator:a6863f11821e088a0acbad35a6eb5b661"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af43cb4d7271f9d02cc681a45394e2506"><td class="memItemLeft" align="right" valign="top"><a id="af43cb4d7271f9d02cc681a45394e2506"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>pop</b> (vsg::RecordTraversal &amp;) const</td></tr>
 <tr class="separator:af43cb4d7271f9d02cc681a45394e2506"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -125,16 +125,35 @@ vsg::dsphere&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_transform.html#a712e57ff90715f6b4f1566ad28dd1b5b">horizonCulling</a> = true</td></tr>
 <tr class="memdesc:a712e57ff90715f6b4f1566ad28dd1b5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">whether horizon culling is active <br /></td></tr>
 <tr class="separator:a712e57ff90715f6b4f1566ad28dd1b5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:ade279645350393875db32de3b1b15600"><td class="memItemLeft" align="right" valign="top"><a id="ade279645350393875db32de3b1b15600"></a>
-util::ViewLocal&lt; Data &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_viewlocal</b></td></tr>
-<tr class="separator:ade279645350393875db32de3b1b15600"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8668efdb3aba8a4d34dd4515376ed59c"><td class="memItemLeft" align="right" valign="top"><a id="a8668efdb3aba8a4d34dd4515376ed59c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_transform.html#a8668efdb3aba8a4d34dd4515376ed59c">frustumCulling</a> = true</td></tr>
+<tr class="memdesc:a8668efdb3aba8a4d34dd4515376ed59c"><td class="mdescLeft">&#160;</td><td class="mdescRight">whether frustum culling is active <br /></td></tr>
+<tr class="separator:a8668efdb3aba8a4d34dd4515376ed59c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e621027a0c3c4075ee90d2a886d5c7e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_transform.html#a5e621027a0c3c4075ee90d2a886d5c7e">localTangentPlane</a> = true</td></tr>
+<tr class="separator:a5e621027a0c3c4075ee90d2a886d5c7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9856f9d6e63e378298057a22da2953c4"><td class="memItemLeft" align="right" valign="top"><a id="a9856f9d6e63e378298057a22da2953c4"></a>
+util::ViewLocal&lt; ViewLocalData &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>viewLocal</b></td></tr>
+<tr class="separator:a9856f9d6e63e378298057a22da2953c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_transform.html">Transform</a> node that accepts geospatial coordinates and creates a local ENU (X=east, Y=north, Z=up) coordinate frame for its children that is tangent to the earth at the transform's geo position. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="a5e621027a0c3c4075ee90d2a886d5c7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e621027a0c3c4075ee90d2a886d5c7e">&#9670;&nbsp;</a></span>localTangentPlane</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ROCKY_NAMESPACE::GeoTransform::localTangentPlane = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Whether the transformation should establish a local tangent plane (ENU) at the position. Disabling this can increase performance for objects (like billboards) that don't need tangent plane. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/rocky/vsg/<a class="el" href="_geo_transform_8h_source.html">GeoTransform.h</a></li>
 <li>src/rocky/vsg/GeoTransform.cpp</li>
 </ul>

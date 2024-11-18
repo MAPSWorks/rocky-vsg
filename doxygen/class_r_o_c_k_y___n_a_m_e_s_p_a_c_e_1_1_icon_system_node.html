@@ -70,7 +70,6 @@ $(function() {
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_icon_system_node-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ROCKY_NAMESPACE::IconSystemNode Class Reference</div>  </div>
@@ -79,7 +78,7 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="_icon_system_8h_source.html">IconSystem.h</a>&gt;</code></p>
 
-<p>Inherits vsg::Inherit&lt; ECS::VSG_SystemNode, IconSystemNode &gt;.</p>
+<p>Inherits vsg::Inherit&lt; ecs::SystemNode&lt; Icon &gt;, IconSystemNode &gt;.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -91,24 +90,18 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3fac5db6c387431468e90d8739e22fed"><td class="memItemLeft" align="right" valign="top"><a id="a3fac5db6c387431468e90d8739e22fed"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_icon_system_node.html#a3fac5db6c387431468e90d8739e22fed">IconSystemNode</a> (entt::registry &amp;registry)</td></tr>
-<tr class="memdesc:a3fac5db6c387431468e90d8739e22fed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the mesh renderer. <br /></td></tr>
-<tr class="separator:a3fac5db6c387431468e90d8739e22fed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc4d415ae61f71899949391fbec291bf"><td class="memItemLeft" align="right" valign="top"><a id="abc4d415ae61f71899949391fbec291bf"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_icon_system_node.html#abc4d415ae61f71899949391fbec291bf">initialize</a> (<a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html">Runtime</a> &amp;) override</td></tr>
-<tr class="memdesc:abc4d415ae61f71899949391fbec291bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the system (once) <br /></td></tr>
-<tr class="separator:abc4d415ae61f71899949391fbec291bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afee6793173855411b8706e378cc0c20c"><td class="memItemLeft" align="right" valign="top"><a id="afee6793173855411b8706e378cc0c20c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ROCKY_VSG_SYSTEM_HELPER</b> (<a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_icon.html">Icon</a>, helper)</td></tr>
-<tr class="separator:afee6793173855411b8706e378cc0c20c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ad47603ff1db27ccb0b19349fcc7a7666"><td class="memItemLeft" align="right" valign="top"><a id="ad47603ff1db27ccb0b19349fcc7a7666"></a>
-static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_icon_system_node.html#ad47603ff1db27ccb0b19349fcc7a7666">featureMask</a> (const <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_icon.html">Icon</a> &amp;icon)</td></tr>
-<tr class="memdesc:ad47603ff1db27ccb0b19349fcc7a7666"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the feature mask for a given icon. <br /></td></tr>
-<tr class="separator:ad47603ff1db27ccb0b19349fcc7a7666"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41cdf8bcdca64b32ddfa47ff697b386d"><td class="memItemLeft" align="right" valign="top"><a id="a41cdf8bcdca64b32ddfa47ff697b386d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_icon_system_node.html#a41cdf8bcdca64b32ddfa47ff697b386d">IconSystemNode</a> (ecs::Registry &amp;r)</td></tr>
+<tr class="memdesc:a41cdf8bcdca64b32ddfa47ff697b386d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the mesh renderer. <br /></td></tr>
+<tr class="separator:a41cdf8bcdca64b32ddfa47ff697b386d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d242454a4cbfd8feb8f18aefa0394e2"><td class="memItemLeft" align="right" valign="top"><a id="a3d242454a4cbfd8feb8f18aefa0394e2"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_icon_system_node.html#a3d242454a4cbfd8feb8f18aefa0394e2">featureMask</a> (const <a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_icon.html">Icon</a> &amp;icon) const override</td></tr>
+<tr class="memdesc:a3d242454a4cbfd8feb8f18aefa0394e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the feature mask for a given icon. <br /></td></tr>
+<tr class="separator:a3d242454a4cbfd8feb8f18aefa0394e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3ef9b020d5dd624e357e26ec1a18331"><td class="memItemLeft" align="right" valign="top"><a id="ab3ef9b020d5dd624e357e26ec1a18331"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_icon_system_node.html#ab3ef9b020d5dd624e357e26ec1a18331">initializeSystem</a> (<a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_runtime.html">Runtime</a> &amp;) override</td></tr>
+<tr class="memdesc:ab3ef9b020d5dd624e357e26ec1a18331"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the system (once) <br /></td></tr>
+<tr class="separator:ab3ef9b020d5dd624e357e26ec1a18331"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Creates commands for rendering icon primitives. </p>
