@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['l2cachesize_0',['l2CacheSize',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_layer.html#a15f5e02f7f568862aa042261da4b3d9c',1,'ROCKY_NAMESPACE::Layer']]],
+  ['l2cachesize_0',['l2CacheSize',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_layer.html#a9cfc86db0aa8dce00b1ae02160c6fc0e',1,'ROCKY_NAMESPACE::Layer']]],
   ['label_1',['Label',['../struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_label.html',1,'ROCKY_NAMESPACE']]],
   ['labelsystemnode_2',['labelsystemnode',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_label_system_node.html',1,'ROCKY_NAMESPACE::LabelSystemNode'],['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_label_system_node.html#a1cc06c98ebc59f4bdd9e18595cdcabfd',1,'ROCKY_NAMESPACE::LabelSystemNode::LabelSystemNode()']]],
   ['lastattribute_3',['LastAttribute',['../class_ti_xml_element.html#adb3212c0c62ab98dba77b68d41c3fa9e',1,'TiXmlElement']]],
-  ['lastchild_4',['lastchild',['../class_ti_xml_node.html#a2be69d6e76b460fb74179ed9d6747433',1,'TiXmlNode::LastChild(const std::string &amp;_value)'],['../class_ti_xml_node.html#ad2dd65971c28b15b387c5aff76c36398',1,'TiXmlNode::LastChild(const std::string &amp;_value) const'],['../class_ti_xml_node.html#afe68e2adbf007c58d9348b25c44faa79',1,'TiXmlNode::LastChild(const char *_value)'],['../class_ti_xml_node.html#a418603b3d7a2cf33d146521d96e6af20',1,'TiXmlNode::LastChild()']]],
+  ['lastchild_4',['lastchild',['../class_ti_xml_node.html#a2be69d6e76b460fb74179ed9d6747433',1,'TiXmlNode::LastChild(const std::string &amp;_value)'],['../class_ti_xml_node.html#a418603b3d7a2cf33d146521d96e6af20',1,'TiXmlNode::LastChild()'],['../class_ti_xml_node.html#afe68e2adbf007c58d9348b25c44faa79',1,'TiXmlNode::LastChild(const char *_value)'],['../class_ti_xml_node.html#ad2dd65971c28b15b387c5aff76c36398',1,'TiXmlNode::LastChild(const std::string &amp;_value) const']]],
   ['lasterror_5',['lastError',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s_operation.html#a2785700700dbf37a17af3e78ea303035',1,'ROCKY_NAMESPACE::SRSOperation']]],
   ['layer_6',['Layer',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_layer.html',1,'ROCKY_NAMESPACE']]],
   ['layeradded_7',['LayerAdded',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map.html#acfc7fed5301e0094c03c2428aa505533',1,'ROCKY_NAMESPACE::Map']]],
@@ -27,9 +27,7 @@ var searchData=
   ['load_24',['load',['../class_r_tree.html#adbd1f87715d22ed75b2b8be738583fc2',1,'RTree::Load(const char *a_fileName)'],['../class_r_tree.html#ad02dc25a34d9b5b291c8ff3f1b002b09',1,'RTree::Load(RTFileStream &amp;a_stream)']]],
   ['loadfile_25',['loadfile',['../class_ti_xml_document.html#a4c852a889c02cf251117fd1d9fe1845f',1,'TiXmlDocument::LoadFile(TiXmlEncoding encoding=TIXML_DEFAULT_ENCODING)'],['../class_ti_xml_document.html#a879cdf5e981b8b2d2ef82f2546dd28fb',1,'TiXmlDocument::LoadFile(const char *filename, TiXmlEncoding encoding=TIXML_DEFAULT_ENCODING)'],['../class_ti_xml_document.html#a41f6fe7200864d1dca663d230caf8db6',1,'TiXmlDocument::LoadFile(FILE *, TiXmlEncoding encoding=TIXML_DEFAULT_ENCODING)'],['../class_ti_xml_document.html#a18ae6ed34fed7991ebc220862dfac884',1,'TiXmlDocument::LoadFile(const std::string &amp;filename, TiXmlEncoding encoding=TIXML_DEFAULT_ENCODING)']]],
   ['loadschedulername_26',['loadSchedulerName',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_terrain_engine.html#aafbf258c321148e919cb97b4c284a397',1,'ROCKY_NAMESPACE::TerrainEngine']]],
-  ['localmatrix_27',['localMatrix',['../struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_transform.html#a67f7a5e7aafc98a2bfb040888e9a7dba',1,'ROCKY_NAMESPACE::Transform']]],
-  ['localtangentplane_28',['localtangentplane',['../struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_transform.html#a9db47834d7b218067b12ec4eaab771a2',1,'ROCKY_NAMESPACE::Transform::localTangentPlane'],['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geo_transform.html#a5e621027a0c3c4075ee90d2a886d5c7e',1,'ROCKY_NAMESPACE::GeoTransform::localTangentPlane']]],
-  ['localtoworldmatrix_29',['localToWorldMatrix',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s.html#a4b07356a2ed3543712385051dd07c251',1,'ROCKY_NAMESPACE::SRS']]],
-  ['lockazimuthwhilepanning_30',['lockAzimuthWhilePanning',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_manipulator_1_1_settings.html#a2a4491453d487e7d28ac29a933b528f3',1,'ROCKY_NAMESPACE::MapManipulator::Settings']]],
-  ['longitudinaldegreestometers_31',['longitudinalDegreesToMeters',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_ellipsoid.html#a911b6a3ff89074b04ab20f3c06c9960b',1,'ROCKY_NAMESPACE::Ellipsoid']]]
+  ['localmatrix_27',['localMatrix',['../struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_transform.html#a6b22b4d7385564637e732f9b1ebb40a5',1,'ROCKY_NAMESPACE::Transform']]],
+  ['lockazimuthwhilepanning_28',['lockAzimuthWhilePanning',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_manipulator_1_1_settings.html#a2a4491453d487e7d28ac29a933b528f3',1,'ROCKY_NAMESPACE::MapManipulator::Settings']]],
+  ['longitudinaldegreestometers_29',['longitudinalDegreesToMeters',['../class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_ellipsoid.html#a911b6a3ff89074b04ab20f3c06c9960b',1,'ROCKY_NAMESPACE::Ellipsoid']]]
 ];
